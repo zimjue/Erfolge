@@ -27,14 +27,14 @@ class Woche {
  class Tag {
     var id: UUID
     var datum: Date
-    var EndederWoche: Bool
+    var endeDerWoche: Bool
      
     @Relationship(deleteRule: .cascade) var fragen: [Frage]?
       
-     init(datum: Date, EndederWoche: Bool ) {
+     init(datum: Date, endeDerWoche: Bool ) {
         self.id = UUID()
         self.datum = datum
-        self.EndederWoche = EndederWoche
+        self.endeDerWoche = endeDerWoche
         self.fragen = []
   
            }

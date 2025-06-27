@@ -18,7 +18,6 @@ struct ContentView: View {
     
     @State private var ausgewaehlterTag: Int = 0
     
-    @State private var EndederWoche = false
     
     var body: some View {
         VStack {
@@ -71,7 +70,7 @@ struct ContentView: View {
             for i in 0...90 {
                 let day = Calendar.current.date(byAdding: .day, value: i, to: startDatum)!
                 
-                let seite = Tag(datum: day, EndederWoche: (i + 1) % 7 == 0 )
+                let seite = Tag(datum: day, endeDerWoche: (i + 1) % 7 == 0)
                 
                 modelContext.insert(seite)
                 
