@@ -166,21 +166,31 @@ Die App erhebt, speichert oder verarbeitet keine personenbezogenen Daten auf ext
 Alle Inhalte, die du in der App eingibst – zum Beispiel Reflexionen, Gedanken oder tägliche Einträge – werden ausschließlich lokal auf deinem Gerät gespeichert.
 </p>
 
-<h2 id="h3">3. Weitergabe von Daten</h2>
+<h2 id="h3">3. Synchronisation über iCloud</h2>
 
 <p id="p3">
+Wenn iCloud auf deinem Gerät aktiviert ist, können deine Einträge über Apples iCloud-Dienst zwischen deinen Geräten synchronisiert werden.
+</p>
+
+<p id="p4">
+Die Daten werden dabei ausschließlich über Apple iCloud übertragen und in deinem persönlichen iCloud-Account gespeichert. Der Entwickler hat keinen Zugriff auf diese Daten.
+</p>
+
+<h2 id="h4">4. Weitergabe von Daten</h2>
+
+<p id="p5">
 Es findet keine Weitergabe deiner Daten an Dritte statt.
 </p>
 
-<h2 id="h4">4. Tracking und Analyse</h2>
+<h2 id="h5">5. Tracking und Analyse</h2>
 
-<p id="p4">
+<p id="p6">
 Die App verwendet keine Tracking-, Analyse- oder Werbedienste.
 </p>
 
-<h2 id="h5">5. Kontakt</h2>
+<h2 id="h6">6. Kontakt</h2>
 
-<p id="p5">
+<p id="p7">
 Bei Fragen zum Datenschutz kannst du dich jederzeit an folgende E-Mail-Adresse wenden:
 <a href="mailto:juzi7@icloud.com">juzi7@icloud.com</a>
 </p>
@@ -216,12 +226,15 @@ h1:"1. Verarbeitung personenbezogener Daten",
 p1:"Die App erhebt, speichert oder verarbeitet keine personenbezogenen Daten auf externen Servern.",
 h2:"2. Lokale Datenspeicherung",
 p2:"Alle Inhalte, die du in der App eingibst – zum Beispiel Reflexionen, Gedanken oder tägliche Einträge – werden ausschließlich lokal auf deinem Gerät gespeichert.",
-h3:"3. Weitergabe von Daten",
-p3:"Es findet keine Weitergabe deiner Daten an Dritte statt.",
-h4:"4. Tracking und Analyse",
-p4:"Die App verwendet keine Tracking-, Analyse- oder Werbedienste.",
-h5:"5. Kontakt",
-p5:"Bei Fragen zum Datenschutz kannst du dich jederzeit an folgende E-Mail-Adresse wenden:",
+h3:"3. Synchronisation über iCloud",
+p3:"Wenn iCloud auf deinem Gerät aktiviert ist, können deine Einträge über Apples iCloud-Dienst zwischen deinen Geräten synchronisiert werden.",
+p4:"Die Daten werden dabei ausschließlich über Apple iCloud übertragen und in deinem persönlichen iCloud-Account gespeichert. Der Entwickler hat keinen Zugriff auf diese Daten.",
+h4:"4. Weitergabe von Daten",
+p5:"Es findet keine Weitergabe deiner Daten an Dritte statt.",
+h5:"5. Tracking und Analyse",
+p6:"Die App verwendet keine Tracking-, Analyse- oder Werbedienste.",
+h6:"6. Kontakt",
+p7:"Bei Fragen zum Datenschutz kannst du dich jederzeit an folgende E-Mail-Adresse wenden:",
 updated:"Stand / Last updated: 2026"
 },
 
@@ -234,12 +247,15 @@ h1:"1. Processing of personal data",
 p1:"The app does not collect, store or process personal data on external servers.",
 h2:"2. Local data storage",
 p2:"All content you enter in the app — such as reflections, thoughts or daily entries — is stored only on your device.",
-h3:"3. Sharing of data",
-p3:"No data is shared with third parties.",
-h4:"4. Tracking and analytics",
-p4:"The app does not use tracking, analytics or advertising services.",
-h5:"5. Contact",
-p5:"If you have questions about privacy, contact:",
+h3:"3. iCloud synchronization",
+p3:"If iCloud is enabled on your device, your entries may be synchronized between your devices using Apple's iCloud service.",
+p4:"The data is transferred and stored exclusively through Apple iCloud within your personal iCloud account. The developer does not have access to this data.",
+h4:"4. Sharing of data",
+p5:"No data is shared with third parties.",
+h5:"5. Tracking and analytics",
+p6:"The app does not use tracking, analytics or advertising services.",
+h6:"6. Contact",
+p7:"If you have questions about privacy, contact:",
 updated:"Last updated: 2026"
 }
 
@@ -259,10 +275,13 @@ document.getElementById("h2").textContent=t.h2
 document.getElementById("p2").textContent=t.p2
 document.getElementById("h3").textContent=t.h3
 document.getElementById("p3").textContent=t.p3
-document.getElementById("h4").textContent=t.h4
 document.getElementById("p4").textContent=t.p4
+document.getElementById("h4").textContent=t.h4
+document.getElementById("p5").textContent=t.p5
 document.getElementById("h5").textContent=t.h5
-document.getElementById("p5").innerHTML=t.p5+' <a href="mailto:juzi7@icloud.com">juzi7@icloud.com</a>'
+document.getElementById("p6").textContent=t.p6
+document.getElementById("h6").textContent=t.h6
+document.getElementById("p7").innerHTML=t.p7+' <a href="mailto:juzi7@icloud.com">juzi7@icloud.com</a>'
 document.getElementById("updated").textContent=t.updated
 
 document.getElementById("btn-de").classList.toggle("active",lang==="de")
