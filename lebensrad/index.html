@@ -38,6 +38,18 @@
       padding: 40px 18px 56px;
     }
 
+    .back-link {
+      display:inline-block;
+      margin-bottom:18px;
+      color:var(--muted);
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    .back-link:hover {
+      color:var(--txt);
+    }
+
     .topbar {
       display:flex;
       justify-content:space-between;
@@ -97,7 +109,7 @@
     }
 
     @media (max-width:860px){
-      .hero{ grid-template-columns:1fr; }
+      .hero { grid-template-columns:1fr; }
     }
 
     h1 {
@@ -154,7 +166,7 @@
     }
 
     @media (max-width:860px){
-      .features{ grid-template-columns:1fr; }
+      .features { grid-template-columns:1fr; }
     }
 
     .feature-card strong {
@@ -191,6 +203,8 @@
 <body>
   <div class="wrap">
 
+    <a class="back-link" href="../" id="back-link">← Alle Apps</a>
+
     <div class="topbar">
       <div class="brand">Lebensrad – Life Wheel</div>
 
@@ -205,7 +219,6 @@
     </div>
 
     <div class="hero">
-
       <div class="card">
         <h1 id="hero-title">Dein Leben.<br/>Auf einen Blick.</h1>
 
@@ -246,8 +259,8 @@
       </div>
 
       <div class="card">
-        <img src="lebensrad/assets/Screenshot.jpeg"
-             alt="Lebensrad App Screenshot"
+        <img src="assets/Screenshot.jpeg"
+             alt="Screenshot der Lebensrad App"
              style="width:100%; border-radius:18px; border:1px solid rgba(255,255,255,.12);" />
 
         <div style="margin-top:20px;">
@@ -264,7 +277,6 @@
           Datenschutz: Keine Weitergabe, keine Tracking-Tools.
         </div>
       </div>
-
     </div>
 
     <div class="footer">
@@ -282,6 +294,7 @@
     const translations = {
       de: {
         htmlLang: "de",
+        back: "← Alle Apps",
         pill: "iOS • Reflexion",
         heroTitle: "Dein Leben.<br/>Auf einen Blick.",
         heroText: "Reflektiere deine wichtigsten Lebensbereiche, erkenne Muster und bringe Schritt für Schritt mehr Balance in dein Leben. Klar. Ruhig. Ohne Overkill.",
@@ -299,6 +312,7 @@
       },
       en: {
         htmlLang: "en",
+        back: "← All Apps",
         pill: "iOS • Reflection",
         heroTitle: "Your life.<br/>At a glance.",
         heroText: "Reflect on the most important areas of your life, recognize patterns and bring more balance into your life step by step. Clear. Calm. No overkill.",
@@ -320,6 +334,7 @@
       const t = translations[lang];
 
       document.documentElement.lang = t.htmlLang;
+      document.getElementById("back-link").textContent = t.back;
       document.getElementById("pill-text").textContent = t.pill;
       document.getElementById("hero-title").innerHTML = t.heroTitle;
       document.getElementById("hero-text").textContent = t.heroText;
@@ -335,8 +350,7 @@
       document.getElementById("privacy-link").textContent = t.privacyLink;
       document.getElementById("support-link").textContent = t.support;
 
-      document.getElementById("privacy-link").href =
-        lang === "de" ? "datenschutz.html" : "privacy.html";
+      document.getElementById("privacy-link").href = "datenschutz.html";
 
       document.getElementById("btn-de").classList.toggle("active", lang === "de");
       document.getElementById("btn-en").classList.toggle("active", lang === "en");
