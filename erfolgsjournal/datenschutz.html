@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Erfolgsjournal – Datenschutz</title>
+<meta name="description" content="Datenschutzerklärung für die Erfolgsjournal App.">
+<meta name="theme-color" content="#0b1220">
+
+<style>
+
+:root{
+--bg:#0b1220;
+--card:#121b2f;
+--txt:#eaf0ff;
+--muted:#b7c2e1;
+--accent:#66e3ff;
+--line:rgba(255,255,255,.12);
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+
+background:
+radial-gradient(1200px 600px at 20% 10%,rgba(102,227,255,.12),transparent 55%),
+radial-gradient(900px 500px at 90% 40%,rgba(153,102,255,.10),transparent 55%),
+var(--bg);
+
+color:var(--txt);
+}
+
+.wrap{
+max-width:900px;
+margin:auto;
+padding:40px 20px 56px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+margin-bottom:24px;
+}
+
+.brand{
+font-weight:700;
+}
+
+.lang-switch{
+display:flex;
+gap:10px;
+}
+
+.lang-btn{
+padding:8px 14px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.2);
+background:transparent;
+color:var(--txt);
+cursor:pointer;
+font-weight:600;
+}
+
+.lang-btn.active{
+background:var(--accent);
+color:black;
+border:none;
+}
+
+.card{
+background:rgba(255,255,255,.06);
+border:1px solid var(--line);
+border-radius:18px;
+padding:24px;
+box-shadow:0 20px 50px rgba(0,0,0,.28);
+}
+
+h1{
+font-size:32px;
+margin:0 0 12px;
+}
+
+h2{
+margin-top:24px;
+font-size:18px;
+}
+
+p{
+color:var(--muted);
+line-height:1.7;
+margin:0 0 14px;
+}
+
+a{
+color:var(--accent);
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+.footer{
+margin-top:30px;
+font-size:13px;
+color:var(--muted);
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.back-link{
+display:inline-block;
+margin-bottom:18px;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div class="topbar">
+
+<div class="brand">
+Erfolgsjournal
+</div>
+
+<div class="lang-switch">
+<button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
+<button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+</div>
+
+<div class="card">
+
+<a class="back-link" href="index.html" id="back-link">
+← Zurück zur App-Seite
+</a>
+
+<h1 id="title-main">
+Datenschutz – Erfolgsjournal
+</h1>
+
+<p id="intro">
+Der Schutz deiner Daten ist uns wichtig. Die App Erfolgsjournal wurde so entwickelt, dass möglichst wenige personenbezogene Daten verarbeitet werden.
+</p>
+
+<h2 id="h1">1. Verarbeitung personenbezogener Daten</h2>
+
+<p id="p1">
+Die App erhebt, speichert oder verarbeitet keine personenbezogenen Daten auf externen Servern.
+</p>
+
+<h2 id="h2">2. Lokale Datenspeicherung</h2>
+
+<p id="p2">
+Alle Inhalte, die du in der App eingibst – zum Beispiel Reflexionen, Gedanken oder tägliche Einträge – werden ausschließlich lokal auf deinem Gerät gespeichert.
+</p>
+
+<h2 id="h3">3. Weitergabe von Daten</h2>
+
+<p id="p3">
+Es findet keine Weitergabe deiner Daten an Dritte statt.
+</p>
+
+<h2 id="h4">4. Tracking und Analyse</h2>
+
+<p id="p4">
+Die App verwendet keine Tracking-, Analyse- oder Werbedienste.
+</p>
+
+<h2 id="h5">5. Kontakt</h2>
+
+<p id="p5">
+Bei Fragen zum Datenschutz kannst du dich jederzeit an folgende E-Mail-Adresse wenden:
+<a href="mailto:juzi7@icloud.com">juzi7@icloud.com</a>
+</p>
+
+<div class="footer">
+
+<div id="updated">
+Stand / Last updated: 2026
+</div>
+
+<div>
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">
+Apple Standard EULA
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const translations={
+
+de:{
+htmlLang:"de",
+back:"← Zurück zur App-Seite",
+title:"Datenschutz – Erfolgsjournal",
+intro:"Der Schutz deiner Daten ist uns wichtig. Die App Erfolgsjournal wurde so entwickelt, dass möglichst wenige personenbezogene Daten verarbeitet werden.",
+h1:"1. Verarbeitung personenbezogener Daten",
+p1:"Die App erhebt, speichert oder verarbeitet keine personenbezogenen Daten auf externen Servern.",
+h2:"2. Lokale Datenspeicherung",
+p2:"Alle Inhalte, die du in der App eingibst – zum Beispiel Reflexionen, Gedanken oder tägliche Einträge – werden ausschließlich lokal auf deinem Gerät gespeichert.",
+h3:"3. Weitergabe von Daten",
+p3:"Es findet keine Weitergabe deiner Daten an Dritte statt.",
+h4:"4. Tracking und Analyse",
+p4:"Die App verwendet keine Tracking-, Analyse- oder Werbedienste.",
+h5:"5. Kontakt",
+p5:"Bei Fragen zum Datenschutz kannst du dich jederzeit an folgende E-Mail-Adresse wenden:",
+updated:"Stand / Last updated: 2026"
+},
+
+en:{
+htmlLang:"en",
+back:"← Back to app page",
+title:"Privacy Policy – Erfolgsjournal",
+intro:"Your privacy matters. The Erfolgsjournal app is designed to process as little personal data as possible.",
+h1:"1. Processing of personal data",
+p1:"The app does not collect, store or process personal data on external servers.",
+h2:"2. Local data storage",
+p2:"All content you enter in the app — such as reflections, thoughts or daily entries — is stored only on your device.",
+h3:"3. Sharing of data",
+p3:"No data is shared with third parties.",
+h4:"4. Tracking and analytics",
+p4:"The app does not use tracking, analytics or advertising services.",
+h5:"5. Contact",
+p5:"If you have questions about privacy, contact:",
+updated:"Last updated: 2026"
+}
+
+}
+
+function setLang(lang){
+
+const t=translations[lang]
+
+document.documentElement.lang=t.htmlLang
+document.getElementById("back-link").textContent=t.back
+document.getElementById("title-main").textContent=t.title
+document.getElementById("intro").textContent=t.intro
+document.getElementById("h1").textContent=t.h1
+document.getElementById("p1").textContent=t.p1
+document.getElementById("h2").textContent=t.h2
+document.getElementById("p2").textContent=t.p2
+document.getElementById("h3").textContent=t.h3
+document.getElementById("p3").textContent=t.p3
+document.getElementById("h4").textContent=t.h4
+document.getElementById("p4").textContent=t.p4
+document.getElementById("h5").textContent=t.h5
+document.getElementById("p5").innerHTML=t.p5+' <a href="mailto:juzi7@icloud.com">juzi7@icloud.com</a>'
+document.getElementById("updated").textContent=t.updated
+
+document.getElementById("btn-de").classList.toggle("active",lang==="de")
+document.getElementById("btn-en").classList.toggle("active",lang==="en")
+
+localStorage.setItem("siteLang",lang)
+
+}
+
+const savedLang=localStorage.getItem("siteLang")||"de"
+setLang(savedLang)
+
+</script>
+
+</body>
+</html>
