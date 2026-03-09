@@ -8,7 +8,7 @@
 <title>Lebensrad (Life Wheel) – Balance & Reflection</title>
 
 <meta name="description"
-content="Lebensrad (Life Wheel) helps you reflect on the important areas of your life and create more balance.">
+content="Lebensrad (Life Wheel) hilft dir, deine wichtigsten Lebensbereiche zu reflektieren und mehr Balance in dein Leben zu bringen.">
 
 <meta name="theme-color" content="#0b1220">
 <meta name="apple-itunes-app" content="app-id=6759198208">
@@ -113,6 +113,10 @@ align-items:start;
 h1{
 font-size:44px;
 margin:0 0 12px;
+}
+
+h2{
+margin-top:0;
 }
 
 p{
@@ -287,32 +291,68 @@ Funktionen
 
 <img src="assets/Screenshot.jpeg"
 class="app-screenshot"
-alt="Life Wheel App Screenshot">
+alt="Lebensrad App – Life Wheel iOS Screenshot">
 
 </div>
 
-<div style="margin-top:20px;">
+</div>
 
-<a href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208"
+</div>
+
+<section class="card" style="margin-top:28px">
+
+<h2>Warum das Lebensrad?</h2>
+
+<p>
+Viele Menschen verlieren im Alltag den Überblick über die wichtigen Bereiche ihres Lebens.
+Das Lebensrad hilft dir, deine aktuelle Lebensbalance sichtbar zu machen
+und bewusst zu reflektieren.
+</p>
+
+</section>
+
+<section class="card" style="margin-top:24px">
+
+<h2>So funktioniert es</h2>
+
+<div class="features">
+
+<div class="card feature-card">
+<strong>1. Lebensbereiche bewerten</strong>
+<p>Bewerte wichtige Lebensbereiche wie Gesundheit, Beziehungen oder Beruf.</p>
+</div>
+
+<div class="card feature-card">
+<strong>2. Reflexion</strong>
+<p>Antworten auf Fragen helfen dir deine Situation besser zu verstehen.</p>
+</div>
+
+<div class="card feature-card">
+<strong>3. Veränderung planen</strong>
+<p>Leite konkrete Schritte für mehr Balance in deinem Leben ab.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="card" style="margin-top:32px; text-align:center">
+
+<h2>Starte deine persönliche Reflexion</h2>
+
+<p>
+Lade die Lebensrad App herunter und entdecke neue Klarheit über dein Leben.
+</p>
+
+<a class="btn primary"
+href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208"
 target="_blank">
 
-<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-style="height:60px">
+Jetzt im App Store laden
 
 </a>
 
-</div>
-
-<div id="privacy-note"
-style="margin-top:20px;font-size:13px;color:var(--muted);">
-
-Datenschutz: Keine Weitergabe, keine Tracking-Tools.
-
-</div>
-
-</div>
-
-</div>
+</section>
 
 <div class="footer">
 
@@ -321,8 +361,8 @@ Datenschutz: Keine Weitergabe, keine Tracking-Tools.
 </div>
 
 <div>
-<a href="datenschutz.html" id="privacy-link">Datenschutz</a> ·
-<a href="mailto:juzi7@icloud.com" id="support-link">Support</a>
+<a href="datenschutz.html">Datenschutz</a> ·
+<a href="mailto:juzi7@icloud.com">Support</a>
 </div>
 
 </div>
@@ -334,64 +374,8 @@ Datenschutz: Keine Weitergabe, keine Tracking-Tools.
 document.getElementById("y").textContent=new Date().getFullYear()
 
 function setLang(lang){
-
 document.documentElement.lang=lang
-
-if(lang==="en"){
-
-document.getElementById("hero-title").innerHTML="Your life.<br>At a glance."
-document.getElementById("hero-text").textContent="Reflect on the most important areas of your life and bring more balance."
-
-document.getElementById("store-link-top").textContent="Download on the App Store"
-document.getElementById("features-link").textContent="Features"
-
-document.getElementById("pill-text").textContent="iOS • Reflection"
-
-document.getElementById("f1-title").textContent="Life areas"
-document.getElementById("f1-text").textContent="Body, relationships, career, finances and more."
-
-document.getElementById("f2-title").textContent="Reflection questions"
-document.getElementById("f2-text").textContent="Deep questions help you gain clarity."
-
-document.getElementById("f3-title").textContent="Action steps"
-document.getElementById("f3-text").textContent="Turn insights into real change."
-
-document.getElementById("privacy-note").textContent="Privacy: No tracking and no data sharing."
-document.getElementById("privacy-link").textContent="Privacy"
-
-document.getElementById("back-link").textContent="← All Apps"
-
-}else{
-
-document.getElementById("hero-title").innerHTML="Dein Leben.<br>Auf einen Blick."
-document.getElementById("hero-text").textContent="Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben."
-
-document.getElementById("store-link-top").textContent="Jetzt im App Store laden"
-document.getElementById("features-link").textContent="Funktionen"
-
-document.getElementById("pill-text").textContent="iOS • Reflexion"
-
-document.getElementById("f1-title").textContent="Lebensbereiche"
-document.getElementById("f1-text").textContent="Körper, Beziehungen, Beruf, Finanzen und mehr."
-
-document.getElementById("f2-title").textContent="Reflexionsfragen"
-document.getElementById("f2-text").textContent="Tiefgehende Fragen helfen dir Klarheit zu gewinnen."
-
-document.getElementById("f3-title").textContent="Konkrete Schritte"
-document.getElementById("f3-text").textContent="Erkenntnisse in echte Veränderungen umsetzen."
-
-document.getElementById("privacy-note").textContent="Datenschutz: Keine Weitergabe, keine Tracking-Tools."
-document.getElementById("privacy-link").textContent="Datenschutz"
-
-document.getElementById("back-link").textContent="← Alle Apps"
-
-}
-
-document.getElementById("btn-de").classList.toggle("active",lang==="de")
-document.getElementById("btn-en").classList.toggle("active",lang==="en")
-
 localStorage.setItem("siteLang",lang)
-
 }
 
 const savedLang=localStorage.getItem("siteLang")||"de"
