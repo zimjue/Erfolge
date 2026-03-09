@@ -4,22 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Lebensrad – Balance & Reflexion</title>
+<title>Lebensrad – Life Wheel App</title>
 
-<meta name="description" content="Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.">
+<meta name="description" content="Die Lebensrad App hilft dir deine wichtigsten Lebensbereiche zu reflektieren und mehr Balance in dein Leben zu bringen.">
 <meta name="theme-color" content="#0b1220">
+<link rel="icon" href="assets/Lebensrad.png">
 
-<!-- OpenGraph -->
 <meta property="og:title" content="Life Wheel – Balance & Reflection">
-<meta property="og:description" content="Reflect on the most important areas of your life and create more balance.">
-<meta property="og:image" content="https://zimjue.github.io/apps/lebensrad/assets/Lebensrad.png">
+<meta property="og:description" content="Reflect on the key areas of your life and create more balance.">
+<meta property="og:image" content="assets/Lebensrad.png">
 <meta property="og:type" content="website">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Life Wheel – Balance & Reflection">
-<meta name="twitter:description" content="Reflect on the key areas of your life and gain clarity.">
-<meta name="twitter:image" content="https://zimjue.github.io/apps/lebensrad/assets/Lebensrad.png">
 
 <style>
 
@@ -30,6 +24,7 @@
 --accent:#66e3ff;
 --card:rgba(255,255,255,.06);
 --line:rgba(255,255,255,.12);
+--shadow:0 30px 60px rgba(0,0,0,.5);
 }
 
 *{box-sizing:border-box}
@@ -37,31 +32,39 @@
 body{
 margin:0;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-background:var(--bg);
+background:
+radial-gradient(1000px 600px at 20% 10%,rgba(102,227,255,.18),transparent 60%),
+var(--bg);
 color:var(--txt);
 }
 
 .wrap{
-max-width:1080px;
+max-width:1180px;
 margin:auto;
-padding:40px 18px 72px;
+padding:40px 20px 100px;
 }
 
 .topbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:36px;
+margin-bottom:50px;
 }
 
-.brand{font-weight:800}
+.brand{
+font-weight:800;
+font-size:18px;
+}
 
-.lang-switch{display:flex;gap:10px}
+.lang-switch{
+display:flex;
+gap:10px;
+}
 
 .lang-btn{
 padding:8px 14px;
 border-radius:10px;
-border:1px solid rgba(255,255,255,.18);
+border:1px solid rgba(255,255,255,.2);
 background:transparent;
 color:var(--txt);
 cursor:pointer;
@@ -70,60 +73,146 @@ font-weight:700;
 
 .lang-btn.active{
 background:var(--accent);
-color:#04121e;
+color:#000;
 border:none;
 }
 
 .hero{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:70px;
 align-items:center;
+margin-bottom:100px;
 }
 
-h1{
-font-size:48px;
-margin:0 0 16px;
+.hero h1{
+font-size:60px;
+line-height:1.05;
+margin:0 0 20px;
 }
 
-p{
+.hero p{
+font-size:19px;
 color:var(--muted);
 line-height:1.6;
 }
 
-.hero img{
-width:100%;
+.appstore-badge{
+margin-top:30px;
+display:inline-block;
+}
+
+.phone-frame{
 max-width:360px;
-border-radius:24px;
+margin:auto;
+padding:16px;
+border-radius:40px;
+background:black;
+border:2px solid rgba(255,255,255,.15);
+box-shadow:0 40px 80px rgba(0,0,0,.6);
+}
+
+.phone-frame img{
+width:100%;
+border-radius:28px;
+display:block;
+}
+
+.section{
+margin-top:100px;
+}
+
+.section h2{
+font-size:38px;
+margin-bottom:30px;
 }
 
 .features{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px;
-margin-top:40px;
+gap:28px;
 }
 
 .card{
 background:var(--card);
 border:1px solid var(--line);
-border-radius:20px;
-padding:24px;
+border-radius:24px;
+padding:28px;
 }
+
+.card strong{
+font-size:18px;
+display:block;
+margin-bottom:8px;
+}
+
+.slider{
+max-width:360px;
+margin:auto;
+position:relative;
+}
+
+.slider img{
+width:100%;
+border-radius:28px;
+box-shadow:var(--shadow);
+}
+
+.slider button{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,.7);
+border:none;
+color:white;
+font-size:30px;
+width:48px;
+height:48px;
+border-radius:50%;
+cursor:pointer;
+}
+
+.prev{left:-80px}
+.next{right:-80px}
 
 .footer{
-margin-top:60px;
+margin-top:120px;
 display:flex;
 justify-content:space-between;
-color:var(--muted);
 font-size:13px;
+color:var(--muted);
 }
 
-.footer a{color:var(--muted);text-decoration:none}
+.footer a{
+color:var(--muted);
+text-decoration:none;
+}
 
-@media(max-width:800px){
-.hero{grid-template-columns:1fr;text-align:center}
-.features{grid-template-columns:1fr}
+.fade{
+opacity:0;
+transform:translateY(20px);
+transition:all .7s ease;
+}
+
+.fade.visible{
+opacity:1;
+transform:none;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.prev{left:0}
+.next{right:0}
+
 }
 
 </style>
@@ -142,72 +231,142 @@ font-size:13px;
 </div>
 </div>
 
-<section class="hero">
-<div>
-<h1 id="hero-title">Dein Leben.<br>Auf einen Blick.</h1>
-<p id="hero-text">Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.</p>
-</div>
+<section class="hero fade">
 
 <div>
-<img src="assets/Lebensrad.png" id="hero-image" alt="Lebensrad Übersicht">
+
+<h1 id="hero-title">Dein Leben.<br>Im Gleichgewicht.</h1>
+
+<p id="hero-text">
+Reflektiere deine wichtigsten Lebensbereiche und entdecke, wo du mehr Balance schaffen möchtest.
+</p>
+
+<a class="appstore-badge"
+href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208"
+target="_blank">
+<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+alt="Download on the App Store"
+style="height:60px">
+</a>
+
 </div>
+
+<div class="phone-frame">
+<img src="assets/Lebensrad.png">
+</div>
+
 </section>
 
-<section class="features">
+
+<section class="section fade">
+
+<h2 id="features-title">Funktionen</h2>
+
+<div class="features">
 
 <div class="card">
 <strong id="f1-title">Lebensbereiche</strong>
-<p id="f1-text">Körper, Beziehungen, Beruf, Finanzen und mehr.</p>
+<p id="f1-text">Bewerte Gesundheit, Beziehungen, Karriere und persönliche Entwicklung.</p>
 </div>
 
 <div class="card">
-<strong id="f2-title">Reflexionsfragen</strong>
-<p id="f2-text">Tiefgehende Fragen helfen dir Klarheit zu gewinnen.</p>
+<strong id="f2-title">Reflexion</strong>
+<p id="f2-text">Tiefgehende Fragen helfen dir deine aktuelle Situation klar zu erkennen.</p>
 </div>
 
 <div class="card">
-<strong id="f3-title">Konkrete Schritte</strong>
-<p id="f3-text">Erkenntnisse in echte Veränderungen umsetzen.</p>
+<strong id="f3-title">Veränderung</strong>
+<p id="f3-text">Leite konkrete Schritte für mehr Balance in deinem Leben ab.</p>
+</div>
+
 </div>
 
 </section>
 
+
+<section class="section fade">
+
+<h2 id="screens-title">App Einblicke</h2>
+
+<div class="slider">
+
+<button class="prev" onclick="prevSlide()">‹</button>
+
+<img id="slide" src="assets/screenshot1.png">
+
+<button class="next" onclick="nextSlide()">›</button>
+
+</div>
+
+</section>
+
+
 <div class="footer">
+
 <div>© <span id="year"></span> Jürgen Zimmer</div>
-<div><a id="privacy-link" href="datenschutz.html">Datenschutz</a></div>
+
+<div>
+<a id="privacy-link" href="datenschutz.html">Datenschutz</a>
 </div>
 
 </div>
+
+</div>
+
 
 <script>
 
-document.getElementById("year").textContent = new Date().getFullYear()
+document.getElementById("year").textContent=new Date().getFullYear()
 
-const translations = {
+const screenshots=[
+"assets/screenshot1.png",
+"assets/screenshot2.png",
+"assets/screenshot3.png"
+]
+
+let slide=0
+
+function showSlide(){
+document.getElementById("slide").src=screenshots[slide]
+}
+
+function nextSlide(){
+slide=(slide+1)%screenshots.length
+showSlide()
+}
+
+function prevSlide(){
+slide=(slide-1+screenshots.length)%screenshots.length
+showSlide()
+}
+
+const translations={
 
 de:{
-title:"Lebensrad – Balance & Reflexion",
-heroTitle:"Dein Leben.<br>Auf einen Blick.",
-heroText:"Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.",
+heroTitle:"Dein Leben.<br>Im Gleichgewicht.",
+heroText:"Reflektiere deine wichtigsten Lebensbereiche und entdecke, wo du mehr Balance schaffen möchtest.",
+features:"Funktionen",
 f1Title:"Lebensbereiche",
-f1Text:"Körper, Beziehungen, Beruf, Finanzen und mehr.",
-f2Title:"Reflexionsfragen",
-f2Text:"Tiefgehende Fragen helfen dir Klarheit zu gewinnen.",
-f3Title:"Konkrete Schritte",
-f3Text:"Erkenntnisse in echte Veränderungen umsetzen.",
+f1Text:"Bewerte Gesundheit, Beziehungen, Karriere und persönliche Entwicklung.",
+f2Title:"Reflexion",
+f2Text:"Tiefgehende Fragen helfen dir deine aktuelle Situation klar zu erkennen.",
+f3Title:"Veränderung",
+f3Text:"Leite konkrete Schritte für mehr Balance in deinem Leben ab.",
+screens:"App Einblicke",
 privacy:"Datenschutz"
 },
 
 en:{
-title:"Life Wheel – Balance & Reflection",
-heroTitle:"Your life.<br>At a glance.",
-heroText:"Reflect on the most important areas of your life and create more balance.",
+heroTitle:"Your life.<br>In balance.",
+heroText:"Reflect on the key areas of your life and see where you want to create change.",
+features:"Features",
 f1Title:"Life areas",
-f1Text:"Body, relationships, career, finances and more.",
-f2Title:"Reflection questions",
-f2Text:"Deeper questions help you gain clarity.",
-f3Title:"Action steps",
-f3Text:"Turn your insights into real change.",
+f1Text:"Evaluate health, relationships, career and personal growth.",
+f2Title:"Reflection",
+f2Text:"Questions help you understand your current situation.",
+f3Title:"Change",
+f3Text:"Turn insights into concrete action.",
+screens:"App previews",
 privacy:"Privacy"
 }
 
@@ -215,43 +374,44 @@ privacy:"Privacy"
 
 function currentLang(){
 
-const savedLang = localStorage.getItem("siteLang")
+const savedLang=localStorage.getItem("siteLang")
 if(savedLang==="de"||savedLang==="en") return savedLang
 
-const browserLang = navigator.language || "en"
+const browser=navigator.language||"en"
 
-if(browserLang.startsWith("de")){
-return "de"
-}else{
+if(browser.startsWith("de")) return "de"
 return "en"
-}
 
 }
 
 function setLang(lang){
 
-const t = translations[lang]
+const t=translations[lang]
 
-document.title = t.title
+document.getElementById("hero-title").innerHTML=t.heroTitle
+document.getElementById("hero-text").textContent=t.heroText
 
-document.getElementById("hero-title").innerHTML = t.heroTitle
-document.getElementById("hero-text").textContent = t.heroText
+document.getElementById("features-title").textContent=t.features
 
-document.getElementById("f1-title").textContent = t.f1Title
-document.getElementById("f1-text").textContent = t.f1Text
-document.getElementById("f2-title").textContent = t.f2Title
-document.getElementById("f2-text").textContent = t.f2Text
-document.getElementById("f3-title").textContent = t.f3Title
-document.getElementById("f3-text").textContent = t.f3Text
+document.getElementById("f1-title").textContent=t.f1Title
+document.getElementById("f1-text").textContent=t.f1Text
 
-document.getElementById("privacy-link").textContent = t.privacy
+document.getElementById("f2-title").textContent=t.f2Title
+document.getElementById("f2-text").textContent=t.f2Text
 
-const privacyLink=document.getElementById("privacy-link")
+document.getElementById("f3-title").textContent=t.f3Title
+document.getElementById("f3-text").textContent=t.f3Text
+
+document.getElementById("screens-title").textContent=t.screens
+
+document.getElementById("privacy-link").textContent=t.privacy
+
+const privacy=document.getElementById("privacy-link")
 
 if(lang==="de"){
-privacyLink.href="datenschutz.html"
+privacy.href="datenschutz.html"
 }else{
-privacyLink.href="privacy.html"
+privacy.href="privacy.html"
 }
 
 document.getElementById("btn-de").classList.toggle("active",lang==="de")
@@ -262,6 +422,19 @@ localStorage.setItem("siteLang",lang)
 }
 
 setLang(currentLang())
+showSlide()
+
+const faders=document.querySelectorAll(".fade")
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("visible")
+}
+})
+})
+
+faders.forEach(el=>observer.observe(el))
 
 </script>
 
