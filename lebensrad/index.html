@@ -211,7 +211,7 @@ Jetzt im App Store laden
 </div>
 
 <div class="hero-image">
-<img src="apps/assets/Lebensrad.png" alt="Lebensrad Übersicht" class="life-wheel">
+<img src="assets/Lebensrad.png" alt="Lebensrad Übersicht" class="life-wheel">
 </div>
 
 </section>
@@ -226,7 +226,7 @@ Jetzt im App Store laden
 <button class="slide-btn prev" onclick="prevSlide()">‹</button>
 
 <img id="slider-image"
-src="assets/screenshot1.jpeg"
+src="../assets/screenshot1.jpeg"
 class="app-screenshot">
 
 <button class="slide-btn next" onclick="nextSlide()">›</button>
@@ -400,7 +400,7 @@ if(savedLang){return savedLang}
 
 const browserLang=navigator.language||navigator.userLanguage
 
-if(browserLang.startsWith("de")){
+if(browserLang.startsWith("de"){
 return "de"
 }
 
@@ -410,9 +410,9 @@ return "en"
 setLang(detectLanguage())
 
 const screenshots=[
-"assets/screenshot1.jpeg",
-"assets/screenshot2.jpeg",
-"assets/screenshot3.jpeg"
+"../assets/screenshot1.jpeg",
+"../assets/screenshot2.jpeg",
+"../assets/screenshot3.jpeg"
 ]
 
 let currentSlide=0
