@@ -4,436 +4,785 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Lebensrad (Life Wheel) – Balance & Reflection</title>
-
-<meta name="description"
-content="Lebensrad (Life Wheel) hilft dir, deine wichtigsten Lebensbereiche zu reflektieren und mehr Balance in dein Leben zu bringen.">
-
+<title>Lebensrad – Balance & Reflexion</title>
+<meta name="description" content="Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.">
 <meta name="theme-color" content="#0b1220">
 <meta name="apple-itunes-app" content="app-id=6759198208">
 
-<style>
+<meta property="og:title" content="Lebensrad – Balance & Reflexion">
+<meta property="og:description" content="Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/Lebensrad.png">
 
+<style>
 :root{
---bg:#0b1220;
---txt:#eaf0ff;
---muted:#b7c2e1;
---accent:#66e3ff;
---card:rgba(255,255,255,.06);
---line:rgba(255,255,255,.12);
+  --bg:#0b1220;
+  --txt:#eaf0ff;
+  --muted:#b7c2e1;
+  --accent:#66e3ff;
+  --card:rgba(255,255,255,.06);
+  --line:rgba(255,255,255,.12);
+  --shadow:0 30px 70px rgba(0,0,0,.45);
 }
 
 *{box-sizing:border-box}
-
+html{scroll-behavior:smooth}
 body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-background:
-radial-gradient(1200px 600px at 20% 10%,rgba(102,227,255,.18),transparent 55%),
-radial-gradient(900px 500px at 90% 40%,rgba(153,102,255,.14),transparent 55%),
-var(--bg);
-color:var(--txt);
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 20% 10%,rgba(102,227,255,.18),transparent 55%),
+    radial-gradient(900px 500px at 90% 40%,rgba(153,102,255,.14),transparent 55%),
+    var(--bg);
+  color:var(--txt);
 }
 
+a{color:inherit}
+
 .wrap{
-max-width:1000px;
-margin:auto;
-padding:40px 18px 60px;
+  max-width:1080px;
+  margin:auto;
+  padding:40px 18px 72px;
 }
 
 .topbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:32px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:36px;
 }
 
-.brand{font-weight:700}
+.brand{
+  font-weight:800;
+  letter-spacing:.2px;
+}
 
 .lang-switch{
-display:flex;
-gap:10px;
+  display:flex;
+  gap:10px;
 }
 
 .lang-btn{
-padding:8px 14px;
-border-radius:10px;
-border:1px solid rgba(255,255,255,.2);
-background:transparent;
-color:var(--txt);
-cursor:pointer;
-font-weight:600;
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.18);
+  background:transparent;
+  color:var(--txt);
+  cursor:pointer;
+  font-weight:700;
 }
 
 .lang-btn.active{
-background:var(--accent);
-color:black;
-border:none;
+  background:var(--accent);
+  color:#04121e;
+  border-color:transparent;
 }
 
 .hero{
-display:grid;
-grid-template-columns:1fr 420px;
-gap:40px;
-align-items:center;
-margin-bottom:40px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:42px;
+  align-items:center;
+  margin-bottom:42px;
 }
 
-@media(max-width:860px){
-.hero{grid-template-columns:1fr;text-align:center}
+.hero-copy{max-width:560px}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.eyebrow-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 18px rgba(102,227,255,.8);
+}
+
+h1{
+  font-size:52px;
+  line-height:1.04;
+  margin:0 0 16px;
+}
+
+p{
+  color:var(--muted);
+  line-height:1.65;
+  margin:0;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.store-note{
+  font-size:14px;
+  color:var(--muted);
 }
 
 .hero-image{
-display:flex;
-justify-content:center;
+  display:flex;
+  justify-content:center;
+}
+
+.device-shell{
+  position:relative;
+  width:min(100%, 360px);
+  padding:14px;
+  border-radius:34px;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:var(--shadow);
+}
+
+.device-shell::before{
+  content:"";
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:34%;
+  height:18px;
+  border-radius:0 0 14px 14px;
+  background:rgba(4,8,16,.92);
+  z-index:2;
 }
 
 .life-wheel{
-width:320px;
-max-width:100%;
-filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));
+  display:block;
+  width:100%;
+  border-radius:24px;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
-
-h1{font-size:44px;margin:0}
-
-p{color:var(--muted);line-height:1.6}
 
 .card{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:20px;
-padding:28px;
-margin-top:28px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:30px;
+  margin-top:28px;
+  backdrop-filter:blur(10px);
 }
 
-.btn{
-padding:14px 22px;
-border-radius:14px;
-text-decoration:none;
-font-weight:600;
-display:inline-block;
-margin-top:14px;
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:16px;
+  margin-bottom:18px;
 }
 
-.btn.primary{
-background:var(--accent);
-color:black;
-}
+.section-head h2{margin:0;font-size:28px}
+.section-head p{max-width:560px}
 
 .features{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:20px;
 }
 
-@media(max-width:860px){
-.features{grid-template-columns:1fr}
+.feature-card{
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:22px;
+}
+
+.feature-icon{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  font-size:20px;
+  margin-bottom:14px;
+  background:linear-gradient(180deg,rgba(102,227,255,.18),rgba(102,227,255,.06));
+  border:1px solid rgba(102,227,255,.18);
+}
+
+.slider-wrap{
+  position:relative;
 }
 
 .slider{
-position:relative;
-height:520px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.12);
-background:rgba(255,255,255,.03);
-overflow:hidden;
+  position:relative;
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.12);
+  background:
+    radial-gradient(500px 200px at 50% 0%,rgba(102,227,255,.08),transparent 60%),
+    rgba(255,255,255,.03);
+  overflow:hidden;
+}
+
+.slider::after{
+  content:"";
+  position:absolute;
+  inset:auto 12% 18px;
+  height:32px;
+  filter:blur(28px);
+  background:rgba(0,0,0,.35);
+  border-radius:999px;
+}
+
+.slide-frame{
+  position:relative;
+  z-index:1;
+  width:min(100%, 360px);
+  padding:14px;
+  border-radius:34px;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:var(--shadow);
+}
+
+.slide-frame::before{
+  content:"";
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:34%;
+  height:18px;
+  border-radius:0 0 14px 14px;
+  background:rgba(4,8,16,.92);
+  z-index:2;
 }
 
 .app-screenshot{
-max-width:100%;
-max-height:100%;
+  display:block;
+  width:100%;
+  border-radius:24px;
 }
 
 .slide-btn{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:rgba(0,0,0,.4);
-border:none;
-color:white;
-font-size:28px;
-width:40px;
-height:40px;
-border-radius:50%;
-cursor:pointer;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(8,14,27,.72);
+  color:white;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+  z-index:3;
+  backdrop-filter:blur(10px);
 }
 
-.prev{left:10px}
-.next{right:10px}
+.slide-btn:hover{background:rgba(12,20,38,.9)}
+.prev{left:18px}
+.next{right:18px}
+
+.slider-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  margin-top:18px;
+  flex-wrap:wrap;
+}
+
+.slide-caption{font-size:15px;color:var(--muted)}
+
+.dots{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border:none;
+  background:rgba(255,255,255,.22);
+  cursor:pointer;
+  padding:0;
+}
+
+.dot.active{
+  width:28px;
+  border-radius:999px;
+  background:var(--accent);
+}
+
+.cta-card{
+  text-align:center;
+}
 
 .footer{
-margin-top:60px;
-font-size:13px;
-color:var(--muted);
-display:flex;
-justify-content:space-between;
+  margin-top:64px;
+  font-size:13px;
+  color:var(--muted);
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
 }
 
 .footer a{color:var(--muted);text-decoration:none}
+.footer a:hover{text-decoration:underline}
 
+.store-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  min-width:192px;
+  padding:11px 16px;
+  border-radius:16px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 10px 26px rgba(0,0,0,.35);
+}
+
+.store-badge:hover{transform:translateY(-1px)}
+.store-badge:focus-visible,.lang-btn:focus-visible,.slide-btn:focus-visible,.dot:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+}
+
+.badge-icon{width:28px;height:34px;display:block;flex:0 0 auto}
+.badge-text{display:flex;flex-direction:column;line-height:1.05}
+.badge-text small{font-size:11px;opacity:.85;font-weight:500}
+.badge-text strong{font-size:21px;font-weight:700;letter-spacing:.1px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;text-align:center}
+  .hero-copy{max-width:none}
+  .hero-actions{justify-content:center}
+  .section-head{flex-direction:column;align-items:flex-start}
+  .features{grid-template-columns:1fr}
+  .slider{min-height:540px}
+}
+
+@media (max-width:640px){
+  .wrap{padding:24px 14px 56px}
+  h1{font-size:40px}
+  .card{padding:22px}
+  .slider{min-height:470px}
+  .slide-btn{width:42px;height:42px;font-size:24px}
+  .prev{left:10px}
+  .next{right:10px}
+}
 </style>
 </head>
-
 <body>
-
 <div class="wrap">
+  <div class="topbar">
+    <div class="brand">Lebensrad – Life Wheel</div>
+    <div class="lang-switch" aria-label="Sprachauswahl / Language switch">
+      <button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
 
-<div class="topbar">
-<div class="brand">Lebensrad – Life Wheel</div>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span><span id="eyebrow-text">Persönliche Reflexion als App</span></div>
+        <h1 id="hero-title">Dein Leben.<br>Auf einen Blick.</h1>
+        <p id="hero-text">Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.</p>
+        <div class="hero-actions">
+          <a id="store-link-top" class="store-badge" href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208" target="_blank" rel="noopener noreferrer" aria-label="Im App Store laden">
+            <svg class="badge-icon" viewBox="0 0 24 29" aria-hidden="true" fill="currentColor">
+              <path d="M19.12 15.22c.03 3.1 2.72 4.13 2.75 4.14-.02.07-.43 1.49-1.42 2.95-.86 1.26-1.75 2.51-3.16 2.54-1.38.03-1.82-.82-3.39-.82-1.57 0-2.06.79-3.37.85-1.36.05-2.4-1.36-3.26-2.61-1.76-2.54-3.1-7.18-1.3-10.3.89-1.55 2.49-2.53 4.22-2.56 1.32-.03 2.57.89 3.39.89.81 0 2.34-1.1 3.94-.94.67.03 2.56.27 3.77 2.04-.1.06-2.25 1.31-2.23 3.82Zm-2.63-8.38c.72-.87 1.21-2.08 1.07-3.28-1.03.04-2.28.68-3.02 1.55-.66.76-1.24 1.98-1.08 3.15 1.15.09 2.31-.58 3.03-1.42Z"/>
+            </svg>
+            <span class="badge-text">
+              <small id="store-top-small">Laden im</small>
+              <strong id="store-top-strong">App Store</strong>
+            </span>
+          </a>
+          <span class="store-note" id="store-note">Für iPhone verfügbar</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="device-shell">
+          <img id="hero-image" src="../assets/Lebensrad.png" alt="Lebensrad Übersicht" class="life-wheel" loading="eager">
+        </div>
+      </div>
+    </section>
 
-<div class="lang-switch">
-<button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
-<button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-</div>
-</div>
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <h2 id="shots-title">App Einblicke</h2>
+        </div>
+        <p id="shots-text">Ein kurzer Blick in die App: klar, modern und auf persönliche Reflexion ausgerichtet.</p>
+      </div>
 
+      <div class="slider-wrap" aria-label="Screenshot Karussell">
+        <div class="slider" id="slider" tabindex="0">
+          <button class="slide-btn prev" type="button" onclick="prevSlide()" aria-label="Vorheriger Screenshot">‹</button>
+          <div class="slide-frame">
+            <img id="slider-image" src="../assets/screenshot1.jpeg" class="app-screenshot" alt="Lebensrad App Screenshot" loading="eager">
+          </div>
+          <button class="slide-btn next" type="button" onclick="nextSlide()" aria-label="Nächster Screenshot">›</button>
+        </div>
+        <div class="slider-meta">
+          <div class="slide-caption" id="slide-caption">Startansicht der Lebensrad App</div>
+          <div class="dots" id="dots" aria-label="Screenshot Auswahl"></div>
+        </div>
+      </div>
+    </section>
 
-<!-- HERO -->
+    <section class="card">
+      <h2 id="features-title">Funktionen</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">◎</div>
+          <strong id="f1-title">Lebensbereiche</strong>
+          <p id="f1-text">Körper, Beziehungen, Beruf, Finanzen und mehr.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">✦</div>
+          <strong id="f2-title">Reflexionsfragen</strong>
+          <p id="f2-text">Tiefgehende Fragen helfen dir Klarheit zu gewinnen.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">↗</div>
+          <strong id="f3-title">Konkrete Schritte</strong>
+          <p id="f3-text">Erkenntnisse in echte Veränderungen umsetzen.</p>
+        </div>
+      </div>
+    </section>
 
-<section class="hero">
+    <section class="card">
+      <h2 id="why-title">Warum das Lebensrad?</h2>
+      <p id="why-text">Das Lebensrad hilft dir, Balance in den wichtigsten Bereichen deines Lebens sichtbar zu machen. Viele Menschen verlieren im Alltag den Überblick über Gesundheit, Beziehungen oder persönliche Entwicklung.</p>
+    </section>
 
-<div>
+    <section class="card">
+      <h2 id="how-title">So funktioniert es</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">1</div>
+          <strong id="step1-title">1. Lebensbereiche bewerten</strong>
+          <p id="step1-text">Bewerte wichtige Lebensbereiche wie Gesundheit oder Beziehungen.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">2</div>
+          <strong id="step2-title">2. Reflexion</strong>
+          <p id="step2-text">Fragen helfen dir deine aktuelle Situation besser zu verstehen.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" aria-hidden="true">3</div>
+          <strong id="step3-title">3. Veränderung planen</strong>
+          <p id="step3-text">Leite konkrete Schritte für mehr Balance in deinem Leben ab.</p>
+        </div>
+      </div>
+    </section>
 
-<h1 id="hero-title">Dein Leben.<br>Auf einen Blick.</h1>
+    <section class="card cta-card">
+      <h2 id="cta-title">Starte deine persönliche Reflexion</h2>
+      <p id="cta-text">Lade die Lebensrad App herunter und entdecke neue Klarheit über dein Leben.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a id="store-link-bottom" class="store-badge" href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208" target="_blank" rel="noopener noreferrer" aria-label="Im App Store laden">
+          <svg class="badge-icon" viewBox="0 0 24 29" aria-hidden="true" fill="currentColor">
+            <path d="M19.12 15.22c.03 3.1 2.72 4.13 2.75 4.14-.02.07-.43 1.49-1.42 2.95-.86 1.26-1.75 2.51-3.16 2.54-1.38.03-1.82-.82-3.39-.82-1.57 0-2.06.79-3.37.85-1.36.05-2.4-1.36-3.26-2.61-1.76-2.54-3.1-7.18-1.3-10.3.89-1.55 2.49-2.53 4.22-2.56 1.32-.03 2.57.89 3.39.89.81 0 2.34-1.1 3.94-.94.67.03 2.56.27 3.77 2.04-.1.06-2.25 1.31-2.23 3.82Zm-2.63-8.38c.72-.87 1.21-2.08 1.07-3.28-1.03.04-2.28.68-3.02 1.55-.66.76-1.24 1.98-1.08 3.15 1.15.09 2.31-.58 3.03-1.42Z"/>
+          </svg>
+          <span class="badge-text">
+            <small id="store-bottom-small">Laden im</small>
+            <strong id="store-bottom-strong">App Store</strong>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
 
-<p id="hero-text">
-Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.
-</p>
-
-<a id="store-link-top" class="btn primary" target="_blank">
-Jetzt im App Store laden
-</a>
-
-</div>
-
-<div class="hero-image">
-<img src="../assets/Lebensrad.png" alt="Lebensrad Übersicht" class="life-wheel">
-</div>
-
-</section>
-
-
-<!-- SCREENSHOT -->
-
-<section class="card">
-
-<div class="slider">
-
-<button class="slide-btn prev" onclick="prevSlide()">‹</button>
-
-<img id="slider-image"
-src="../assets/Screenshot.jpeg"
-class="app-screenshot">
-
-<button class="slide-btn next" onclick="nextSlide()">›</button>
-
-</div>
-
-</section>
-
-
-<!-- FEATURES -->
-
-<section class="card">
-
-<h2 id="features-title">Funktionen</h2>
-
-<div class="features">
-
-<div class="card">
-<strong id="f1-title">Lebensbereiche</strong>
-<p id="f1-text">Körper, Beziehungen, Beruf, Finanzen und mehr.</p>
-</div>
-
-<div class="card">
-<strong id="f2-title">Reflexionsfragen</strong>
-<p id="f2-text">Tiefgehende Fragen helfen dir Klarheit zu gewinnen.</p>
-</div>
-
-<div class="card">
-<strong id="f3-title">Konkrete Schritte</strong>
-<p id="f3-text">Erkenntnisse in echte Veränderungen umsetzen.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- WHY -->
-
-<section class="card">
-
-<h2 id="why-title">Warum das Lebensrad?</h2>
-
-<p id="why-text">
-Das Lebensrad hilft dir, Balance in den wichtigsten Bereichen deines Lebens sichtbar zu machen.
-Viele Menschen verlieren im Alltag den Überblick über Gesundheit, Beziehungen oder persönliche Entwicklung.
-</p>
-
-</section>
-
-
-<!-- HOW -->
-
-<section class="card">
-
-<h2 id="how-title">So funktioniert es</h2>
-
-<div class="features">
-
-<div class="card">
-<strong id="step1-title">1. Lebensbereiche bewerten</strong>
-<p id="step1-text">Bewerte wichtige Lebensbereiche wie Gesundheit oder Beziehungen.</p>
-</div>
-
-<div class="card">
-<strong id="step2-title">2. Reflexion</strong>
-<p id="step2-text">Fragen helfen dir deine aktuelle Situation besser zu verstehen.</p>
-</div>
-
-<div class="card">
-<strong id="step3-title">3. Veränderung planen</strong>
-<p id="step3-text">Leite konkrete Schritte für mehr Balance in deinem Leben ab.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="card" style="text-align:center">
-
-<h2 id="cta-title">Starte deine persönliche Reflexion</h2>
-
-<p id="cta-text">
-Lade die Lebensrad App herunter und entdecke neue Klarheit über dein Leben.
-</p>
-
-<a class="btn primary"
-href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208"
-target="_blank">
-
-Jetzt im App Store laden
-
-</a>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<div class="footer">
-<div>© <span id="y"></span> Jürgen Zimmer</div>
-<div><a id="privacy-link" href="datenschutz.html">Datenschutz</a></div>
-</div>
-
+  <div class="footer">
+    <div>© <span id="y"></span> Jürgen Zimmer</div>
+    <div><a id="privacy-link" href="datenschutz.html">Datenschutz</a></div>
+  </div>
 </div>
 
 <script>
+document.getElementById("y").textContent = new Date().getFullYear();
 
-document.getElementById("y").textContent=new Date().getFullYear()
+const translations = {
+  de: {
+    htmlLang: "de",
+    title: "Lebensrad – Balance & Reflexion",
+    description: "Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.",
+    ogTitle: "Lebensrad – Balance & Reflexion",
+    ogDescription: "Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.",
+    eyebrowText: "Persönliche Reflexion als App",
+    heroTitle: "Dein Leben.<br>Auf einen Blick.",
+    heroText: "Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.",
+    storeTopSmall: "Laden im",
+    storeTopStrong: "App Store",
+    storeBottomSmall: "Laden im",
+    storeBottomStrong: "App Store",
+    storeNote: "Für iPhone verfügbar",
+    storeAria: "Im App Store laden",
+    heroImageAlt: "Lebensrad Übersicht",
+    shotsTitle: "App Einblicke",
+    shotsText: "Ein kurzer Blick in die App: klar, modern und auf persönliche Reflexion ausgerichtet.",
+    screenshotAlt: "Lebensrad App Screenshot",
+    slidePrevAria: "Vorheriger Screenshot",
+    slideNextAria: "Nächster Screenshot",
+    sliderAria: "Screenshot Karussell",
+    dotsAria: "Screenshot Auswahl",
+    captions: [
+      "Startansicht der Lebensrad App",
+      "Beispiel für Reflexion und Bewertung",
+      "Weitere Ansicht aus der App"
+    ],
+    featuresTitle: "Funktionen",
+    f1Title: "Lebensbereiche",
+    f1Text: "Körper, Beziehungen, Beruf, Finanzen und mehr.",
+    f2Title: "Reflexionsfragen",
+    f2Text: "Tiefgehende Fragen helfen dir Klarheit zu gewinnen.",
+    f3Title: "Konkrete Schritte",
+    f3Text: "Erkenntnisse in echte Veränderungen umsetzen.",
+    whyTitle: "Warum das Lebensrad?",
+    whyText: "Das Lebensrad hilft dir, Balance in den wichtigsten Bereichen deines Lebens sichtbar zu machen. Viele Menschen verlieren im Alltag den Überblick über Gesundheit, Beziehungen oder persönliche Entwicklung.",
+    howTitle: "So funktioniert es",
+    step1Title: "1. Lebensbereiche bewerten",
+    step1Text: "Bewerte wichtige Lebensbereiche wie Gesundheit oder Beziehungen.",
+    step2Title: "2. Reflexion",
+    step2Text: "Fragen helfen dir deine aktuelle Situation besser zu verstehen.",
+    step3Title: "3. Veränderung planen",
+    step3Text: "Leite konkrete Schritte für mehr Balance in deinem Leben ab.",
+    ctaTitle: "Starte deine persönliche Reflexion",
+    ctaText: "Lade die Lebensrad App herunter und entdecke neue Klarheit über dein Leben.",
+    privacy: "Datenschutz"
+  },
+  en: {
+    htmlLang: "en",
+    title: "Life Wheel – Balance & Reflection",
+    description: "The Life Wheel app helps you reflect on the key areas of your life, see your balance more clearly, and take meaningful action.",
+    ogTitle: "Life Wheel – Balance & Reflection",
+    ogDescription: "Reflect on the key areas of your life and create more balance with the Life Wheel app.",
+    eyebrowText: "Personal reflection in an app",
+    heroTitle: "Your life.<br>At a glance.",
+    heroText: "Reflect on the most important areas of your life and create more balance.",
+    storeTopSmall: "Download on the",
+    storeTopStrong: "App Store",
+    storeBottomSmall: "Download on the",
+    storeBottomStrong: "App Store",
+    storeNote: "Available for iPhone",
+    storeAria: "Download on the App Store",
+    heroImageAlt: "Life Wheel overview",
+    shotsTitle: "App previews",
+    shotsText: "A quick look into the app: clear, modern, and focused on personal reflection.",
+    screenshotAlt: "Life Wheel app screenshot",
+    slidePrevAria: "Previous screenshot",
+    slideNextAria: "Next screenshot",
+    sliderAria: "Screenshot carousel",
+    dotsAria: "Screenshot selection",
+    captions: [
+      "Home screen of the Life Wheel app",
+      "Example of reflection and rating",
+      "Another view from the app"
+    ],
+    featuresTitle: "Features",
+    f1Title: "Life areas",
+    f1Text: "Body, relationships, career, finances, and more.",
+    f2Title: "Reflection questions",
+    f2Text: "Deeper questions help you gain clarity.",
+    f3Title: "Action steps",
+    f3Text: "Turn your insights into real change.",
+    whyTitle: "Why the Life Wheel?",
+    whyText: "The Life Wheel helps you visualize balance across the most important areas of your life. Many people lose sight of their health, relationships, or personal growth in everyday life.",
+    howTitle: "How it works",
+    step1Title: "1. Rate life areas",
+    step1Text: "Evaluate important areas such as health or relationships.",
+    step2Title: "2. Reflect",
+    step2Text: "Questions help you understand your current situation more clearly.",
+    step3Title: "3. Plan change",
+    step3Text: "Define concrete steps to create more balance in your life.",
+    ctaTitle: "Start your personal reflection",
+    ctaText: "Download the Life Wheel app and gain new clarity about your life.",
+    privacy: "Privacy"
+  }
+};
 
-function setLang(lang){
+const screenshots = [
+  "../assets/screenshot1.jpeg",
+  "../assets/screenshot2.jpeg",
+  "../assets/screenshot3.jpeg"
+];
 
-if(lang==="en"){
+let currentSlide = 0;
+let autoPlay = null;
 
-document.getElementById("hero-title").innerHTML="Your life.<br>At a glance."
-document.getElementById("hero-text").textContent="Reflect on the most important areas of your life and create more balance."
-document.getElementById("store-link-top").textContent="Download on the App Store"
-
-document.getElementById("features-title").textContent="Features"
-
-document.getElementById("f1-title").textContent="Life areas"
-document.getElementById("f1-text").textContent="Body, relationships, career, finances and more."
-
-document.getElementById("f2-title").textContent="Reflection questions"
-document.getElementById("f2-text").textContent="Deep questions help you gain clarity."
-
-document.getElementById("f3-title").textContent="Action steps"
-document.getElementById("f3-text").textContent="Turn insights into real change."
-
-document.getElementById("why-title").textContent="Why the Life Wheel?"
-document.getElementById("why-text").textContent="The Life Wheel helps you visualize balance in the most important areas of your life."
-
-document.getElementById("how-title").textContent="How it works"
-
-document.getElementById("step1-title").textContent="1. Rate life areas"
-document.getElementById("step1-text").textContent="Evaluate areas like health or relationships."
-
-document.getElementById("step2-title").textContent="2. Reflection"
-document.getElementById("step2-text").textContent="Questions help you understand your current situation."
-
-document.getElementById("step3-title").textContent="3. Plan change"
-document.getElementById("step3-text").textContent="Turn insights into real life improvements."
-
-document.getElementById("cta-title").textContent="Start your personal reflection"
-document.getElementById("cta-text").textContent="Download the Life Wheel app and gain clarity about your life."
-
-document.getElementById("privacy-link").textContent="Privacy"
-
-}else{
-
-document.getElementById("hero-title").innerHTML="Dein Leben.<br>Auf einen Blick."
-document.getElementById("hero-text").textContent="Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben."
-document.getElementById("store-link-top").textContent="Jetzt im App Store laden"
-
+function currentLang(){
+  const savedLang = localStorage.getItem("siteLang");
+  if(savedLang === "de" || savedLang === "en") return savedLang;
+  const browserLang = navigator.language || navigator.userLanguage || "de";
+  return browserLang.toLowerCase().startsWith("de") ? "de" : "en";
 }
 
-document.getElementById("btn-de").classList.toggle("active",lang==="de")
-document.getElementById("btn-en").classList.toggle("active",lang==="en")
-
-localStorage.setItem("siteLang",lang)
-
+function buildDots(){
+  const dots = document.getElementById("dots");
+  dots.innerHTML = "";
+  screenshots.forEach((_, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "dot" + (index === currentSlide ? " active" : "");
+    button.setAttribute("aria-label", `Screenshot ${index + 1}`);
+    button.onclick = () => goToSlide(index);
+    dots.appendChild(button);
+  });
 }
 
-function detectLanguage(){
-
-const savedLang=localStorage.getItem("siteLang")
-if(savedLang){return savedLang}
-
-const browserLang=navigator.language||navigator.userLanguage
-
-if (browserLang.startsWith("de")) {
-  return "de"
+function updateSlideMeta(){
+  const lang = currentLang();
+  const t = translations[lang] || translations.de;
+  document.getElementById("slider-image").src = screenshots[currentSlide];
+  document.getElementById("slider-image").alt = t.screenshotAlt;
+  document.getElementById("slide-caption").textContent = t.captions[currentSlide] || "";
+  [...document.querySelectorAll(".dot")].forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentSlide);
+    dot.setAttribute("aria-current", index === currentSlide ? "true" : "false");
+  });
 }
-
-return "en"
-}
-
-setLang(detectLanguage())
-
-const screenshots=[
-"../assets/screenshot1.jpeg",
-"../assets/screenshot2.jpeg",
-"../assets/screenshot3.jpeg"
-]
-
-let currentSlide=0
 
 function showSlide(){
-document.getElementById("slider-image").src=screenshots[currentSlide]
+  buildDots();
+  updateSlideMeta();
+}
+
+function goToSlide(index){
+  currentSlide = index;
+  updateSlideMeta();
+  restartAutoPlay();
 }
 
 function nextSlide(){
-currentSlide++
-if(currentSlide>=screenshots.length){currentSlide=0}
-showSlide()
+  currentSlide = (currentSlide + 1) % screenshots.length;
+  updateSlideMeta();
+  restartAutoPlay();
 }
 
 function prevSlide(){
-currentSlide--
-if(currentSlide<0){currentSlide=screenshots.length-1}
-showSlide()
+  currentSlide = (currentSlide - 1 + screenshots.length) % screenshots.length;
+  updateSlideMeta();
+  restartAutoPlay();
 }
 
-</script>
+function startAutoPlay(){
+  stopAutoPlay();
+  autoPlay = setInterval(() => {
+    currentSlide = (currentSlide + 1) % screenshots.length;
+    updateSlideMeta();
+  }, 4500);
+}
 
+function stopAutoPlay(){
+  if(autoPlay) clearInterval(autoPlay);
+}
+
+function restartAutoPlay(){
+  startAutoPlay();
+}
+
+function setLang(lang){
+  const t = translations[lang] || translations.de;
+  document.documentElement.lang = t.htmlLang;
+  document.title = t.title;
+  document.querySelector('meta[name="description"]').setAttribute('content', t.description);
+  document.querySelector('meta[property="og:title"]').setAttribute('content', t.ogTitle);
+  document.querySelector('meta[property="og:description"]').setAttribute('content', t.ogDescription);
+
+  document.getElementById("eyebrow-text").textContent = t.eyebrowText;
+  document.getElementById("hero-title").innerHTML = t.heroTitle;
+  document.getElementById("hero-text").textContent = t.heroText;
+  document.getElementById("store-top-small").textContent = t.storeTopSmall;
+  document.getElementById("store-top-strong").textContent = t.storeTopStrong;
+  document.getElementById("store-bottom-small").textContent = t.storeBottomSmall;
+  document.getElementById("store-bottom-strong").textContent = t.storeBottomStrong;
+  document.getElementById("store-note").textContent = t.storeNote;
+  document.getElementById("store-link-top").setAttribute("aria-label", t.storeAria);
+  document.getElementById("store-link-bottom").setAttribute("aria-label", t.storeAria);
+  document.getElementById("hero-image").alt = t.heroImageAlt;
+
+  document.getElementById("shots-title").textContent = t.shotsTitle;
+  document.getElementById("shots-text").textContent = t.shotsText;
+  document.getElementById("slider").setAttribute("aria-label", t.sliderAria);
+  document.getElementById("dots").setAttribute("aria-label", t.dotsAria);
+  document.querySelector(".prev").setAttribute("aria-label", t.slidePrevAria);
+  document.querySelector(".next").setAttribute("aria-label", t.slideNextAria);
+
+  document.getElementById("features-title").textContent = t.featuresTitle;
+  document.getElementById("f1-title").textContent = t.f1Title;
+  document.getElementById("f1-text").textContent = t.f1Text;
+  document.getElementById("f2-title").textContent = t.f2Title;
+  document.getElementById("f2-text").textContent = t.f2Text;
+  document.getElementById("f3-title").textContent = t.f3Title;
+  document.getElementById("f3-text").textContent = t.f3Text;
+
+  document.getElementById("why-title").textContent = t.whyTitle;
+  document.getElementById("why-text").textContent = t.whyText;
+
+  document.getElementById("how-title").textContent = t.howTitle;
+  document.getElementById("step1-title").textContent = t.step1Title;
+  document.getElementById("step1-text").textContent = t.step1Text;
+  document.getElementById("step2-title").textContent = t.step2Title;
+  document.getElementById("step2-text").textContent = t.step2Text;
+  document.getElementById("step3-title").textContent = t.step3Title;
+  document.getElementById("step3-text").textContent = t.step3Text;
+
+  document.getElementById("cta-title").textContent = t.ctaTitle;
+  document.getElementById("cta-text").textContent = t.ctaText;
+  document.getElementById("privacy-link").textContent = t.privacy;
+
+  document.getElementById("btn-de").classList.toggle("active", lang === "de");
+  document.getElementById("btn-en").classList.toggle("active", lang === "en");
+
+  localStorage.setItem("siteLang", lang);
+  updateSlideMeta();
+}
+
+const slider = document.getElementById("slider");
+slider.addEventListener("mouseenter", stopAutoPlay);
+slider.addEventListener("mouseleave", startAutoPlay);
+slider.addEventListener("focusin", stopAutoPlay);
+slider.addEventListener("focusout", startAutoPlay);
+slider.addEventListener("keydown", (event) => {
+  if(event.key === "ArrowRight") nextSlide();
+  if(event.key === "ArrowLeft") prevSlide();
+});
+
+let touchStartX = 0;
+slider.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].clientX;
+}, {passive:true});
+slider.addEventListener("touchend", (event) => {
+  const touchEndX = event.changedTouches[0].clientX;
+  const delta = touchEndX - touchStartX;
+  if(Math.abs(delta) > 40){
+    if(delta < 0) nextSlide();
+    else prevSlide();
+  }
+}, {passive:true});
+
+showSlide();
+setLang(currentLang());
+startAutoPlay();
+</script>
 </body>
 </html>
