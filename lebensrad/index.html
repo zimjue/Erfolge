@@ -8,11 +8,38 @@
 <meta name="description" content="Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.">
 <meta name="theme-color" content="#0b1220">
 <meta name="apple-itunes-app" content="app-id=6759198208">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://zimjue.github.io/apps/lebensrad/">
 
 <meta property="og:title" content="Lebensrad – Balance & Reflexion">
 <meta property="og:description" content="Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../assets/Lebensrad.png">
+<meta property="og:url" content="https://zimjue.github.io/apps/lebensrad/">
+<meta property="og:image" content="https://zimjue.github.io/apps/lebensrad/assets/Lebensrad.png">
+<meta property="og:site_name" content="Lebensrad">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lebensrad – Balance & Reflexion">
+<meta name="twitter:description" content="Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.">
+<meta name="twitter:image" content="https://zimjue.github.io/apps/lebensrad/assets/Lebensrad.png">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Lebensrad",
+  "applicationCategory":"LifestyleApplication",
+  "operatingSystem":"iOS, iPadOS, macOS",
+  "description":"Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.",
+  "url":"https://zimjue.github.io/apps/lebensrad/",
+  "image":"https://zimjue.github.io/apps/lebensrad/assets/Lebensrad.png",
+  "downloadUrl":"https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208",
+  "publisher":{
+    "@type":"Person",
+    "name":"Jürgen Zimolong"
+  }
+}
+</script>
 
 <style>
 :root{
@@ -27,6 +54,7 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -186,8 +214,14 @@ p{
   margin-bottom:18px;
 }
 
-.section-head h2{margin:0;font-size:28px}
-.section-head p{max-width:560px}
+.section-head h2{
+  margin:0;
+  font-size:28px;
+}
+
+.section-head p{
+  max-width:560px;
+}
 
 .features{
   display:grid;
@@ -303,7 +337,10 @@ p{
   flex-wrap:wrap;
 }
 
-.slide-caption{font-size:15px;color:var(--muted)}
+.slide-caption{
+  font-size:15px;
+  color:var(--muted);
+}
 
 .dots{
   display:flex;
@@ -341,39 +378,45 @@ p{
   flex-wrap:wrap;
 }
 
-.footer a{color:var(--muted);text-decoration:none}
-.footer a:hover{text-decoration:underline}
-
-.store-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  min-width:192px;
-  padding:11px 16px;
-  border-radius:16px;
-  background:#000;
-  color:#fff;
+.footer a{
+  color:var(--muted);
   text-decoration:none;
-  border:1px solid rgba(255,255,255,.14);
-  box-shadow:0 10px 26px rgba(0,0,0,.35);
 }
 
-.store-badge:hover{transform:translateY(-1px)}
-.store-badge:focus-visible,.lang-btn:focus-visible,.slide-btn:focus-visible,.dot:focus-visible{
+.footer a:hover{
+  text-decoration:underline;
+}
+
+.app-store-badge{
+  display:inline-block;
+  line-height:0;
+}
+
+.app-store-badge img{
+  height:52px;
+  width:auto;
+  display:block;
+}
+
+.lang-btn:focus-visible,
+.slide-btn:focus-visible,
+.dot:focus-visible,
+.app-store-badge:focus-visible{
   outline:2px solid var(--accent);
   outline-offset:3px;
 }
 
-.badge-icon{width:28px;height:34px;display:block;flex:0 0 auto}
-.badge-text{display:flex;flex-direction:column;line-height:1.05}
-.badge-text small{font-size:11px;opacity:.85;font-weight:500}
-.badge-text strong{font-size:21px;font-weight:700;letter-spacing:.1px}
-
 @media (max-width:860px){
-  .hero{grid-template-columns:1fr;text-align:center}
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
   .hero-copy{max-width:none}
   .hero-actions{justify-content:center}
-  .section-head{flex-direction:column;align-items:flex-start}
+  .section-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
   .features{grid-template-columns:1fr}
   .slider{min-height:540px}
 }
@@ -383,16 +426,21 @@ p{
   h1{font-size:40px}
   .card{padding:22px}
   .slider{min-height:470px}
-  .slide-btn{width:42px;height:42px;font-size:24px}
+  .slide-btn{
+    width:42px;
+    height:42px;
+    font-size:24px;
+  }
   .prev{left:10px}
   .next{right:10px}
+  .app-store-badge img{height:48px}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="topbar">
-    <div class="brand">Lebensrad – Life Wheel</div>
+    <div class="brand" id="brand-title">Lebensrad</div>
     <div class="lang-switch" aria-label="Sprachauswahl / Language switch">
       <button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
       <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
@@ -402,25 +450,35 @@ p{
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-dot"></span><span id="eyebrow-text">Persönliche Reflexion als App</span></div>
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span id="eyebrow-text">Persönliche Reflexion als App</span>
+        </div>
+
         <h1 id="hero-title">Dein Leben.<br>Auf einen Blick.</h1>
         <p id="hero-text">Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.</p>
+
         <div class="hero-actions">
-          <a id="store-link-top" class="store-badge" href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208" target="_blank" rel="noopener noreferrer" aria-label="Im App Store laden">
-            <svg class="badge-icon" viewBox="0 0 24 29" aria-hidden="true" fill="currentColor">
-              <path d="M19.12 15.22c.03 3.1 2.72 4.13 2.75 4.14-.02.07-.43 1.49-1.42 2.95-.86 1.26-1.75 2.51-3.16 2.54-1.38.03-1.82-.82-3.39-.82-1.57 0-2.06.79-3.37.85-1.36.05-2.4-1.36-3.26-2.61-1.76-2.54-3.1-7.18-1.3-10.3.89-1.55 2.49-2.53 4.22-2.56 1.32-.03 2.57.89 3.39.89.81 0 2.34-1.1 3.94-.94.67.03 2.56.27 3.77 2.04-.1.06-2.25 1.31-2.23 3.82Zm-2.63-8.38c.72-.87 1.21-2.08 1.07-3.28-1.03.04-2.28.68-3.02 1.55-.66.76-1.24 1.98-1.08 3.15 1.15.09 2.31-.58 3.03-1.42Z"/>
-            </svg>
-            <span class="badge-text">
-              <small id="store-top-small">Laden im</small>
-              <strong id="store-top-strong">App Store</strong>
-            </span>
+          <a
+            id="store-link-top"
+            class="app-store-badge"
+            href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Im App Store laden">
+            <img
+              id="store-badge-top"
+              src="assets/app-store-badge.svg"
+              alt="Download on the App Store">
           </a>
-          <span class="store-note" id="store-note">Für iPhone, iPad, MacOS verfügbar</span>
+
+          <span class="store-note" id="store-note">Für iPhone, iPad, macOS verfügbar</span>
         </div>
       </div>
+
       <div class="hero-image">
         <div class="device-shell">
-          <img id="hero-image" src="../assets/Lebensrad.png" alt="Lebensrad Übersicht" class="life-wheel" loading="eager">
+          <img id="hero-image" src="assets/Lebensrad.png" alt="Lebensrad Übersicht" class="life-wheel" loading="eager">
         </div>
       </div>
     </section>
@@ -437,10 +495,11 @@ p{
         <div class="slider" id="slider" tabindex="0">
           <button class="slide-btn prev" type="button" onclick="prevSlide()" aria-label="Vorheriger Screenshot">‹</button>
           <div class="slide-frame">
-            <img id="slider-image" src="../assets/screenshot1.png" class="app-screenshot" alt="Lebensrad App Screenshot" loading="eager">
+            <img id="slider-image" src="assets/screenshot1.png" class="app-screenshot" alt="Lebensrad App Screenshot" loading="eager">
           </div>
           <button class="slide-btn next" type="button" onclick="nextSlide()" aria-label="Nächster Screenshot">›</button>
         </div>
+
         <div class="slider-meta">
           <div class="slide-caption" id="slide-caption">Startansicht der Lebensrad App</div>
           <div class="dots" id="dots" aria-label="Screenshot Auswahl"></div>
@@ -498,22 +557,26 @@ p{
     <section class="card cta-card">
       <h2 id="cta-title">Starte deine persönliche Reflexion</h2>
       <p id="cta-text">Lade die Lebensrad App herunter und entdecke neue Klarheit über dein Leben.</p>
+
       <div class="hero-actions" style="justify-content:center">
-        <a id="store-link-bottom" class="store-badge" href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208" target="_blank" rel="noopener noreferrer" aria-label="Im App Store laden">
-          <svg class="badge-icon" viewBox="0 0 24 29" aria-hidden="true" fill="currentColor">
-            <path d="M19.12 15.22c.03 3.1 2.72 4.13 2.75 4.14-.02.07-.43 1.49-1.42 2.95-.86 1.26-1.75 2.51-3.16 2.54-1.38.03-1.82-.82-3.39-.82-1.57 0-2.06.79-3.37.85-1.36.05-2.4-1.36-3.26-2.61-1.76-2.54-3.1-7.18-1.3-10.3.89-1.55 2.49-2.53 4.22-2.56 1.32-.03 2.57.89 3.39.89.81 0 2.34-1.1 3.94-.94.67.03 2.56.27 3.77 2.04-.1.06-2.25 1.31-2.23 3.82Zm-2.63-8.38c.72-.87 1.21-2.08 1.07-3.28-1.03.04-2.28.68-3.02 1.55-.66.76-1.24 1.98-1.08 3.15 1.15.09 2.31-.58 3.03-1.42Z"/>
-          </svg>
-          <span class="badge-text">
-            <small id="store-bottom-small">Laden im</small>
-            <strong id="store-bottom-strong">App Store</strong>
-          </span>
+        <a
+          id="store-link-bottom"
+          class="app-store-badge"
+          href="https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Im App Store laden">
+          <img
+            id="store-badge-bottom"
+            src="assets/app-store-badge.svg"
+            alt="Download on the App Store">
         </a>
       </div>
     </section>
   </main>
 
   <div class="footer">
-    <div>© <span id="y"></span> Jürgen Zimmer</div>
+    <div>© <span id="y"></span> Jürgen Zimolong</div>
     <div><a id="privacy-link" href="datenschutz.html">Datenschutz</a></div>
   </div>
 </div>
@@ -524,19 +587,22 @@ document.getElementById("y").textContent = new Date().getFullYear();
 const translations = {
   de: {
     htmlLang: "de",
+    brand: "Lebensrad",
     title: "Lebensrad – Balance & Reflexion",
     description: "Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.",
     ogTitle: "Lebensrad – Balance & Reflexion",
     ogDescription: "Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.",
+    ogSiteName: "Lebensrad",
+    twitterTitle: "Lebensrad – Balance & Reflexion",
+    twitterDescription: "Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.",
+    schemaName: "Lebensrad",
+    schemaDescription: "Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.",
     eyebrowText: "Persönliche Reflexion als App",
     heroTitle: "Dein Leben.<br>Auf einen Blick.",
     heroText: "Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.",
-    storeTopSmall: "Laden im",
-    storeTopStrong: "App Store",
-    storeBottomSmall: "Laden im",
-    storeBottomStrong: "App Store",
-    storeNote: "Für iPhone, iPad, MacOS verfügbar",
+    storeNote: "Für iPhone, iPad, macOS verfügbar",
     storeAria: "Im App Store laden",
+    storeBadgeAlt: "Download on the App Store",
     heroImageAlt: "Lebensrad Übersicht",
     shotsTitle: "App Einblicke",
     shotsText: "Ein kurzer Blick in die App: klar, modern und auf persönliche Reflexion ausgerichtet.",
@@ -568,23 +634,27 @@ const translations = {
     step3Text: "Leite konkrete Schritte für mehr Balance in deinem Leben ab.",
     ctaTitle: "Starte deine persönliche Reflexion",
     ctaText: "Lade die Lebensrad App herunter und entdecke neue Klarheit über dein Leben.",
-    privacy: "Datenschutz"
+    privacy: "Datenschutz",
+    privacyHref: "datenschutz.html"
   },
   en: {
     htmlLang: "en",
+    brand: "Life Wheel",
     title: "Life Wheel – Balance & Reflection",
     description: "The Life Wheel app helps you reflect on the key areas of your life, see your balance more clearly, and take meaningful action.",
     ogTitle: "Life Wheel – Balance & Reflection",
     ogDescription: "Reflect on the key areas of your life and create more balance with the Life Wheel app.",
+    ogSiteName: "Life Wheel",
+    twitterTitle: "Life Wheel – Balance & Reflection",
+    twitterDescription: "Reflect on the key areas of your life and create more balance with the Life Wheel app.",
+    schemaName: "Life Wheel",
+    schemaDescription: "The Life Wheel app helps you reflect on the key areas of your life, see your balance more clearly, and take meaningful action.",
     eyebrowText: "Personal reflection in an app",
     heroTitle: "Your life.<br>At a glance.",
     heroText: "Reflect on the most important areas of your life and create more balance.",
-    storeTopSmall: "Download on the",
-    storeTopStrong: "App Store",
-    storeBottomSmall: "Download on the",
-    storeBottomStrong: "App Store",
-    storeNote: "Available for iPhone, iPad, MacOS",
+    storeNote: "Available for iPhone, iPad, macOS",
     storeAria: "Download on the App Store",
+    storeBadgeAlt: "Download on the App Store",
     heroImageAlt: "Life Wheel overview",
     shotsTitle: "App previews",
     shotsText: "A quick look into the app: clear, modern, and focused on personal reflection.",
@@ -616,7 +686,8 @@ const translations = {
     step3Text: "Define concrete steps to create more balance in your life.",
     ctaTitle: "Start your personal reflection",
     ctaText: "Download the Life Wheel app and gain new clarity about your life.",
-    privacy: "Privacy"
+    privacy: "Privacy",
+    privacyHref: "privacy.html"
   }
 };
 
@@ -652,9 +723,11 @@ function buildDots(){
 function updateSlideMeta(){
   const lang = currentLang();
   const t = translations[lang] || translations.de;
+
   document.getElementById("slider-image").src = screenshots[currentSlide];
   document.getElementById("slider-image").alt = t.screenshotAlt;
   document.getElementById("slide-caption").textContent = t.captions[currentSlide] || "";
+
   [...document.querySelectorAll(".dot")].forEach((dot, index) => {
     dot.classList.toggle("active", index === currentSlide);
     dot.setAttribute("aria-current", index === currentSlide ? "true" : "false");
@@ -700,24 +773,58 @@ function restartAutoPlay(){
   startAutoPlay();
 }
 
+function updateMetaTag(selector, content){
+  const el = document.querySelector(selector);
+  if(el) el.setAttribute("content", content);
+}
+
+function updateStructuredData(t){
+  const schema = {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name": t.schemaName,
+    "applicationCategory":"LifestyleApplication",
+    "operatingSystem":"iOS, iPadOS, macOS",
+    "description": t.schemaDescription,
+    "url":"https://zimjue.github.io/apps/lebensrad/",
+    "image":"https://zimjue.github.io/apps/lebensrad/assets/Lebensrad.png",
+    "downloadUrl":"https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208",
+    "publisher":{
+      "@type":"Person",
+      "name":"Jürgen Zimolong"
+    }
+  };
+
+  const script = document.querySelector('script[type="application/ld+json"]');
+  if(script) script.textContent = JSON.stringify(schema);
+}
+
 function setLang(lang){
   const t = translations[lang] || translations.de;
+
   document.documentElement.lang = t.htmlLang;
   document.title = t.title;
-  document.querySelector('meta[name="description"]').setAttribute('content', t.description);
-  document.querySelector('meta[property="og:title"]').setAttribute('content', t.ogTitle);
-  document.querySelector('meta[property="og:description"]').setAttribute('content', t.ogDescription);
 
+  updateMetaTag('meta[name="description"]', t.description);
+  updateMetaTag('meta[property="og:title"]', t.ogTitle);
+  updateMetaTag('meta[property="og:description"]', t.ogDescription);
+  updateMetaTag('meta[property="og:site_name"]', t.ogSiteName);
+  updateMetaTag('meta[name="twitter:title"]', t.twitterTitle);
+  updateMetaTag('meta[name="twitter:description"]', t.twitterDescription);
+
+  updateStructuredData(t);
+
+  document.getElementById("brand-title").textContent = t.brand;
   document.getElementById("eyebrow-text").textContent = t.eyebrowText;
   document.getElementById("hero-title").innerHTML = t.heroTitle;
   document.getElementById("hero-text").textContent = t.heroText;
-  document.getElementById("store-top-small").textContent = t.storeTopSmall;
-  document.getElementById("store-top-strong").textContent = t.storeTopStrong;
-  document.getElementById("store-bottom-small").textContent = t.storeBottomSmall;
-  document.getElementById("store-bottom-strong").textContent = t.storeBottomStrong;
   document.getElementById("store-note").textContent = t.storeNote;
+
   document.getElementById("store-link-top").setAttribute("aria-label", t.storeAria);
   document.getElementById("store-link-bottom").setAttribute("aria-label", t.storeAria);
+  document.getElementById("store-badge-top").alt = t.storeBadgeAlt;
+  document.getElementById("store-badge-bottom").alt = t.storeBadgeAlt;
+
   document.getElementById("hero-image").alt = t.heroImageAlt;
 
   document.getElementById("shots-title").textContent = t.shotsTitle;
@@ -748,7 +855,10 @@ function setLang(lang){
 
   document.getElementById("cta-title").textContent = t.ctaTitle;
   document.getElementById("cta-text").textContent = t.ctaText;
-  document.getElementById("privacy-link").textContent = t.privacy;
+
+  const privacyLink = document.getElementById("privacy-link");
+  privacyLink.textContent = t.privacy;
+  privacyLink.href = t.privacyHref;
 
   document.getElementById("btn-de").classList.toggle("active", lang === "de");
   document.getElementById("btn-en").classList.toggle("active", lang === "en");
@@ -758,19 +868,23 @@ function setLang(lang){
 }
 
 const slider = document.getElementById("slider");
+
 slider.addEventListener("mouseenter", stopAutoPlay);
 slider.addEventListener("mouseleave", startAutoPlay);
 slider.addEventListener("focusin", stopAutoPlay);
 slider.addEventListener("focusout", startAutoPlay);
+
 slider.addEventListener("keydown", (event) => {
   if(event.key === "ArrowRight") nextSlide();
   if(event.key === "ArrowLeft") prevSlide();
 });
 
 let touchStartX = 0;
+
 slider.addEventListener("touchstart", (event) => {
   touchStartX = event.changedTouches[0].clientX;
 }, {passive:true});
+
 slider.addEventListener("touchend", (event) => {
   const touchEndX = event.changedTouches[0].clientX;
   const delta = touchEndX - touchStartX;
