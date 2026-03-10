@@ -151,6 +151,10 @@ h1{
   color:var(--text);
 }
 
+.store-badge img{
+  height:46px;
+}
+
 footer{
   margin-top:60px;
   text-align:center;
@@ -164,162 +168,206 @@ footer{
 
 <div class="wrap">
 
-  <div class="topbar">
-    <div class="brand">Jürgen Zimmer Apps</div>
+<div class="topbar">
+<div class="brand">Jürgen Zimmer Apps</div>
 
-    <div class="lang-switch">
-      <button class="lang-btn active" onclick="setLang('de')" id="btn-de">DE</button>
-      <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
-    </div>
-  </div>
+<div class="lang-switch">
+<button class="lang-btn active" onclick="setLang('de')" id="btn-de">DE</button>
+<button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+</div>
+</div>
 
-  <header>
-    <h1 id="title">Meine Apps</h1>
+<header>
+<h1 id="title">Meine Apps</h1>
 
-    <div class="subtitle" id="subtitle">
-      Apps für persönliche Entwicklung, Reflexion und Fitness.
-    </div>
-  </header>
+<div class="subtitle" id="subtitle">
+Apps für persönliche Entwicklung, Reflexion und Fitness.
+</div>
+</header>
 
-  <div class="grid">
+<div class="grid">
 
-    <!-- Erfolgsjournal -->
-    <div class="card">
-      <img class="app-icon" src="erfolgsjournal/assets/Ruhe_am_See.png" alt="Erfolgsjournal Icon">
+<!-- Erfolgsjournal -->
+<div class="card">
 
-      <div class="app-title">Erfolgsjournal</div>
+<img class="app-icon" src="erfolgsjournal/assets/Ruhe_am_See.png">
 
-      <div class="app-desc"
-           data-de="Ein ruhiges Journal für tägliche Reflexion, Dankbarkeit und persönliche Entwicklung."
-           data-en="A calm journal for daily reflection, gratitude and personal growth.">
-        Ein ruhiges Journal für tägliche Reflexion, Dankbarkeit und persönliche Entwicklung.
-      </div>
+<div class="app-title">Erfolgsjournal</div>
 
-      <div class="buttons">
-        <a class="btn primary"
-           href="erfolgsjournal/"
-           id="open1">
-          App ansehen
-        </a>
+<div class="app-desc"
+data-de="Ein ruhiges Journal für tägliche Reflexion, Dankbarkeit und persönliche Entwicklung."
+data-en="A calm journal for daily reflection, gratitude and personal growth.">
+Ein ruhiges Journal für tägliche Reflexion, Dankbarkeit und persönliche Entwicklung.
+</div>
 
-        <a class="btn secondary"
-           href="erfolgsjournal/datenschutz.html"
-           id="privacy1">
-          Datenschutz
-        </a>
-      </div>
-    </div>
+<div class="buttons">
 
-    <!-- Lebensrad -->
-    <div class="card">
-      <img class="app-icon" src="lebensrad/assets/Lebensrad.png" alt="Lebensrad Icon">
+<a class="btn primary"
+href="erfolgsjournal/"
+id="open1">
+App ansehen
+</a>
 
-      <div class="app-title">Lebensrad</div>
+<a href="https://apps.apple.com"
+class="store-badge">
+<img src="assets/app-store-badge.svg">
+</a>
 
-      <div class="app-desc"
-           data-de="Reflektiere deine wichtigsten Lebensbereiche und bringe Schritt für Schritt mehr Balance in dein Leben."
-           data-en="Reflect on the most important areas of your life and bring more balance into it step by step.">
-        Reflektiere deine wichtigsten Lebensbereiche und bringe Schritt für Schritt mehr Balance in dein Leben.
-      </div>
+<a class="btn secondary"
+href="erfolgsjournal/datenschutz.html"
+id="privacy1">
+Datenschutz
+</a>
 
-      <div class="buttons">
-        <a class="btn primary"
-           href="lebensrad/"
-           id="open2">
-          App ansehen
-        </a>
+</div>
 
-        <a class="btn secondary"
-           href="cdatenschutz.html"
-           id="privacy2">
-          Datenschutz
-        </a>
-      </div>
-    </div>
+</div>
 
-    <!-- Fitness Goals -->
-    <div class="card">
-      <img class="app-icon" src="fitnessgoals/assets/Fitnessgoals.jpeg" alt="Fitness Goals Icon">
+<!-- Lebensrad -->
+<div class="card">
 
-      <div class="app-title">Fitness Goals</div>
+<img class="app-icon" src="lebensrad/assets/Lebensrad.png">
 
-      <div class="app-desc"
-           data-de="Setze klare Fitnessziele, verfolge deine Fortschritte und bleibe motiviert."
-           data-en="Set clear fitness goals, track your progress and stay motivated.">
-        Setze klare Fitnessziele, verfolge deine Fortschritte und bleibe motiviert.
-      </div>
+<div class="app-title">Lebensrad</div>
 
-      <div class="buttons">
-        <a class="btn primary"
-           href="fitnessgoals/"
-           id="open3">
-          App ansehen
-        </a>
+<div class="app-desc"
+data-de="Reflektiere deine wichtigsten Lebensbereiche und bringe Schritt für Schritt mehr Balance in dein Leben."
+data-en="Reflect on the most important areas of your life and bring more balance into it step by step.">
+Reflektiere deine wichtigsten Lebensbereiche und bringe Schritt für Schritt mehr Balance in dein Leben.
+</div>
 
-        <a class="btn secondary"
-           href="fitnessgoals/datenschutz.html"
-           id="privacy3">
-          Datenschutz
-        </a>
-      </div>
-    </div>
+<div class="buttons">
 
-  </div>
+<a class="btn primary"
+href="lebensrad/"
+id="open2">
+App ansehen
+</a>
 
-  <footer>
-    © <span id="year"></span> Jürgen Zimmer
-  </footer>
+<a href="https://apps.apple.com"
+class="store-badge">
+<img src="assets/app-store-badge.svg">
+</a>
+
+<a class="btn secondary"
+href="lebensrad/datenschutz.html"
+id="privacy2">
+Datenschutz
+</a>
+
+</div>
+
+</div>
+
+<!-- Fitness Goals -->
+<div class="card">
+
+<img class="app-icon" src="fitnessgoals/assets/Fitnessgoals.jpeg">
+
+<div class="app-title">Fitness Goals</div>
+
+<div class="app-desc"
+data-de="Setze klare Fitnessziele, verfolge deine Fortschritte und bleibe motiviert."
+data-en="Set clear fitness goals, track your progress and stay motivated.">
+Setze klare Fitnessziele, verfolge deine Fortschritte und bleibe motiviert.
+</div>
+
+<div class="buttons">
+
+<a class="btn primary"
+href="fitnessgoals/"
+id="open3">
+App ansehen
+</a>
+
+<a href="https://apps.apple.com"
+class="store-badge">
+<img src="assets/app-store-badge.svg">
+</a>
+
+<a class="btn secondary"
+href="fitnessgoals/datenschutz.html"
+id="privacy3">
+Datenschutz
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© <span id="year"></span> Jürgen Zimmer
+</footer>
 
 </div>
 
 <script>
+
 const translations = {
-  de: {
-    title: "Meine Apps",
-    subtitle: "Apps für persönliche Entwicklung, Reflexion und Fitness.",
-    privacy: "Datenschutz",
-    open: "App ansehen"
-  },
-  en: {
-    title: "My Apps",
-    subtitle: "Apps for personal growth, reflection and fitness.",
-    privacy: "Privacy",
-    open: "View App"
-  }
+
+de:{
+title:"Meine Apps",
+subtitle:"Apps für persönliche Entwicklung, Reflexion und Fitness.",
+privacy:"Datenschutz",
+open:"App ansehen"
+},
+
+en:{
+title:"My Apps",
+subtitle:"Apps for personal growth, reflection and fitness.",
+privacy:"Privacy",
+open:"View App"
+}
+
 };
 
 function setLang(lang){
-  document.documentElement.lang = lang;
-  document.getElementById("title").textContent = translations[lang].title;
-  document.getElementById("subtitle").textContent = translations[lang].subtitle;
 
-  document.querySelectorAll(".app-desc").forEach(el => {
-    el.textContent = el.getAttribute("data-" + lang);
-  });
+document.documentElement.lang=lang;
 
-  document.getElementById("privacy1").textContent = translations[lang].privacy;
-  document.getElementById("privacy2").textContent = translations[lang].privacy;
-  document.getElementById("privacy3").textContent = translations[lang].privacy;
+document.getElementById("title").textContent=translations[lang].title;
+document.getElementById("subtitle").textContent=translations[lang].subtitle;
 
-  document.getElementById("open1").textContent = translations[lang].open;
-  document.getElementById("open2").textContent = translations[lang].open;
-  document.getElementById("open3").textContent = translations[lang].open;
+document.querySelectorAll(".app-desc").forEach(el=>{
+el.textContent=el.getAttribute("data-"+lang);
+});
 
-  // Falls du später getrennte englische Privacy-Dateien willst, hier umschalten:
-  document.getElementById("privacy1").href = "erfolgsjournal/datenschutz.html";
-  document.getElementById("privacy2").href = "lebensrad/datenschutz.html";
-  document.getElementById("privacy3").href = "fitnessgoals/datenschutz.html";
+document.getElementById("privacy1").textContent=translations[lang].privacy;
+document.getElementById("privacy2").textContent=translations[lang].privacy;
+document.getElementById("privacy3").textContent=translations[lang].privacy;
 
-  document.getElementById("btn-de").classList.toggle("active", lang === "de");
-  document.getElementById("btn-en").classList.toggle("active", lang === "en");
+document.getElementById("open1").textContent=translations[lang].open;
+document.getElementById("open2").textContent=translations[lang].open;
+document.getElementById("open3").textContent=translations[lang].open;
 
-  localStorage.setItem("siteLang", lang);
+if(lang==="de"){
+
+document.getElementById("privacy1").href="erfolgsjournal/datenschutz.html";
+document.getElementById("privacy2").href="lebensrad/datenschutz.html";
+document.getElementById("privacy3").href="fitnessgoals/datenschutz.html";
+
+}else{
+
+document.getElementById("privacy1").href="erfolgsjournal/privacy.html";
+document.getElementById("privacy2").href="lebensrad/privacy.html";
+document.getElementById("privacy3").href="fitnessgoals/privacy.html";
+
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("btn-de").classList.toggle("active",lang==="de");
+document.getElementById("btn-en").classList.toggle("active",lang==="en");
 
-const savedLang = localStorage.getItem("siteLang") || "de";
+localStorage.setItem("siteLang",lang);
+
+}
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const savedLang=localStorage.getItem("siteLang")||"de";
 setLang(savedLang);
+
 </script>
 
 </body>
