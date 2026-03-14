@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -8,6 +9,7 @@
 <meta name="description" content="iOS Apps von Jürgen Zimmer – persönliche Entwicklung, Reflexion und Fitness.">
 
 <style>
+
 :root{
 --bg:#0b1220;
 --card:#121b2f;
@@ -33,6 +35,8 @@ margin:auto;
 padding:40px 20px 60px;
 }
 
+/* TOPBAR */
+
 .topbar{
 display:flex;
 justify-content:space-between;
@@ -47,29 +51,10 @@ font-size:18px;
 font-weight:600;
 }
 
-.lang-switch{
-display:flex;
-gap:10px;
-}
-
-.lang-btn{
-padding:8px 14px;
-border-radius:10px;
-border:1px solid rgba(255,255,255,.2);
-background:transparent;
-color:var(--text);
-cursor:pointer;
-font-weight:600;
-}
-
-.lang-btn.active{
-background:var(--accent);
-color:#000;
-border:none;
-}
+/* HEADER */
 
 header{
-margin-bottom:50px;
+margin-bottom:40px;
 text-align:center;
 }
 
@@ -85,9 +70,68 @@ max-width:740px;
 margin:auto;
 }
 
+/* DEVELOPER SECTION */
+
+.dev{
+text-align:center;
+margin:50px 0 70px;
+}
+
+.dev img{
+width:110px;
+border-radius:26px;
+margin-bottom:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.dev h2{
+margin:0 0 10px;
+font-size:28px;
+}
+
+.dev p{
+max-width:680px;
+margin:auto;
+color:var(--muted);
+line-height:1.6;
+font-size:17px;
+}
+
+/* FEATURED APP */
+
+.featured{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.15);
+border-radius:28px;
+padding:40px;
+text-align:center;
+margin-bottom:60px;
+}
+
+.featured img{
+width:120px;
+border-radius:28px;
+margin-bottom:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.featured h3{
+margin:0 0 10px;
+font-size:26px;
+}
+
+.featured p{
+color:var(--muted);
+max-width:640px;
+margin:auto;
+line-height:1.6;
+}
+
+/* GRID */
+
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:28px;
 }
 
@@ -101,18 +145,18 @@ transition:.2s;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
-min-height:360px;
+min-height:340px;
 }
 
 .card:hover{
-transform:translateY(-6px) scale(1.02);
+transform:translateY(-6px);
 box-shadow:0 25px 50px rgba(0,0,0,.4);
 }
 
 .app-icon{
-width:96px;
-height:96px;
-border-radius:22px;
+width:90px;
+height:90px;
+border-radius:20px;
 margin-bottom:18px;
 object-fit:cover;
 display:block;
@@ -122,7 +166,7 @@ box-shadow:0 6px 18px rgba(0,0,0,.35);
 }
 
 .app-title{
-font-size:22px;
+font-size:21px;
 font-weight:600;
 margin-bottom:10px;
 }
@@ -160,8 +204,10 @@ border:1px solid rgba(255,255,255,.2);
 color:var(--text);
 }
 
+/* FOOTER */
+
 footer{
-margin-top:60px;
+margin-top:70px;
 text-align:center;
 font-size:13px;
 color:var(--muted);
@@ -177,6 +223,13 @@ footer a:hover{
 text-decoration:underline;
 color:var(--text);
 }
+
+.made{
+margin-top:10px;
+opacity:.7;
+font-size:12px;
+}
+
 </style>
 </head>
 
@@ -186,111 +239,117 @@ color:var(--text);
 
 <div class="topbar">
 <div class="brand">Jürgen Zimmer Apps</div>
-
-<div class="lang-switch">
-<button class="lang-btn active" onclick="setLang('de')" id="btn-de">DE</button>
-<button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
-</div>
 </div>
 
 <header>
-<h1 id="title">Meine Apps</h1>
 
-<div class="subtitle" id="subtitle">
+<h1>Meine Apps</h1>
+
+<div class="subtitle">
 Apps für persönliche Entwicklung, Reflexion und Fitness.
 </div>
+
 </header>
+
+<!-- DEVELOPER -->
+
+<section class="dev">
+
+<img src="lebensrad/assets/lebensrad.png">
+
+<h2>Jürgen Zimmer</h2>
+
+<p>
+Indie iOS Developer aus München.  
+Ich entwickle Apps für persönliche Entwicklung, Gesundheit, Reflexion und Lernen.
+</p>
+
+</section>
+
+<!-- FEATURED APP -->
+
+<section class="featured">
+
+<img src="myvideospace/assets/myvideospace.png">
+
+<h3>MyVideoSpace</h3>
+
+<p>
+Organisiere YouTube Videos in Playlists und verfolge wie oft du Trainings-,
+Lern- oder Yogavideos anschaust.
+</p>
+
+<div class="buttons" style="margin-top:20px">
+
+<a class="btn primary" href="myvideospace/">App ansehen</a>
+<a class="btn secondary" href="myvideospace/datenschutz.html">Datenschutz</a>
+
+</div>
+
+</section>
+
+<!-- APP GRID -->
 
 <div class="grid">
 
 <!-- Erfolgsjournal -->
+
 <div class="card">
 
-<img class="app-icon" src="erfolgsjournal/assets/Ruhe_am_See.png" alt="Erfolgsjournal Icon">
+<img class="app-icon" src="erfolgsjournal/assets/Ruhe_am_See.png">
 
 <div class="app-title">Erfolgsjournal</div>
 
-<div class="app-desc"
-data-de="Ein ruhiges Journal für tägliche Reflexion, Dankbarkeit und persönliche Entwicklung."
-data-en="A calm journal for daily reflection, gratitude and personal growth.">
-Ein ruhiges Journal für tägliche Reflexion, Dankbarkeit und persönliche Entwicklung.
+<div class="app-desc">
+Ein ruhiges Journal für tägliche Reflexion und persönliche Entwicklung.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary"
-href="erfolgsjournal/"
-id="open1">
-App ansehen
-</a>
-
-<a class="btn secondary"
-href="erfolgsjournal/datenschutz.html"
-id="privacy1">
-Datenschutz
-</a>
+<a class="btn primary" href="erfolgsjournal/">App ansehen</a>
+<a class="btn secondary" href="erfolgsjournal/datenschutz.html">Datenschutz</a>
 
 </div>
 
 </div>
 
 <!-- Lebensrad -->
+
 <div class="card">
 
-<img class="app-icon" src="lebensrad/assets/lebensrad.png" alt="Lebensrad Icon">
+<img class="app-icon" src="lebensrad/assets/lebensrad.png">
 
 <div class="app-title">Lebensrad</div>
 
-<div class="app-desc"
-data-de="Reflektiere deine wichtigsten Lebensbereiche und bringe Schritt für Schritt mehr Balance in dein Leben."
-data-en="Reflect on the most important areas of your life and bring more balance into it step by step.">
-Reflektiere deine wichtigsten Lebensbereiche und bringe Schritt für Schritt mehr Balance in dein Leben.
+<div class="app-desc">
+Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary"
-href="lebensrad/"
-id="open2">
-App ansehen
-</a>
-
-<a class="btn secondary"
-href="lebensrad/datenschutz.html"
-id="privacy2">
-Datenschutz
-</a>
+<a class="btn primary" href="lebensrad/">App ansehen</a>
+<a class="btn secondary" href="lebensrad/datenschutz.html">Datenschutz</a>
 
 </div>
 
 </div>
 
-<!-- Fitness Goals -->
+<!-- FitnessGoals -->
+
 <div class="card">
 
-<img class="app-icon" src="fitnessgoals/assets/Fitnessgoals.jpeg" alt="Fitness Goals Icon">
+<img class="app-icon" src="fitnessgoals/assets/Fitnessgoals.jpeg">
 
 <div class="app-title">Fitness Goals</div>
 
-<div class="app-desc"
-data-de="Setze klare Fitnessziele, verfolge deine Fortschritte und bleibe motiviert."
-data-en="Set clear fitness goals, track your progress and stay motivated.">
-Setze klare Fitnessziele, verfolge deine Fortschritte und bleibe motiviert.
+<div class="app-desc">
+Setze klare Fitnessziele und verfolge deine Fortschritte.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary"
-href="fitnessgoals/"
-id="open3">
-App ansehen
-</a>
-
-<a class="btn secondary"
-href="fitnessgoals/datenschutz.html"
-id="privacy3">
-Datenschutz
-</a>
+<a class="btn primary" href="fitnessgoals/">App ansehen</a>
+<a class="btn secondary" href="fitnessgoals/datenschutz.html">Datenschutz</a>
 
 </div>
 
@@ -299,78 +358,23 @@ Datenschutz
 </div>
 
 <footer>
+
 © <span id="year"></span> Jürgen Zimmer<br>
-<a href="datenschutz.html" id="footerPrivacy">Datenschutz</a> ·
-<a href="support.html" id="supportLink">Support</a> ·
-<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">EULA</a>
+
+<a href="datenschutz.html">Datenschutz</a> ·
+<a href="support.html">Support</a> ·
+<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">EULA</a>
+
+<div class="made">
+Made with ❤️ in Munich
+</div>
+
 </footer>
 
 </div>
 
 <script>
-const translations = {
-de:{
-title:"Meine Apps",
-subtitle:"Apps für persönliche Entwicklung, Reflexion und Fitness.",
-privacy:"Datenschutz",
-open:"App ansehen",
-support:"Support",
-footerPrivacy:"Datenschutz"
-},
-en:{
-title:"My Apps",
-subtitle:"Apps for personal growth, reflection and fitness.",
-privacy:"Privacy",
-open:"View App",
-support:"Support",
-footerPrivacy:"Privacy"
-}
-};
-
-function setLang(lang){
-
-document.documentElement.lang=lang;
-
-document.getElementById("title").textContent=translations[lang].title;
-document.getElementById("subtitle").textContent=translations[lang].subtitle;
-
-document.querySelectorAll(".app-desc").forEach(el=>{
-el.textContent=el.getAttribute("data-"+lang);
-});
-
-document.getElementById("privacy1").textContent=translations[lang].privacy;
-document.getElementById("privacy2").textContent=translations[lang].privacy;
-document.getElementById("privacy3").textContent=translations[lang].privacy;
-
-document.getElementById("open1").textContent=translations[lang].open;
-document.getElementById("open2").textContent=translations[lang].open;
-document.getElementById("open3").textContent=translations[lang].open;
-
-document.getElementById("supportLink").textContent=translations[lang].support;
-document.getElementById("footerPrivacy").textContent=translations[lang].footerPrivacy;
-
-if(lang==="de"){
-document.getElementById("privacy1").href="erfolgsjournal/datenschutz.html";
-document.getElementById("privacy2").href="lebensrad/datenschutz.html";
-document.getElementById("privacy3").href="fitnessgoals/datenschutz.html";
-document.getElementById("footerPrivacy").href="datenschutz.html";
-}else{
-document.getElementById("privacy1").href="erfolgsjournal/privacy.html";
-document.getElementById("privacy2").href="lebensrad/privacy.html";
-document.getElementById("privacy3").href="fitnessgoals/privacy.html";
-document.getElementById("footerPrivacy").href="privacy.html";
-}
-
-document.getElementById("btn-de").classList.toggle("active",lang==="de");
-document.getElementById("btn-en").classList.toggle("active",lang==="en");
-
-localStorage.setItem("siteLang",lang);
-}
-
 document.getElementById("year").textContent=new Date().getFullYear();
-
-const savedLang=localStorage.getItem("siteLang")||"de";
-setLang(savedLang);
 </script>
 
 </body>
