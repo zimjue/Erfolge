@@ -29,7 +29,7 @@ color:var(--txt);
 .wrap{
 max-width:900px;
 margin:auto;
-padding:40px 20px 70px;
+padding:40px 20px 60px;
 }
 
 .topbar{
@@ -37,22 +37,40 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 margin-bottom:24px;
+gap:16px;
+flex-wrap:wrap;
 }
 
 .brand{
 font-weight:700;
 }
 
+.back-link{
+display:inline-block;
+padding:8px 14px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.15);
+background:rgba(255,255,255,.04);
+color:var(--txt);
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+}
+
+.back-link:hover{
+background:rgba(255,255,255,.08);
+}
+
 .card{
 background:rgba(255,255,255,.06);
 border:1px solid rgba(255,255,255,.12);
 border-radius:18px;
-padding:28px;
+padding:26px;
 }
 
 h1{
 font-size:30px;
-margin-bottom:14px;
+margin:0 0 12px;
 }
 
 h2{
@@ -60,18 +78,14 @@ margin-top:24px;
 font-size:18px;
 }
 
-p{
+p, li{
 color:var(--muted);
 line-height:1.7;
 font-size:15px;
 }
 
-.back{
-display:inline-block;
-margin-bottom:22px;
-font-weight:600;
-text-decoration:none;
-color:var(--accent);
+ul{
+padding-left:20px;
 }
 
 .footer{
@@ -97,12 +111,11 @@ a{color:var(--accent);text-decoration:none}
 <div class="wrap">
 
 <div class="topbar">
+<a class="back-link" href="index.html">← Back</a>
 <div class="brand">Life Wheel</div>
 </div>
 
 <div class="card">
-
-<a class="back" href="index.html">← Back</a>
 
 <h1>Privacy Policy – Life Wheel</h1>
 

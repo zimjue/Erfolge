@@ -37,10 +37,28 @@ body{
   justify-content:space-between;
   align-items:center;
   margin-bottom:24px;
+  gap:16px;
+  flex-wrap:wrap;
 }
 
 .brand{
   font-weight:700;
+}
+
+.back-link{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.04);
+  color:var(--txt);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+}
+
+.back-link:hover{
+  background:rgba(255,255,255,.08);
 }
 
 .card{
@@ -80,13 +98,6 @@ a{
   color:var(--accent);
   text-decoration:none;
 }
-
-.back-link{
-  display:inline-block;
-  margin-bottom:18px;
-  font-size:14px;
-  font-weight:600;
-}
 </style>
 </head>
 
@@ -95,12 +106,11 @@ a{
 <div class="wrap">
 
   <div class="topbar">
+    <a class="back-link" href="index.html">← Zurück</a>
     <div class="brand">Lebensrad</div>
   </div>
 
   <div class="card">
-
-    <a class="back-link" href="index.html">← Zurück</a>
 
     <h1>Datenschutz – Lebensrad</h1>
 
