@@ -494,7 +494,7 @@ p{
 
       <div class="hero-image">
         <div class="device-shell">
-          <img id="hero-image" src="" alt="myvideospace Startansicht" class="life-wheel" loading="eager">
+          <img id="hero-image" src="screenshots/screenshot1.png" alt="myvideospace Startansicht" class="life-wheel" loading="eager">
         </div>
       </div>
     </section>
@@ -504,16 +504,16 @@ p{
         <div>
           <h2 id="shots-title">App Einblicke</h2>
         </div>
-        <p id="shots-text">Vier Screenshots zeigen, wie myvideospace Home, Collections, Watchlist und den Player aufraeumt.</p>
+        <p id="shots-text">Vier Screenshots zeigen, wie myvideospace Home, Collections, Watchlist und den Player ordnet.</p>
       </div>
 
       <div class="slider-wrap" aria-label="Screenshot Karussell">
         <div class="slider" id="slider" tabindex="0">
           <button class="slide-btn prev" type="button" onclick="prevSlide()" aria-label="Vorheriger Screenshot">‹</button>
           <div class="slide-frame">
-            <img id="slider-image" src="" class="app-screenshot" alt="myvideospace Screenshot" loading="eager">
+            <img id="slider-image" src="screenshots/screenshot1.png" class="app-screenshot" alt="myvideospace Screenshot" loading="eager">
           </div>
-          <button class="slide-btn next" type="button" onclick="nextSlide()" aria-label="Naechster Screenshot">›</button>
+          <button class="slide-btn next" type="button" onclick="nextSlide()" aria-label="Nächster Screenshot">›</button>
         </div>
 
         <div class="slider-meta">
@@ -534,7 +534,7 @@ p{
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">✦</div>
           <strong id="f2-title">Watchlist</strong>
-          <p id="f2-text">Merke dir Videos fuer spaeter und verliere keine Highlights mehr aus dem Blick.</p>
+          <p id="f2-text">Merke dir Videos für später und verliere keine Highlights mehr aus dem Blick.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">↗</div>
@@ -546,7 +546,7 @@ p{
 
     <section class="card">
       <h2 id="why-title">Warum myvideospace?</h2>
-      <p id="why-text">Viele Video-Links, Listen und gespeicherte Inhalte verteilen sich ueber verschiedene Orte. myvideospace bringt alles in einen klaren, persoenlichen Space zurueck.</p>
+      <p id="why-text">Viele Video-Links, Listen und gespeicherte Inhalte verteilen sich über verschiedene Orte. myvideospace bringt alles in einen klaren, persönlichen Space zurück.</p>
     </section>
 
     <section class="card">
@@ -560,19 +560,19 @@ p{
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">2</div>
           <strong id="step2-title">2. Clever sortieren</strong>
-          <p id="step2-text">Ordne Inhalte in Collections, Watchlists und persoenliche Kategorien ein.</p>
+          <p id="step2-text">Ordne Inhalte in Collections, Watchlists und persönliche Kategorien ein.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon" aria-hidden="true">3</div>
           <strong id="step3-title">3. Schnell wiederfinden</strong>
-          <p id="step3-text">Starte direkt da, wo du zuletzt aufgehoert hast oder entdecke neue Empfehlungen.</p>
+          <p id="step3-text">Starte direkt da, wo du zuletzt aufgehört hast oder entdecke neue Empfehlungen.</p>
         </div>
       </div>
     </section>
 
     <section class="card cta-card">
       <h2 id="cta-title">Entdecke deinen Video-Space</h2>
-      <p id="cta-text">Sieh dir die App-Ansichten an und nutze myvideospace als zentrale Anlaufstelle fuer deine Lieblingsvideos.</p>
+      <p id="cta-text">Sieh dir die App-Ansichten an und nutze myvideospace als zentrale Anlaufstelle für deine Lieblingsvideos.</p>
 
       <div class="hero-actions" style="justify-content:center">
         <a id="store-link-bottom" class="app-cta" href="#shots">Zu den Screenshots</a>
@@ -593,63 +593,6 @@ p{
 <script>
 document.getElementById("y").textContent = new Date().getFullYear();
 
-function makeShot(title, subtitle, colorA, colorB, accent){
-  return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(`
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1800">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="${colorA}"/>
-      <stop offset="100%" stop-color="${colorB}"/>
-    </linearGradient>
-  </defs>
-  <rect width="900" height="1800" fill="url(#bg)"/>
-  <circle cx="740" cy="180" r="200" fill="${accent}" opacity=".16"/>
-  <circle cx="180" cy="1460" r="260" fill="${accent}" opacity=".1"/>
-  <rect x="54" y="58" width="792" height="1684" rx="62" fill="rgba(6,12,24,.72)" stroke="rgba(255,255,255,.14)"/>
-  <rect x="330" y="92" width="240" height="24" rx="12" fill="rgba(255,255,255,.18)"/>
-  <text x="104" y="190" fill="#F4F7FF" font-size="64" font-family="Arial, Helvetica, sans-serif" font-weight="700">${title}</text>
-  <text x="104" y="246" fill="rgba(244,247,255,.72)" font-size="30" font-family="Arial, Helvetica, sans-serif">${subtitle}</text>
-  <rect x="104" y="312" width="692" height="300" rx="34" fill="rgba(255,255,255,.08)"/>
-  <rect x="132" y="342" width="290" height="240" rx="26" fill="${accent}" opacity=".78"/>
-  <rect x="448" y="342" width="318" height="30" rx="15" fill="rgba(255,255,255,.88)"/>
-  <rect x="448" y="388" width="252" height="24" rx="12" fill="rgba(255,255,255,.36)"/>
-  <rect x="448" y="454" width="230" height="24" rx="12" fill="rgba(255,255,255,.36)"/>
-  <rect x="448" y="520" width="184" height="44" rx="22" fill="rgba(255,255,255,.16)"/>
-  <rect x="104" y="668" width="212" height="212" rx="28" fill="rgba(255,255,255,.08)"/>
-  <rect x="344" y="668" width="212" height="212" rx="28" fill="rgba(255,255,255,.08)"/>
-  <rect x="584" y="668" width="212" height="212" rx="28" fill="rgba(255,255,255,.08)"/>
-  <rect x="104" y="934" width="692" height="108" rx="24" fill="rgba(255,255,255,.08)"/>
-  <rect x="104" y="1080" width="692" height="108" rx="24" fill="rgba(255,255,255,.08)"/>
-  <rect x="104" y="1226" width="692" height="108" rx="24" fill="rgba(255,255,255,.08)"/>
-  <rect x="104" y="1508" width="692" height="92" rx="28" fill="rgba(255,255,255,.08)"/>
-  <circle cx="204" cy="1554" r="18" fill="${accent}"/>
-  <circle cx="450" cy="1554" r="18" fill="rgba(255,255,255,.34)"/>
-  <circle cx="696" cy="1554" r="18" fill="rgba(255,255,255,.34)"/>
-</svg>`);
-}
-
-const screenshots = [
-  makeShot("myvideospace", "Home Feed", "#0e1a31", "#1c345f", "#59f0c2"),
-  makeShot("Collections", "Organized by topic", "#0f1830", "#243b73", "#7cb8ff"),
-  makeShot("Watchlist", "Save for later", "#0c1730", "#164f63", "#4ae2c0"),
-  makeShot("Player", "Notes and recommendations", "#161430", "#46326b", "#9fc0ff")
-];
-
-const slideCaptions = {
-  de: [
-    "Home Feed mit Schnellzugriff und Continue Watching",
-    "Collections fuer Themen, Creator und Projekte",
-    "Watchlist fuer spaeter gespeicherte Videos",
-    "Player-Ansicht mit Empfehlungen und Uebersicht"
-  ],
-  en: [
-    "Home feed with quick access and continue watching",
-    "Collections for topics, creators and projects",
-    "Watchlist for saved videos",
-    "Player view with recommendations and overview"
-  ]
-};
-
 const translations = {
   de: {
     htmlLang: "de",
@@ -667,41 +610,51 @@ const translations = {
     eyebrowText: "Video-Sammlungen einfach organisiert",
     heroTitle: "Deine Videos.<br>Ein Ort.",
     heroText: "Mit myvideospace organisierst du Lieblingsvideos, Collections, Watchlists und zuletzt gesehene Inhalte in einer klaren, modernen App.",
-    topCta: "Screenshots ansehen",
     storeNote: "Collections, Watchlist und schneller Zugriff in einer App",
+    storeAria: "Zu den Screenshots",
+    storeTextTop: "Screenshots ansehen",
+    storeTextBottom: "Zu den Screenshots",
+    heroImageAlt: "myvideospace Startansicht",
     shotsTitle: "App Einblicke",
-    shotsText: "Vier Screenshots zeigen, wie myvideospace Home, Collections, Watchlist und den Player aufraeumt.",
+    shotsText: "Vier Screenshots zeigen, wie myvideospace Home, Collections, Watchlist und den Player ordnet.",
+    screenshotAlt: "myvideospace Screenshot",
+    slidePrevAria: "Vorheriger Screenshot",
+    slideNextAria: "Nächster Screenshot",
+    sliderAria: "Screenshot Karussell",
+    dotsAria: "Screenshot Auswahl",
+    captions: [
+      "Home Feed mit Schnellzugriff und Continue Watching",
+      "Collections für Themen, Creator und Projekte",
+      "Watchlist für später gespeicherte Videos",
+      "Player-Ansicht mit Empfehlungen und Übersicht"
+    ],
     featuresTitle: "Funktionen",
     f1Title: "Collections",
     f1Text: "Sortiere Videos nach Themen, Projekten, Creatorn oder Stimmung in klare Sammlungen.",
     f2Title: "Watchlist",
-    f2Text: "Merke dir Videos fuer spaeter und verliere keine Highlights mehr aus dem Blick.",
+    f2Text: "Merke dir Videos für später und verliere keine Highlights mehr aus dem Blick.",
     f3Title: "Quick Access",
     f3Text: "Finde zuletzt gesehene, gespeicherte und favorisierte Inhalte mit wenigen Taps wieder.",
     whyTitle: "Warum myvideospace?",
-    whyText: "Viele Video-Links, Listen und gespeicherte Inhalte verteilen sich ueber verschiedene Orte. myvideospace bringt alles in einen klaren, persoenlichen Space zurueck.",
+    whyText: "Viele Video-Links, Listen und gespeicherte Inhalte verteilen sich über verschiedene Orte. myvideospace bringt alles in einen klaren, persönlichen Space zurück.",
     howTitle: "So funktioniert es",
     step1Title: "1. Videos sammeln",
     step1Text: "Speichere Videos aus deinen Lieblingsquellen an einem zentralen Ort.",
     step2Title: "2. Clever sortieren",
-    step2Text: "Ordne Inhalte in Collections, Watchlists und persoenliche Kategorien ein.",
+    step2Text: "Ordne Inhalte in Collections, Watchlists und persönliche Kategorien ein.",
     step3Title: "3. Schnell wiederfinden",
-    step3Text: "Starte direkt da, wo du zuletzt aufgehoert hast oder entdecke neue Empfehlungen.",
+    step3Text: "Starte direkt da, wo du zuletzt aufgehört hast oder entdecke neue Empfehlungen.",
     ctaTitle: "Entdecke deinen Video-Space",
-    ctaText: "Sieh dir die App-Ansichten an und nutze myvideospace als zentrale Anlaufstelle fuer deine Lieblingsvideos.",
-    bottomCta: "Zu den Screenshots",
+    ctaText: "Sieh dir die App-Ansichten an und nutze myvideospace als zentrale Anlaufstelle für deine Lieblingsvideos.",
     privacy: "Datenschutz",
+    privacyHref: "privacy.html",
     support: "Support",
-    terms: "Nutzungsbedingungen",
-    prevAria: "Vorheriger Screenshot",
-    nextAria: "Naechster Screenshot",
-    sliderAria: "Screenshot Karussell",
-    dotsAria: "Screenshot Auswahl"
+    terms: "Nutzungsbedingungen"
   },
   en: {
     htmlLang: "en",
     brand: "myvideospace",
-    back: "← All apps",
+    back: "← All Apps",
     title: "myvideospace - Video organizer for your favorite moments",
     description: "myvideospace organizes your favorite videos with smart collections, watchlists, quick access and a clean, modern interface.",
     ogTitle: "myvideospace - Video organizer for your favorite moments",
@@ -714,10 +667,24 @@ const translations = {
     eyebrowText: "Your video collections, neatly organized",
     heroTitle: "Your videos.<br>One place.",
     heroText: "myvideospace organizes favorite videos, collections, watchlists and recently viewed content in one clean, modern app.",
-    topCta: "See screenshots",
     storeNote: "Collections, watchlist and quick access in one app",
+    storeAria: "Jump to screenshots",
+    storeTextTop: "See screenshots",
+    storeTextBottom: "Jump to screenshots",
+    heroImageAlt: "myvideospace home view",
     shotsTitle: "App previews",
     shotsText: "Four screenshots show how myvideospace organizes home, collections, watchlist and player views.",
+    screenshotAlt: "myvideospace screenshot",
+    slidePrevAria: "Previous screenshot",
+    slideNextAria: "Next screenshot",
+    sliderAria: "Screenshot carousel",
+    dotsAria: "Screenshot selection",
+    captions: [
+      "Home feed with quick access and continue watching",
+      "Collections for topics, creators and projects",
+      "Watchlist for saved videos",
+      "Player view with recommendations and overview"
+    ],
     featuresTitle: "Features",
     f1Title: "Collections",
     f1Text: "Sort videos by topic, project, creator or mood in simple collections.",
@@ -736,71 +703,117 @@ const translations = {
     step3Text: "Resume where you left off or discover fresh recommendations.",
     ctaTitle: "Discover your video space",
     ctaText: "Explore the app views and use myvideospace as the central place for your favorite videos.",
-    bottomCta: "Jump to screenshots",
     privacy: "Privacy",
+    privacyHref: "privacy.html",
     support: "Support",
-    terms: "Terms",
-    prevAria: "Previous screenshot",
-    nextAria: "Next screenshot",
-    sliderAria: "Screenshot carousel",
-    dotsAria: "Screenshot selector"
+    terms: "Terms"
   }
 };
 
+const screenshots = [
+  "screenshots/screenshot1.png",
+  "screenshots/screenshot2.png",
+  "screenshots/screenshot3.png",
+  "screenshots/screenshot4.png"
+];
+
 let currentSlide = 0;
+let autoPlay = null;
 
-function updateMeta(name, content){
-  const el = document.querySelector(name);
-  if(el) el.setAttribute("content", content);
+function currentLang(){
+  const savedLang = localStorage.getItem("siteLang");
+  if(savedLang === "de" || savedLang === "en") return savedLang;
+  const browserLang = navigator.language || navigator.userLanguage || "de";
+  return browserLang.toLowerCase().startsWith("de") ? "de" : "en";
 }
 
-function updateSchema(t){
-  const schema = {
-    "@context":"https://schema.org",
-    "@type":"SoftwareApplication",
-    "name":t.schemaName,
-    "applicationCategory":"EntertainmentApplication",
-    "operatingSystem":"iOS, Android, Web",
-    "description":t.schemaDescription,
-    "publisher":{"@type":"Organization","name":"myvideospace"}
-  };
-  document.getElementById("schema-data").textContent = JSON.stringify(schema);
-}
-
-function renderDots(){
+function buildDots(){
   const dots = document.getElementById("dots");
   dots.innerHTML = "";
   screenshots.forEach((_, index) => {
-    const dot = document.createElement("button");
-    dot.className = "dot" + (index === currentSlide ? " active" : "");
-    dot.type = "button";
-    dot.setAttribute("aria-label", `Screenshot ${index + 1}`);
-    dot.addEventListener("click", () => goToSlide(index));
-    dots.appendChild(dot);
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "dot" + (index === currentSlide ? " active" : "");
+    button.setAttribute("aria-label", `Screenshot ${index + 1}`);
+    button.onclick = () => goToSlide(index);
+    dots.appendChild(button);
   });
 }
 
-function renderSlide(lang){
-  const activeLang = lang === "en" ? "en" : "de";
+function updateSlideMeta(){
+  const lang = currentLang();
+  const t = translations[lang] || translations.de;
+
   document.getElementById("slider-image").src = screenshots[currentSlide];
-  document.getElementById("hero-image").src = screenshots[0];
-  document.getElementById("slide-caption").textContent = slideCaptions[activeLang][currentSlide];
-  renderDots();
+  document.getElementById("slider-image").alt = t.screenshotAlt;
+  document.getElementById("slide-caption").textContent = t.captions[currentSlide] || "";
+
+  [...document.querySelectorAll(".dot")].forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentSlide);
+    dot.setAttribute("aria-current", index === currentSlide ? "true" : "false");
+  });
 }
 
-function nextSlide(){
-  currentSlide = (currentSlide + 1) % screenshots.length;
-  renderSlide(document.documentElement.lang);
-}
-
-function prevSlide(){
-  currentSlide = (currentSlide - 1 + screenshots.length) % screenshots.length;
-  renderSlide(document.documentElement.lang);
+function showSlide(){
+  buildDots();
+  updateSlideMeta();
 }
 
 function goToSlide(index){
   currentSlide = index;
-  renderSlide(document.documentElement.lang);
+  updateSlideMeta();
+  restartAutoPlay();
+}
+
+function nextSlide(){
+  currentSlide = (currentSlide + 1) % screenshots.length;
+  updateSlideMeta();
+  restartAutoPlay();
+}
+
+function prevSlide(){
+  currentSlide = (currentSlide - 1 + screenshots.length) % screenshots.length;
+  updateSlideMeta();
+  restartAutoPlay();
+}
+
+function startAutoPlay(){
+  stopAutoPlay();
+  autoPlay = setInterval(() => {
+    currentSlide = (currentSlide + 1) % screenshots.length;
+    updateSlideMeta();
+  }, 4500);
+}
+
+function stopAutoPlay(){
+  if(autoPlay) clearInterval(autoPlay);
+}
+
+function restartAutoPlay(){
+  startAutoPlay();
+}
+
+function updateMetaTag(selector, content){
+  const el = document.querySelector(selector);
+  if(el) el.setAttribute("content", content);
+}
+
+function updateStructuredData(t){
+  const schema = {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name": t.schemaName,
+    "applicationCategory":"EntertainmentApplication",
+    "operatingSystem":"iOS, Android, Web",
+    "description": t.schemaDescription,
+    "publisher":{
+      "@type":"Organization",
+      "name":"myvideospace"
+    }
+  };
+
+  const script = document.querySelector('script[type="application/ld+json"]');
+  if(script) script.textContent = JSON.stringify(schema);
 }
 
 function setLang(lang){
@@ -808,23 +821,36 @@ function setLang(lang){
 
   document.documentElement.lang = t.htmlLang;
   document.title = t.title;
-  updateMeta('meta[name="description"]', t.description);
-  updateMeta('meta[property="og:title"]', t.ogTitle);
-  updateMeta('meta[property="og:description"]', t.ogDescription);
-  updateMeta('meta[property="og:site_name"]', t.ogSiteName);
-  updateMeta('meta[name="twitter:title"]', t.twitterTitle);
-  updateMeta('meta[name="twitter:description"]', t.twitterDescription);
-  updateSchema(t);
+
+  updateMetaTag('meta[name="description"]', t.description);
+  updateMetaTag('meta[property="og:title"]', t.ogTitle);
+  updateMetaTag('meta[property="og:description"]', t.ogDescription);
+  updateMetaTag('meta[property="og:site_name"]', t.ogSiteName);
+  updateMetaTag('meta[name="twitter:title"]', t.twitterTitle);
+  updateMetaTag('meta[name="twitter:description"]', t.twitterDescription);
+
+  updateStructuredData(t);
 
   document.getElementById("brand-title").textContent = t.brand;
   document.getElementById("back-link").textContent = t.back;
   document.getElementById("eyebrow-text").textContent = t.eyebrowText;
   document.getElementById("hero-title").innerHTML = t.heroTitle;
   document.getElementById("hero-text").textContent = t.heroText;
-  document.getElementById("store-link-top").textContent = t.topCta;
   document.getElementById("store-note").textContent = t.storeNote;
+
+  document.getElementById("store-link-top").textContent = t.storeTextTop;
+  document.getElementById("store-link-bottom").textContent = t.storeTextBottom;
+  document.getElementById("store-link-top").setAttribute("aria-label", t.storeAria);
+  document.getElementById("store-link-bottom").setAttribute("aria-label", t.storeAria);
+  document.getElementById("hero-image").alt = t.heroImageAlt;
+
   document.getElementById("shots-title").textContent = t.shotsTitle;
   document.getElementById("shots-text").textContent = t.shotsText;
+  document.getElementById("slider").setAttribute("aria-label", t.sliderAria);
+  document.getElementById("dots").setAttribute("aria-label", t.dotsAria);
+  document.querySelector(".prev").setAttribute("aria-label", t.slidePrevAria);
+  document.querySelector(".next").setAttribute("aria-label", t.slideNextAria);
+
   document.getElementById("features-title").textContent = t.featuresTitle;
   document.getElementById("f1-title").textContent = t.f1Title;
   document.getElementById("f1-text").textContent = t.f1Text;
@@ -832,8 +858,10 @@ function setLang(lang){
   document.getElementById("f2-text").textContent = t.f2Text;
   document.getElementById("f3-title").textContent = t.f3Title;
   document.getElementById("f3-text").textContent = t.f3Text;
+
   document.getElementById("why-title").textContent = t.whyTitle;
   document.getElementById("why-text").textContent = t.whyText;
+
   document.getElementById("how-title").textContent = t.howTitle;
   document.getElementById("step1-title").textContent = t.step1Title;
   document.getElementById("step1-text").textContent = t.step1Text;
@@ -841,32 +869,54 @@ function setLang(lang){
   document.getElementById("step2-text").textContent = t.step2Text;
   document.getElementById("step3-title").textContent = t.step3Title;
   document.getElementById("step3-text").textContent = t.step3Text;
+
   document.getElementById("cta-title").textContent = t.ctaTitle;
   document.getElementById("cta-text").textContent = t.ctaText;
-  document.getElementById("store-link-bottom").textContent = t.bottomCta;
-  document.getElementById("privacy-link").textContent = t.privacy;
+
+  const privacyLink = document.getElementById("privacy-link");
+  privacyLink.textContent = t.privacy;
+  privacyLink.href = t.privacyHref;
+
   document.getElementById("support-link").textContent = t.support;
   document.getElementById("eula-link").textContent = t.terms;
-  document.getElementById("slider").setAttribute("aria-label", t.sliderAria);
-  document.getElementById("dots").setAttribute("aria-label", t.dotsAria);
-  document.querySelector(".prev").setAttribute("aria-label", t.prevAria);
-  document.querySelector(".next").setAttribute("aria-label", t.nextAria);
 
   document.getElementById("btn-de").classList.toggle("active", lang === "de");
   document.getElementById("btn-en").classList.toggle("active", lang === "en");
 
-  renderSlide(lang);
   localStorage.setItem("siteLang", lang);
+  updateSlideMeta();
 }
 
-function detectLanguage(){
-  const savedLang = localStorage.getItem("siteLang");
-  if(savedLang === "de" || savedLang === "en") return savedLang;
-  const browserLang = navigator.language || "en";
-  return browserLang.startsWith("de") ? "de" : "en";
-}
+const slider = document.getElementById("slider");
 
-setLang(detectLanguage());
+slider.addEventListener("mouseenter", stopAutoPlay);
+slider.addEventListener("mouseleave", startAutoPlay);
+slider.addEventListener("focusin", stopAutoPlay);
+slider.addEventListener("focusout", startAutoPlay);
+
+slider.addEventListener("keydown", (event) => {
+  if(event.key === "ArrowRight") nextSlide();
+  if(event.key === "ArrowLeft") prevSlide();
+});
+
+let touchStartX = 0;
+
+slider.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].clientX;
+}, {passive:true});
+
+slider.addEventListener("touchend", (event) => {
+  const touchEndX = event.changedTouches[0].clientX;
+  const delta = touchEndX - touchStartX;
+  if(Math.abs(delta) > 40){
+    if(delta < 0) nextSlide();
+    else prevSlide();
+  }
+}, {passive:true});
+
+showSlide();
+setLang(currentLang());
+startAutoPlay();
 </script>
 </body>
 </html>
