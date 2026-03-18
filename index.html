@@ -70,6 +70,36 @@ max-width:740px;
 margin:auto;
 }
 
+.trust{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:16px;
+margin:34px 0 54px;
+}
+
+.trust-item{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.12);
+border-radius:18px;
+padding:18px 16px;
+text-align:left;
+}
+
+.trust-label{
+font-size:12px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(--accent);
+margin-bottom:8px;
+font-weight:700;
+}
+
+.trust-copy{
+color:var(--muted);
+font-size:14px;
+line-height:1.55;
+}
+
 /* DEVELOPER SECTION */
 
 .dev{
@@ -118,6 +148,22 @@ box-shadow:0 10px 30px rgba(0,0,0,.5);
 .featured h3{
 margin:0 0 10px;
 font-size:26px;
+}
+
+.featured-tag{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 12px;
+margin-bottom:16px;
+border-radius:999px;
+background:rgba(102,227,255,.1);
+border:1px solid rgba(102,227,255,.22);
+color:var(--accent);
+font-size:13px;
+font-weight:700;
+letter-spacing:.04em;
+text-transform:uppercase;
 }
 
 .featured p{
@@ -169,6 +215,22 @@ box-shadow:0 6px 18px rgba(0,0,0,.35);
 font-size:21px;
 font-weight:600;
 margin-bottom:10px;
+}
+
+.app-meta{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:6px 10px;
+border-radius:999px;
+margin-bottom:14px;
+font-size:12px;
+font-weight:700;
+letter-spacing:.04em;
+text-transform:uppercase;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.1);
+color:var(--accent);
 }
 
 .app-desc{
@@ -230,6 +292,12 @@ opacity:.7;
 font-size:12px;
 }
 
+@media (max-width:760px){
+.trust{
+grid-template-columns:1fr;
+}
+}
+
 </style>
 </head>
 
@@ -246,10 +314,29 @@ font-size:12px;
 <h1>Meine Apps</h1>
 
 <div class="subtitle">
-Apps für persönliche Entwicklung, Reflexion, Fitness und Finanzen.
+Apps fuer persoenliche Entwicklung, Reflexion, Fitness, Makro und Lernen.
 </div>
 
 </header>
+
+<section class="trust">
+
+<div class="trust-item">
+<div class="trust-label">Fokus</div>
+<div class="trust-copy">Klar positionierte Apps mit ruhiger UX statt ueberladener Features.</div>
+</div>
+
+<div class="trust-item">
+<div class="trust-label">Plattform</div>
+<div class="trust-copy">Entwickelt fuer Apple-Nutzer mit starkem Fokus auf iPhone und iPad.</div>
+</div>
+
+<div class="trust-item">
+<div class="trust-label">Prinzip</div>
+<div class="trust-copy">Datenschutzfreundliche Produkte von einem Indie Developer aus Muenchen.</div>
+</div>
+
+</section>
 
 <!-- DEVELOPER -->
 
@@ -272,11 +359,13 @@ Ich entwickle Apps für persönliche Entwicklung, Gesundheit, Reflexion, Lernen 
 
 <img src="liquiditypulse/assets/liquiditypulse.png" alt="LiquidityPulse App Icon">
 
+<div class="featured-tag">Featured App</div>
+
 <h3>LiquidityPulse</h3>
 
 <p>
 Verfolge globale Liquiditaet, Marktstress und wichtige Makro-Signale in einer
-klaren, modernen Uebersicht.
+klaren App mit echtem Analyse- und Monetarisierungspotenzial.
 </p>
 
 <div class="buttons" style="margin-top:20px">
@@ -300,15 +389,41 @@ klaren, modernen Uebersicht.
 
 <div class="app-title">LiquidityPulse</div>
 
+<div class="app-meta">Makro</div>
+
 <div class="app-desc">
-Eine Makro-App, mit der du Liquiditaet, Marktregime und historische
-Zusammenhaenge schneller einordnen kannst.
+Analysiere Liquiditaet, Marktregime und historische Zusammenhaenge in einer
+kompakten Makro-App.
 </div>
 
 <div class="buttons">
 
 <a class="btn primary" href="liquiditypulse/">App ansehen</a>
 <a class="btn secondary" href="liquiditypulse/datenschutz.html">Datenschutz</a>
+
+</div>
+
+</div>
+
+<!-- MyVideoSpace -->
+
+<div class="card">
+
+<img class="app-icon" src="myvideospace/assets/myvideospace.png" alt="MyVideoSpace App Icon">
+
+<div class="app-title">MyVideoSpace</div>
+
+<div class="app-meta">Video</div>
+
+<div class="app-desc">
+Organisiere Videos, Sammlungen und Watchlists in einer klaren Bibliothek mit
+schnellem Zugriff.
+</div>
+
+<div class="buttons">
+
+<a class="btn primary" href="myvideospace/">App ansehen</a>
+<a class="btn secondary" href="myvideospace/datenschutz.html">Datenschutz</a>
 
 </div>
 
@@ -322,8 +437,10 @@ Zusammenhaenge schneller einordnen kannst.
 
 <div class="app-title">Erfolgsjournal</div>
 
+<div class="app-meta">Reflexion</div>
+
 <div class="app-desc">
-Ein ruhiges Journal für tägliche Reflexion und persönliche Entwicklung.
+Ein ruhiges Journal fuer taegliche Reflexion, Klarheit und persoenliche Entwicklung.
 </div>
 
 <div class="buttons">
@@ -343,8 +460,10 @@ Ein ruhiges Journal für tägliche Reflexion und persönliche Entwicklung.
 
 <div class="app-title">Lebensrad</div>
 
+<div class="app-meta">Balance</div>
+
 <div class="app-desc">
-Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.
+Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in deinen Alltag.
 </div>
 
 <div class="buttons">
@@ -362,10 +481,12 @@ Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leb
 
 <img class="app-icon" src="fitnessgoals/assets/Fitnessgoals.jpeg">
 
-<div class="app-title">Fitness Goals</div>
+<div class="app-title">FitnessGoals</div>
+
+<div class="app-meta">Fitness</div>
 
 <div class="app-desc">
-Setze klare Fitnessziele und verfolge deine Fortschritte.
+Setze klare Fitnessziele und verfolge Fortschritte mit Fokus und Struktur.
 </div>
 
 <div class="buttons">
@@ -374,28 +495,6 @@ Setze klare Fitnessziele und verfolge deine Fortschritte.
 <a class="btn secondary" href="fitnessgoals/datenschutz.html">Datenschutz</a>
 
 </div>
-
-<!-- MyVideoSpace -->
-
-<div class="card">
-
-<img class="app-icon" src="myvideospace/assets/myvideospace.png" alt="MyVideoSpace App Icon">
-
-<div class="app-title">MyVideoSpace</div>
-
-<div class="app-desc">
-Organisiere Videos, Sammlungen und Watchlists in einer klaren, modernen Uebersicht.
-</div>
-
-<div class="buttons">
-
-<a class="btn primary" href="myvideospace/">App ansehen</a>
-<a class="btn secondary" href="myvideospace/datenschutz.html">Datenschutz</a>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
