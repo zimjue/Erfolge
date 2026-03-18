@@ -181,17 +181,15 @@ p{
   margin-top:22px;
 }
 
-.app-cta{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:52px;
-  padding:14px 22px;
-  border-radius:14px;
-  background:linear-gradient(135deg,var(--accent),#83ffd9);
-  color:#04121e;
-  text-decoration:none;
-  font-weight:800;
+.app-store-badge{
+  display:inline-block;
+  line-height:0;
+}
+
+.app-store-badge img{
+  height:52px;
+  width:auto;
+  display:block;
 }
 
 .store-note{
@@ -427,7 +425,7 @@ p{
 .lang-btn:focus-visible,
 .slide-btn:focus-visible,
 .dot:focus-visible,
-.app-cta:focus-visible,
+.app-store-badge:focus-visible,
 .back-btn:focus-visible{
   outline:2px solid var(--accent);
   outline-offset:3px;
@@ -464,6 +462,7 @@ p{
   }
   .prev{left:10px}
   .next{right:10px}
+  .app-store-badge img{height:48px}
 }
 </style>
 </head>
@@ -493,7 +492,18 @@ p{
         <p id="hero-text">Mit MyVideoSpace organisierst du Lieblingsvideos, Collections, Watchlists und zuletzt gesehene Inhalte in einer klaren, modernen App.</p>
 
         <div class="hero-actions">
-          <a id="store-link-top" class="app-cta" href="#shots">Zu den Screenshots</a>
+          <a
+            id="store-link-top"
+            class="app-store-badge"
+            href="https://apps.apple.com/de/app/myvideospace/id6760615103"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Im App Store laden">
+            <img
+              id="store-badge-top"
+              src="../assets/app-store-badge.svg"
+              alt="Download on the App Store">
+          </a>
           <span class="store-note" id="store-note">Collections, Watchlist und schneller Zugriff in einer App</span>
         </div>
       </div>
@@ -581,7 +591,18 @@ p{
       <p id="cta-text">Sieh dir die App-Ansichten an und nutze MyVideoSpace als zentrale Anlaufstelle für deine Lieblingsvideos.</p>
 
       <div class="hero-actions" style="justify-content:center">
-        <a id="store-link-bottom" class="app-cta" href="#shots">Zu den Screenshots</a>
+        <a
+          id="store-link-bottom"
+          class="app-store-badge"
+          href="https://apps.apple.com/de/app/myvideospace/id6760615103"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Im App Store laden">
+          <img
+            id="store-badge-bottom"
+            src="../assets/app-store-badge.svg"
+            alt="Download on the App Store">
+        </a>
       </div>
     </section>
   </main>
@@ -613,13 +634,12 @@ const translations = {
     twitterDescription: "Organize videos, build collections and keep your watchlist in one clean space.",
     schemaName: "MyVideoSpace",
     schemaDescription: "MyVideoSpace organizes your favorite videos with smart collections, watchlists, quick access and a clean, modern interface.",
-    eyebrowText: "Video-Sammlungen einfach organisiert",
-    heroTitle: "Deine Videos.<br>Ein Ort.",
-    heroText: "Mit MyVideoSpace organisierst du Lieblingsvideos, Collections, Watchlists und zuletzt gesehene Inhalte in einer klaren, modernen App.",
-    storeNote: "Collections, Watchlist und schneller Zugriff in einer App",
-    storeAria: "Zu den Screenshots",
-    storeTextTop: "Zu den Screenshots",
-    storeTextBottom: "Zu den Screenshots",
+    eyebrowText: "Jetzt im App Store",
+    heroTitle: "Deine Videos.<br>Klar organisiert.",
+    heroText: "MyVideoSpace bringt Lieblingsvideos, Collections, Watchlist und zuletzt gesehene Inhalte in eine moderne App, die Ordnung schafft und dir schnellen Zugriff gibt.",
+    storeNote: "Jetzt im App Store fuer iPhone und iPad",
+    storeAria: "Im App Store laden",
+    storeBadgeAlt: "Download on the App Store",
     heroImageAlt: "MyVideoSpace Startansicht",
     shotsTitle: "App Einblicke",
     shotsText: "Vier Screenshots zeigen Homescreen, Dashboard, Einstellungen mit Pro Features und Infos zur App.",
@@ -642,7 +662,7 @@ const translations = {
     f3Title: "Quick Access",
     f3Text: "Finde zuletzt gesehene, gespeicherte und favorisierte Inhalte mit wenigen Taps wieder.",
     whyTitle: "Warum MyVideoSpace?",
-    whyText: "Viele Video-Links, Listen und gespeicherte Inhalte verteilen sich über verschiedene Orte. MyVideoSpace bringt alles in einen klaren, persönlichen Space zurück.",
+    whyText: "Viele Video-Links, Listen und gespeicherte Inhalte verteilen sich ueber verschiedene Orte. MyVideoSpace bringt alles in einen klaren, persoenlichen Space zurueck, damit du schneller findest, was du wirklich sehen willst.",
     howTitle: "So funktioniert es",
     step1Title: "1. Videos sammeln",
     step1Text: "Speichere Videos aus deinen Lieblingsquellen an einem zentralen Ort.",
@@ -650,8 +670,8 @@ const translations = {
     step2Text: "Ordne Inhalte in Collections, Watchlists und persönliche Kategorien ein.",
     step3Title: "3. Schnell wiederfinden",
     step3Text: "Starte direkt da, wo du zuletzt aufgehört hast oder entdecke neue Empfehlungen.",
-    ctaTitle: "Entdecke deinen Video-Space",
-    ctaText: "Sieh dir die App-Ansichten an und nutze MyVideoSpace als zentrale Anlaufstelle für deine Lieblingsvideos.",
+    ctaTitle: "Jetzt MyVideoSpace laden",
+    ctaText: "Hol dir die App im App Store und mache deine Lieblingsvideos an einem Ort schnell wiederfindbar.",
     privacy: "Datenschutz",
     privacyHref: "datenschutz.html",
     support: "Support",
@@ -670,13 +690,12 @@ const translations = {
     twitterDescription: "Organize videos, build collections and keep your watchlist in one clean space.",
     schemaName: "MyVideoSpace",
     schemaDescription: "MyVideoSpace organizes your favorite videos with smart collections, watchlists, quick access and a clean, modern interface.",
-    eyebrowText: "Your video collections, neatly organized",
-    heroTitle: "Your videos.<br>One place.",
-    heroText: "MyVideoSpace organizes favorite videos, collections, watchlists and recently viewed content in one clean, modern app.",
-    storeNote: "Collections, watchlist and quick access in one app",
-    storeAria: "Jump to screenshots",
-    storeTextTop: "See screenshots",
-    storeTextBottom: "Jump to screenshots",
+    eyebrowText: "Now on the App Store",
+    heroTitle: "Your videos.<br>Clearly organized.",
+    heroText: "MyVideoSpace brings favorite videos, collections, your watchlist, and recently viewed content into one modern app built for clarity and quick access.",
+    storeNote: "Now on the App Store for iPhone and iPad",
+    storeAria: "Download on the App Store",
+    storeBadgeAlt: "Download on the App Store",
     heroImageAlt: "MyVideoSpace home view",
     shotsTitle: "App previews",
     shotsText: "Four screenshots show the home screen, dashboard, settings with pro features, and app info.",
@@ -699,7 +718,7 @@ const translations = {
     f3Title: "Quick Access",
     f3Text: "Jump back into recent, saved and favorite content in just a few taps.",
     whyTitle: "Why MyVideoSpace?",
-    whyText: "Video links, lists and saved content often end up spread across different places. MyVideoSpace brings them back into one clean personal space.",
+    whyText: "Video links, lists, and saved content often end up scattered across different places. MyVideoSpace brings them back into one clean personal space so you can find what matters faster.",
     howTitle: "How it works",
     step1Title: "1. Save videos",
     step1Text: "Collect videos from your favorite sources in one central place.",
@@ -707,8 +726,8 @@ const translations = {
     step2Text: "Organize content into collections, watchlists and personal categories.",
     step3Title: "3. Find it fast",
     step3Text: "Resume where you left off or discover fresh recommendations.",
-    ctaTitle: "Discover your video space",
-    ctaText: "Explore the app views and use MyVideoSpace as the central place for your favorite videos.",
+    ctaTitle: "Download MyVideoSpace now",
+    ctaText: "Get the app on the App Store and keep your favorite videos organized in one place.",
     privacy: "Privacy",
     privacyHref: "privacy.html",
     support: "Support",
@@ -846,10 +865,10 @@ function setLang(lang){
   document.getElementById("hero-text").textContent = t.heroText;
   document.getElementById("store-note").textContent = t.storeNote;
 
-  document.getElementById("store-link-top").textContent = t.storeTextTop;
-  document.getElementById("store-link-bottom").textContent = t.storeTextBottom;
   document.getElementById("store-link-top").setAttribute("aria-label", t.storeAria);
   document.getElementById("store-link-bottom").setAttribute("aria-label", t.storeAria);
+  document.getElementById("store-badge-top").alt = t.storeBadgeAlt;
+  document.getElementById("store-badge-bottom").alt = t.storeBadgeAlt;
   document.getElementById("hero-image").alt = t.heroImageAlt;
 
   document.getElementById("shots-title").textContent = t.shotsTitle;
