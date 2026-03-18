@@ -191,6 +191,36 @@ margin:auto;
 line-height:1.6;
 }
 
+.featured-points{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:14px;
+margin:24px 0 6px;
+text-align:left;
+}
+
+.featured-point{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.1);
+border-radius:18px;
+padding:16px;
+}
+
+.featured-point-title{
+font-size:13px;
+font-weight:700;
+letter-spacing:.04em;
+text-transform:uppercase;
+color:var(--accent);
+margin-bottom:8px;
+}
+
+.featured-point-copy{
+font-size:14px;
+line-height:1.55;
+color:var(--muted);
+}
+
 /* GRID */
 
 .grid{
@@ -314,6 +344,10 @@ font-size:12px;
 .trust{
 grid-template-columns:1fr;
 }
+
+.featured-points{
+grid-template-columns:1fr;
+}
 }
 
 </style>
@@ -383,9 +417,28 @@ Ich entwickle Apps für persönliche Entwicklung, Gesundheit, Reflexion, Lernen 
 
 <p>
 Für makro-interessierte Anleger, Marktbeobachter und Bitcoin-orientierte Nutzer:
-Verfolge globale Liquidität, Marktstress und wichtige Makro-Signale in einer
-klaren App mit starkem Analysefokus.
+LiquidityPulse macht globale Liquidität, Marktstress und Regimewechsel schneller
+lesbar, damit du Zusammenhänge früher erkennst und klarer einordnen kannst.
 </p>
+
+<div class="featured-points">
+
+<div class="featured-point">
+<div class="featured-point-title">Makro-Fokus</div>
+<div class="featured-point-copy">Liquidität, Marktstress und Regimewechsel in einer klaren Arbeitsoberfläche.</div>
+</div>
+
+<div class="featured-point">
+<div class="featured-point-title">Schnelle Einordnung</div>
+<div class="featured-point-copy">Weniger Datenrauschen, mehr Kontext für das, was an den Märkten gerade wichtig ist.</div>
+</div>
+
+<div class="featured-point">
+<div class="featured-point-title">Für Anleger</div>
+<div class="featured-point-copy">Besonders interessant für Nutzer mit Makro-, Risiko- und Bitcoin-Fokus.</div>
+</div>
+
+</div>
 
 <div class="buttons" style="margin-top:20px">
 
