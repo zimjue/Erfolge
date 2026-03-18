@@ -51,6 +51,27 @@ font-size:18px;
 font-weight:600;
 }
 
+.lang-switch{
+display:flex;
+gap:10px;
+}
+
+.lang-btn{
+padding:8px 14px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.18);
+background:transparent;
+color:var(--text);
+cursor:pointer;
+font-weight:700;
+}
+
+.lang-btn.active{
+background:var(--accent);
+color:#04121e;
+border-color:transparent;
+}
+
 /* HEADER */
 
 header{
@@ -355,13 +376,17 @@ grid-template-columns:1fr;
 
 <div class="topbar">
 <div class="brand">Jürgen Zimmer Apps</div>
+<div class="lang-switch" aria-label="Sprachauswahl / Language switch">
+<button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
+<button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+</div>
 </div>
 
 <header>
 
-<h1>Meine Apps</h1>
+<h1 id="hero-title">Meine Apps</h1>
 
-<div class="subtitle">
+<div class="subtitle" id="hero-subtitle">
 Apps für persönliche Entwicklung, Reflexion, Fitness, Finanzen, Makro und Lernen.
 </div>
 
@@ -370,18 +395,18 @@ Apps für persönliche Entwicklung, Reflexion, Fitness, Finanzen, Makro und Lern
 <section class="trust">
 
 <div class="trust-item">
-<div class="trust-label">Fokus</div>
-<div class="trust-copy">Klar positionierte Apps mit ruhiger UX statt überladener Features.</div>
+<div class="trust-label" id="trust1-label">Fokus</div>
+<div class="trust-copy" id="trust1-copy">Klar positionierte Apps mit ruhiger UX statt überladener Features.</div>
 </div>
 
 <div class="trust-item">
-<div class="trust-label">Plattform</div>
-<div class="trust-copy">Entwickelt für Apple-Nutzer mit starkem Fokus auf iPhone und iPad.</div>
+<div class="trust-label" id="trust2-label">Plattform</div>
+<div class="trust-copy" id="trust2-copy">Entwickelt für Apple-Nutzer mit starkem Fokus auf iPhone und iPad.</div>
 </div>
 
 <div class="trust-item">
-<div class="trust-label">Ansatz</div>
-<div class="trust-copy">Ich entwickle Apps, die komplexe Themen einfach, ruhig und alltagstauglich machen.</div>
+<div class="trust-label" id="trust3-label">Ansatz</div>
+<div class="trust-copy" id="trust3-copy">Ich entwickle Apps, die komplexe Themen einfach, ruhig und alltagstauglich machen.</div>
 </div>
 
 </section>
@@ -394,7 +419,7 @@ Apps für persönliche Entwicklung, Reflexion, Fitness, Finanzen, Makro und Lern
 
 <h2>Jürgen Zimmer</h2>
 
-<p>
+<p id="dev-copy">
 Indie iOS Developer aus München.  
 Ich entwickle Apps für persönliche Entwicklung, Gesundheit, Reflexion, Lernen und Finanzen.
 </p>
@@ -408,13 +433,13 @@ Ich entwickle Apps für persönliche Entwicklung, Gesundheit, Reflexion, Lernen 
 <img src="liquiditypulse/assets/liquiditypulse.png" alt="LiquidityPulse App Icon">
 
 <div class="featured-tags">
-<div class="featured-tag">Featured App</div>
-<div class="featured-tag is-new">Neu</div>
+<div class="featured-tag" id="featured-tag">Featured App</div>
+<div class="featured-tag is-new" id="featured-new">Neu</div>
 </div>
 
 <h3>LiquidityPulse</h3>
 
-<p>
+<p id="featured-copy">
 Für makro-interessierte Anleger, Marktbeobachter und Bitcoin-orientierte Nutzer:
 LiquidityPulse macht globale Liquidität, Marktstress und Regimewechsel schneller
 lesbar, damit du Zusammenhänge früher erkennst und klarer einordnen kannst.
@@ -423,26 +448,26 @@ lesbar, damit du Zusammenhänge früher erkennst und klarer einordnen kannst.
 <div class="featured-points">
 
 <div class="featured-point">
-<div class="featured-point-title">Makro-Fokus</div>
-<div class="featured-point-copy">Liquidität, Marktstress und Regimewechsel in einer klaren Arbeitsoberfläche.</div>
+<div class="featured-point-title" id="fp1-title">Makro-Fokus</div>
+<div class="featured-point-copy" id="fp1-copy">Liquidität, Marktstress und Regimewechsel in einer klaren Arbeitsoberfläche.</div>
 </div>
 
 <div class="featured-point">
-<div class="featured-point-title">Schnelle Einordnung</div>
-<div class="featured-point-copy">Weniger Datenrauschen, mehr Kontext für das, was an den Märkten gerade wichtig ist.</div>
+<div class="featured-point-title" id="fp2-title">Schnelle Einordnung</div>
+<div class="featured-point-copy" id="fp2-copy">Weniger Datenrauschen, mehr Kontext für das, was an den Märkten gerade wichtig ist.</div>
 </div>
 
 <div class="featured-point">
-<div class="featured-point-title">Für Anleger</div>
-<div class="featured-point-copy">Besonders interessant für Nutzer mit Makro-, Risiko- und Bitcoin-Fokus.</div>
+<div class="featured-point-title" id="fp3-title">Für Anleger</div>
+<div class="featured-point-copy" id="fp3-copy">Besonders interessant für Nutzer mit Makro-, Risiko- und Bitcoin-Fokus.</div>
 </div>
 
 </div>
 
 <div class="buttons" style="margin-top:20px">
 
-<a class="btn primary" href="liquiditypulse/">App ansehen</a>
-<a class="btn secondary" href="liquiditypulse/datenschutz.html">Datenschutz</a>
+<a class="btn primary" href="liquiditypulse/" id="featured-btn-primary">App ansehen</a>
+<a class="btn secondary" href="liquiditypulse/datenschutz.html" id="featured-btn-secondary">Datenschutz</a>
 
 </div>
 
@@ -460,17 +485,17 @@ lesbar, damit du Zusammenhänge früher erkennst und klarer einordnen kannst.
 
 <div class="app-title">MyVideoSpace</div>
 
-<div class="app-meta">Video</div>
+<div class="app-meta" id="mvs-meta">Video</div>
 
-<div class="app-desc">
+<div class="app-desc" id="mvs-copy">
 Organisiere Videos, Sammlungen und Watchlists in einer klaren Bibliothek mit
 schnellem Zugriff.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary" href="myvideospace/">App ansehen</a>
-<a class="btn secondary" href="myvideospace/datenschutz.html">Datenschutz</a>
+<a class="btn primary" href="myvideospace/" id="mvs-btn-primary">App ansehen</a>
+<a class="btn secondary" href="myvideospace/datenschutz.html" id="mvs-btn-secondary">Datenschutz</a>
 
 </div>
 
@@ -484,16 +509,16 @@ schnellem Zugriff.
 
 <div class="app-title">Erfolgsjournal</div>
 
-<div class="app-meta">Reflexion</div>
+<div class="app-meta" id="ej-meta">Reflexion</div>
 
-<div class="app-desc">
+<div class="app-desc" id="ej-copy">
 Ein ruhiges Journal für tägliche Reflexion, Klarheit und persönliche Entwicklung.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary" href="erfolgsjournal/">App ansehen</a>
-<a class="btn secondary" href="erfolgsjournal/datenschutz.html">Datenschutz</a>
+<a class="btn primary" href="erfolgsjournal/" id="ej-btn-primary">App ansehen</a>
+<a class="btn secondary" href="erfolgsjournal/datenschutz.html" id="ej-btn-secondary">Datenschutz</a>
 
 </div>
 
@@ -507,16 +532,16 @@ Ein ruhiges Journal für tägliche Reflexion, Klarheit und persönliche Entwickl
 
 <div class="app-title">Lebensrad</div>
 
-<div class="app-meta">Balance</div>
+<div class="app-meta" id="lr-meta">Balance</div>
 
-<div class="app-desc">
+<div class="app-desc" id="lr-copy">
 Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in deinen Alltag.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary" href="lebensrad/">App ansehen</a>
-<a class="btn secondary" href="lebensrad/datenschutz.html">Datenschutz</a>
+<a class="btn primary" href="lebensrad/" id="lr-btn-primary">App ansehen</a>
+<a class="btn secondary" href="lebensrad/datenschutz.html" id="lr-btn-secondary">Datenschutz</a>
 
 </div>
 
@@ -530,16 +555,16 @@ Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in deinen A
 
 <div class="app-title">FitnessGoals</div>
 
-<div class="app-meta">Fitness</div>
+<div class="app-meta" id="fg-meta">Fitness</div>
 
-<div class="app-desc">
+<div class="app-desc" id="fg-copy">
 Setze klare Fitnessziele und verfolge Fortschritte mit Fokus und Struktur.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary" href="fitnessgoals/">App ansehen</a>
-<a class="btn secondary" href="fitnessgoals/datenschutz.html">Datenschutz</a>
+<a class="btn primary" href="fitnessgoals/" id="fg-btn-primary">App ansehen</a>
+<a class="btn secondary" href="fitnessgoals/datenschutz.html" id="fg-btn-secondary">Datenschutz</a>
 
 </div>
 </div>
@@ -550,11 +575,11 @@ Setze klare Fitnessziele und verfolge Fortschritte mit Fokus und Struktur.
 
 © <span id="year"></span> Jürgen Zimmer<br>
 
-<a href="datenschutz.html">Datenschutz</a> ·
+<a href="datenschutz.html" id="footer-privacy">Datenschutz</a> ·
 <a href="support.html">Support</a> ·
 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">EULA</a>
 
-<div class="made">
+<div class="made" id="made-copy">
 Made with ❤️ in Munich
 </div>
 
@@ -563,6 +588,124 @@ Made with ❤️ in Munich
 </div>
 
 <script>
+const copy = {
+de: {
+  heroTitle: "Meine Apps",
+  heroSubtitle: "Apps für persönliche Entwicklung, Reflexion, Fitness, Finanzen, Makro und Lernen.",
+  trust1Label: "Fokus",
+  trust1Copy: "Klar positionierte Apps mit ruhiger UX statt überladener Features.",
+  trust2Label: "Plattform",
+  trust2Copy: "Entwickelt für Apple-Nutzer mit starkem Fokus auf iPhone und iPad.",
+  trust3Label: "Ansatz",
+  trust3Copy: "Ich entwickle Apps, die komplexe Themen einfach, ruhig und alltagstauglich machen.",
+  devCopy: "Indie iOS Developer aus München.\nIch entwickle Apps für persönliche Entwicklung, Gesundheit, Reflexion, Lernen und Finanzen.",
+  featuredTag: "Featured App",
+  featuredNew: "Neu",
+  featuredCopy: "Für makro-interessierte Anleger, Marktbeobachter und Bitcoin-orientierte Nutzer:\nLiquidityPulse macht globale Liquidität, Marktstress und Regimewechsel schneller lesbar, damit du Zusammenhänge früher erkennst und klarer einordnen kannst.",
+  fp1Title: "Makro-Fokus",
+  fp1Copy: "Liquidität, Marktstress und Regimewechsel in einer klaren Arbeitsoberfläche.",
+  fp2Title: "Schnelle Einordnung",
+  fp2Copy: "Weniger Datenrauschen, mehr Kontext für das, was an den Märkten gerade wichtig ist.",
+  fp3Title: "Für Anleger",
+  fp3Copy: "Besonders interessant für Nutzer mit Makro-, Risiko- und Bitcoin-Fokus.",
+  primary: "App ansehen",
+  secondary: "Datenschutz",
+  mvsMeta: "Video",
+  mvsCopy: "Organisiere Videos, Sammlungen und Watchlists in einer klaren Bibliothek mit schnellem Zugriff.",
+  ejMeta: "Reflexion",
+  ejCopy: "Ein ruhiges Journal für tägliche Reflexion, Klarheit und persönliche Entwicklung.",
+  lrMeta: "Balance",
+  lrCopy: "Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in deinen Alltag.",
+  fgMeta: "Fitness",
+  fgCopy: "Setze klare Fitnessziele und verfolge Fortschritte mit Fokus und Struktur.",
+  footerPrivacy: "Datenschutz",
+  made: "Made with ❤️ in Munich"
+},
+en: {
+  heroTitle: "My Apps",
+  heroSubtitle: "Apps for personal growth, reflection, fitness, finance, macro insight, and learning.",
+  trust1Label: "Focus",
+  trust1Copy: "Clearly positioned apps with calm UX instead of overloaded features.",
+  trust2Label: "Platform",
+  trust2Copy: "Built for Apple users with a strong focus on iPhone and iPad.",
+  trust3Label: "Approach",
+  trust3Copy: "I build apps that make complex topics feel simple, calm, and useful in daily life.",
+  devCopy: "Indie iOS developer from Munich.\nI build apps for personal growth, health, reflection, learning, and finance.",
+  featuredTag: "Featured App",
+  featuredNew: "New",
+  featuredCopy: "For macro-minded investors, market watchers, and Bitcoin-focused users:\nLiquidityPulse makes global liquidity, market stress, and regime shifts easier to read so you can spot relationships earlier and interpret them with more clarity.",
+  fp1Title: "Macro Focus",
+  fp1Copy: "Liquidity, market stress, and regime shifts in one clear workspace.",
+  fp2Title: "Fast Context",
+  fp2Copy: "Less data noise, more context for what actually matters in markets right now.",
+  fp3Title: "For Investors",
+  fp3Copy: "Especially relevant for users with a macro, risk, and Bitcoin focus.",
+  primary: "View App",
+  secondary: "Privacy",
+  mvsMeta: "Video",
+  mvsCopy: "Organize videos, collections, and watchlists in a clear library with quick access.",
+  ejMeta: "Reflection",
+  ejCopy: "A calm journal for daily reflection, clarity, and personal growth.",
+  lrMeta: "Balance",
+  lrCopy: "Reflect on your most important life areas and bring more balance into daily life.",
+  fgMeta: "Fitness",
+  fgCopy: "Set clear fitness goals and track progress with focus and structure.",
+  footerPrivacy: "Privacy",
+  made: "Made with ❤️ in Munich"
+}
+};
+
+function setLang(lang){
+  const t = copy[lang];
+  document.documentElement.lang = lang;
+  document.getElementById("btn-de").classList.toggle("active", lang === "de");
+  document.getElementById("btn-en").classList.toggle("active", lang === "en");
+  document.getElementById("hero-title").textContent = t.heroTitle;
+  document.getElementById("hero-subtitle").textContent = t.heroSubtitle;
+  document.getElementById("trust1-label").textContent = t.trust1Label;
+  document.getElementById("trust1-copy").textContent = t.trust1Copy;
+  document.getElementById("trust2-label").textContent = t.trust2Label;
+  document.getElementById("trust2-copy").textContent = t.trust2Copy;
+  document.getElementById("trust3-label").textContent = t.trust3Label;
+  document.getElementById("trust3-copy").textContent = t.trust3Copy;
+  document.getElementById("dev-copy").innerHTML = t.devCopy.replace("\n","<br>");
+  document.getElementById("featured-tag").textContent = t.featuredTag;
+  document.getElementById("featured-new").textContent = t.featuredNew;
+  document.getElementById("featured-copy").innerHTML = t.featuredCopy.replace("\n","<br>");
+  document.getElementById("fp1-title").textContent = t.fp1Title;
+  document.getElementById("fp1-copy").textContent = t.fp1Copy;
+  document.getElementById("fp2-title").textContent = t.fp2Title;
+  document.getElementById("fp2-copy").textContent = t.fp2Copy;
+  document.getElementById("fp3-title").textContent = t.fp3Title;
+  document.getElementById("fp3-copy").textContent = t.fp3Copy;
+  document.getElementById("featured-btn-primary").textContent = t.primary;
+  document.getElementById("featured-btn-secondary").textContent = t.secondary;
+  document.getElementById("mvs-meta").textContent = t.mvsMeta;
+  document.getElementById("mvs-copy").textContent = t.mvsCopy;
+  document.getElementById("mvs-btn-primary").textContent = t.primary;
+  document.getElementById("mvs-btn-secondary").textContent = t.secondary;
+  document.getElementById("ej-meta").textContent = t.ejMeta;
+  document.getElementById("ej-copy").textContent = t.ejCopy;
+  document.getElementById("ej-btn-primary").textContent = t.primary;
+  document.getElementById("ej-btn-secondary").textContent = t.secondary;
+  document.getElementById("lr-meta").textContent = t.lrMeta;
+  document.getElementById("lr-copy").textContent = t.lrCopy;
+  document.getElementById("lr-btn-primary").textContent = t.primary;
+  document.getElementById("lr-btn-secondary").textContent = t.secondary;
+  document.getElementById("fg-meta").textContent = t.fgMeta;
+  document.getElementById("fg-copy").textContent = t.fgCopy;
+  document.getElementById("fg-btn-primary").textContent = t.primary;
+  document.getElementById("fg-btn-secondary").textContent = t.secondary;
+  document.getElementById("footer-privacy").textContent = t.footerPrivacy;
+  document.getElementById("made-copy").textContent = t.made;
+  document.getElementById("featured-btn-secondary").href = lang === "en" ? "liquiditypulse/privacy.html" : "liquiditypulse/datenschutz.html";
+  document.getElementById("mvs-btn-secondary").href = lang === "en" ? "myvideospace/privacy.html" : "myvideospace/datenschutz.html";
+  document.getElementById("ej-btn-secondary").href = lang === "en" ? "erfolgsjournal/privacy.html" : "erfolgsjournal/datenschutz.html";
+  document.getElementById("lr-btn-secondary").href = lang === "en" ? "lebensrad/privacy.html" : "lebensrad/datenschutz.html";
+  document.getElementById("fg-btn-secondary").href = lang === "en" ? "fitnessgoals/privacy.html" : "fitnessgoals/datenschutz.html";
+  document.getElementById("footer-privacy").href = lang === "en" ? "privacy.html" : "datenschutz.html";
+}
+
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
