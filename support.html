@@ -17,12 +17,15 @@
 --muted:#b7c2e1;
 --accent:#66e3ff;
 --card:rgba(255,255,255,0.05);
+--line:rgba(255,255,255,.12);
 }
 
 body{
 margin:0;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-background:var(--bg);
+background:
+radial-gradient(900px 500px at 10% 10%,rgba(102,227,255,.12),transparent 55%),
+var(--bg);
 color:var(--txt);
 line-height:1.6;
 }
@@ -89,8 +92,8 @@ border-color:transparent;
 }
 
 h1{
-font-size:36px;
-margin-bottom:10px;
+font-size:40px;
+margin:0 0 12px;
 }
 
 p{
@@ -99,9 +102,97 @@ color:var(--muted);
 
 .card{
 background:var(--card);
-border-radius:16px;
+border:1px solid var(--line);
+border-radius:20px;
 padding:24px;
 margin-top:30px;
+}
+
+.hero{
+margin-bottom:18px;
+}
+
+.hero-copy{
+max-width:700px;
+font-size:18px;
+}
+
+.support-grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:22px;
+margin-top:30px;
+}
+
+.mail-card{
+background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));
+}
+
+.mail-link{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 20px;
+border-radius:14px;
+background:var(--accent);
+color:#04121e;
+font-weight:800;
+margin-top:8px;
+}
+
+.mail-link:hover{
+text-decoration:none;
+}
+
+.quick-list{
+margin:14px 0 0;
+padding-left:18px;
+color:var(--muted);
+}
+
+.apps-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:16px;
+margin-top:18px;
+}
+
+.app-link-card{
+display:block;
+padding:18px;
+border-radius:18px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.1);
+text-decoration:none;
+}
+
+.app-link-card:hover{
+background:rgba(255,255,255,.06);
+text-decoration:none;
+}
+
+.app-name{
+font-weight:700;
+color:var(--txt);
+margin-bottom:8px;
+}
+
+.app-tag{
+display:inline-flex;
+padding:6px 10px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+letter-spacing:.04em;
+text-transform:uppercase;
+background:rgba(102,227,255,.1);
+border:1px solid rgba(102,227,255,.18);
+color:var(--accent);
+}
+
+.section-title{
+margin:0 0 8px;
+font-size:22px;
 }
 
 a{
@@ -122,6 +213,16 @@ padding-left:20px;
 margin-top:50px;
 font-size:14px;
 color:var(--muted);
+}
+
+@media (max-width:780px){
+.support-grid{
+grid-template-columns:1fr;
+}
+
+.apps-grid{
+grid-template-columns:1fr;
+}
 }
 
 </style>
@@ -161,16 +262,25 @@ document.getElementById("btn-en").classList.toggle("active", lang === "en")
 
 <h1 data-de="Support" data-en="Support">Support</h1>
 
-<p
+<p class="hero-copy"
 data-de="Wenn du Fragen, Feedback oder Probleme mit einer meiner Apps hast, kannst du mich jederzeit kontaktieren."
 data-en="If you have questions, feedback or problems with one of my apps, feel free to contact me anytime."
 >
 Wenn du Fragen, Feedback oder Probleme mit einer meiner Apps hast, kannst du mich jederzeit kontaktieren.
 </p>
 
-<div class="card">
+<div class="support-grid">
 
-<h2 data-de="E-Mail Support" data-en="Email Support">E-Mail Support</h2>
+<div class="card mail-card">
+
+<h2 class="section-title" data-de="Direkter Kontakt" data-en="Direct Contact">Direkter Kontakt</h2>
+
+<p>
+<span
+data-de="Am schnellsten erreichst du mich per E-Mail. Wenn du die betroffene App dazuschreibst, kann ich dir schneller helfen."
+data-en="The fastest way to reach me is by email. If you mention the affected app, I can help you faster."
+>Am schnellsten erreichst du mich per E-Mail. Wenn du die betroffene App dazuschreibst, kann ich dir schneller helfen.</span>
+</p>
 
 <p>
 <a href="mailto:juzi7@icloud.com">
@@ -178,19 +288,60 @@ juzi7@icloud.com
 </a>
 </p>
 
+<a class="mail-link" href="mailto:juzi7@icloud.com" data-de="E-Mail schreiben" data-en="Send Email">E-Mail schreiben</a>
+
+<ul class="quick-list">
+<li data-de="Fragen zu Funktionen" data-en="Questions about features">Fragen zu Funktionen</li>
+<li data-de="Fehler oder Probleme melden" data-en="Report bugs or issues">Fehler oder Probleme melden</li>
+<li data-de="Feedback und Ideen teilen" data-en="Share feedback and ideas">Feedback und Ideen teilen</li>
+</ul>
+
 </div>
 
 <div class="card">
 
-<h2 data-de="Meine Apps" data-en="My Apps">Meine Apps</h2>
+<h2 class="section-title" data-de="Schnelle Hilfe" data-en="Quick Help">Schnelle Hilfe</h2>
 
-<ul>
-<li><a href="/apps/liquiditypulse/">LiquidityPulse</a></li>
-<li><a href="/apps/lebensrad/">Lebensrad</a></li>
-<li><a href="/apps/fitnessgoals/">FitnessGoals</a></li>
-<li><a href="/apps/erfolgsjournal/">Erfolgsjournal</a></li>
-<li><a href="/apps/myvideospace/">MyVideoSpace</a></li>
-</ul>
+<p
+data-de="Viele Antworten findest du direkt auf den App-Seiten oder in den jeweiligen Datenschutzseiten."
+data-en="You can find many answers directly on the app pages or in the respective privacy pages."
+>
+Viele Antworten findest du direkt auf den App-Seiten oder in den jeweiligen Datenschutzseiten.
+</p>
+
+</div>
+</div>
+
+<div class="card">
+
+<h2 class="section-title" data-de="Meine Apps" data-en="My Apps">Meine Apps</h2>
+
+<div class="apps-grid">
+<a class="app-link-card" href="/apps/liquiditypulse/">
+<div class="app-name">LiquidityPulse</div>
+<div class="app-tag" data-de="Makro" data-en="Macro">Makro</div>
+</a>
+
+<a class="app-link-card" href="/apps/myvideospace/">
+<div class="app-name">MyVideoSpace</div>
+<div class="app-tag" data-de="Video" data-en="Video">Video</div>
+</a>
+
+<a class="app-link-card" href="/apps/erfolgsjournal/">
+<div class="app-name">Erfolgsjournal</div>
+<div class="app-tag" data-de="Reflexion" data-en="Reflection">Reflexion</div>
+</a>
+
+<a class="app-link-card" href="/apps/lebensrad/">
+<div class="app-name">Lebensrad</div>
+<div class="app-tag" data-de="Balance" data-en="Balance">Balance</div>
+</a>
+
+<a class="app-link-card" href="/apps/fitnessgoals/">
+<div class="app-name">FitnessGoals</div>
+<div class="app-tag" data-de="Fitness" data-en="Fitness">Fitness</div>
+</a>
+</div>
 
 </div>
 
