@@ -8,19 +8,19 @@
 <meta name="description" content="FitnessGoals hilft dir, klare Fitnessziele zu setzen, Fortschritte zu verfolgen und mit Fokus dranzubleiben.">
 <meta name="theme-color" content="#0b1220">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://zimjue.github.io/apps/fitnessgoals/">
+<link rel="canonical" href="https://jzapps.app/fitnessgoals/">
 
 <meta property="og:title" content="FitnessGoals – Ziele setzen, Fortschritt sehen">
 <meta property="og:description" content="FitnessGoals hilft dir, klare Fitnessziele zu setzen, Fortschritte zu verfolgen und mit Fokus dranzubleiben.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://zimjue.github.io/apps/fitnessgoals/">
-<meta property="og:image" content="https://zimjue.github.io/apps/fitnessgoals/assets/Fitnessgoals.jpeg">
+<meta property="og:url" content="https://jzapps.app/fitnessgoals/">
+<meta property="og:image" content="https://jzapps.app/fitnessgoals/assets/Fitnessgoals.jpeg">
 <meta property="og:site_name" content="FitnessGoals">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FitnessGoals – Ziele setzen, Fortschritt sehen">
 <meta name="twitter:description" content="FitnessGoals hilft dir, klare Fitnessziele zu setzen, Fortschritte zu verfolgen und mit Fokus dranzubleiben.">
-<meta name="twitter:image" content="https://zimjue.github.io/apps/fitnessgoals/assets/Fitnessgoals.jpeg">
+<meta name="twitter:image" content="https://jzapps.app/fitnessgoals/assets/Fitnessgoals.jpeg">
 
 <script type="application/ld+json">
 {
@@ -30,8 +30,8 @@
   "applicationCategory":"HealthApplication",
   "operatingSystem":"iOS, iPadOS, macOS",
   "description":"FitnessGoals hilft dir, klare Fitnessziele zu setzen, Fortschritte zu verfolgen und mit Fokus dranzubleiben.",
-  "url":"https://zimjue.github.io/apps/fitnessgoals/",
-  "image":"https://zimjue.github.io/apps/fitnessgoals/assets/Fitnessgoals.jpeg",
+  "url":"https://jzapps.app/fitnessgoals/",
+  "image":"https://jzapps.app/fitnessgoals/assets/Fitnessgoals.jpeg",
   "downloadUrl":"https://apps.apple.com/de/app/fitnessgoals/id6757391456",
   "publisher":{
     "@type":"Person",
@@ -828,8 +828,8 @@ function updateStructuredData(t){
     "applicationCategory":"HealthApplication",
     "operatingSystem":"iOS, iPadOS, macOS",
     "description": t.schemaDescription,
-    "url":"https://zimjue.github.io/apps/fitnessgoals/",
-    "image":"https://zimjue.github.io/apps/fitnessgoals/assets/Fitnessgoals.jpeg",
+    "url":"https://jzapps.app/fitnessgoals/",
+    "image":"https://jzapps.app/fitnessgoals/assets/Fitnessgoals.jpeg",
     "downloadUrl":"https://apps.apple.com/de/app/fitnessgoals/id6757391456",
     "publisher":{
       "@type":"Person",
@@ -903,7 +903,7 @@ function setLang(lang){
   privacyLink.href = t.privacyHref;
 
   document.getElementById("support-link").textContent = t.support;
-  document.getElementById("support-link").href = "../support.html";
+  document.getElementById("support-link").href = lang === "en" ? "../support-en.html" : "../support.html";
 
   document.getElementById("btn-de").classList.toggle("active", lang === "de");
   document.getElementById("btn-en").classList.toggle("active", lang === "en");

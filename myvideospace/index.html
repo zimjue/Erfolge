@@ -8,19 +8,19 @@
 <meta name="description" content="MyVideoSpace organizes your favorite videos with smart collections, watchlists, quick access and a clean, modern interface.">
 <meta name="theme-color" content="#09111f">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://zimjue.github.io/apps/myvideospace/">
+<link rel="canonical" href="https://jzapps.app/myvideospace/">
 
 <meta property="og:title" content="MyVideoSpace - Video organizer for your favorite moments">
 <meta property="og:description" content="Organize videos, build collections and keep your watchlist in one clean space.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://zimjue.github.io/apps/myvideospace/">
-<meta property="og:image" content="https://zimjue.github.io/apps/myvideospace/assets/myvideospace.png">
+<meta property="og:url" content="https://jzapps.app/myvideospace/">
+<meta property="og:image" content="https://jzapps.app/myvideospace/assets/myvideospace.png">
 <meta property="og:site_name" content="MyVideoSpace">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MyVideoSpace - Video organizer for your favorite moments">
 <meta name="twitter:description" content="Organize videos, build collections and keep your watchlist in one clean space.">
-<meta name="twitter:image" content="https://zimjue.github.io/apps/myvideospace/assets/myvideospace.png">
+<meta name="twitter:image" content="https://jzapps.app/myvideospace/assets/myvideospace.png">
 
 <script type="application/ld+json" id="schema-data">
 {
@@ -30,8 +30,8 @@
   "applicationCategory":"EntertainmentApplication",
   "operatingSystem":"iOS, Android, Web",
   "description":"MyVideoSpace organizes your favorite videos with smart collections, watchlists, quick access and a clean, modern interface.",
-  "url":"https://zimjue.github.io/apps/myvideospace/",
-  "image":"https://zimjue.github.io/apps/myvideospace/assets/myvideospace.png",
+  "url":"https://jzapps.app/myvideospace/",
+  "image":"https://jzapps.app/myvideospace/assets/myvideospace.png",
   "publisher":{
     "@type":"Person",
     "name":"Jürgen Zimmer"
@@ -831,8 +831,8 @@ function updateStructuredData(t){
     "applicationCategory":"EntertainmentApplication",
     "operatingSystem":"iOS, Android, Web",
     "description": t.schemaDescription,
-    "url":"https://zimjue.github.io/apps/myvideospace/",
-    "image":"https://zimjue.github.io/apps/myvideospace/assets/myvideospace.png",
+    "url":"https://jzapps.app/myvideospace/",
+    "image":"https://jzapps.app/myvideospace/assets/myvideospace.png",
     "publisher":{
       "@type":"Person",
       "name":"Jürgen Zimmer"
@@ -905,6 +905,7 @@ function setLang(lang){
   privacyLink.href = t.privacyHref;
 
   document.getElementById("support-link").textContent = t.support;
+  document.getElementById("support-link").href = lang === "en" ? "../support-en.html" : "../support.html";
   document.getElementById("eula-link").textContent = t.terms;
 
   document.getElementById("btn-de").classList.toggle("active", lang === "de");
