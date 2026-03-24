@@ -1,35 +1,35 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Erfolgsjournal – Klarheit, Dankbarkeit & Reflexion</title>
-<meta name="description" content="Erfolgsjournal hilft dir, deinen Tag bewusst zu reflektieren, Erfolge festzuhalten und mit Klarheit in den nächsten Tag zu gehen.">
+<title>Success Journal – Clarity, Gratitude & Reflection</title>
+<meta name="description" content="Success Journal helps you reflect on your day, capture achievements, and move into tomorrow with more clarity.">
 <meta name="theme-color" content="#0b1220">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://jzapps.app/erfolgsjournal/">
 
-<meta property="og:title" content="Erfolgsjournal – Klarheit, Dankbarkeit & Reflexion">
-<meta property="og:description" content="Erfolgsjournal hilft dir, deinen Tag bewusst zu reflektieren, Erfolge festzuhalten und mit Klarheit in den nächsten Tag zu gehen.">
+<meta property="og:title" content="Success Journal – Clarity, Gratitude & Reflection">
+<meta property="og:description" content="Success Journal helps you reflect on your day, capture achievements, and move into tomorrow with more clarity.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jzapps.app/erfolgsjournal/">
 <meta property="og:image" content="https://jzapps.app/erfolgsjournal/assets/Journal.png">
-<meta property="og:site_name" content="Erfolgsjournal">
+<meta property="og:site_name" content="Success Journal">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Erfolgsjournal – Klarheit, Dankbarkeit & Reflexion">
-<meta name="twitter:description" content="Erfolgsjournal hilft dir, deinen Tag bewusst zu reflektieren, Erfolge festzuhalten und mit Klarheit in den nächsten Tag zu gehen.">
+<meta name="twitter:title" content="Success Journal – Clarity, Gratitude & Reflection">
+<meta name="twitter:description" content="Success Journal helps you reflect on your day, capture achievements, and move into tomorrow with more clarity.">
 <meta name="twitter:image" content="https://jzapps.app/erfolgsjournal/assets/Journal.png">
 
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"SoftwareApplication",
-  "name":"Erfolgsjournal",
+  "name":"Success Journal",
   "applicationCategory":"LifestyleApplication",
   "operatingSystem":"iOS, iPadOS, macOS",
-  "description":"Erfolgsjournal hilft dir, deinen Tag bewusst zu reflektieren, Erfolge festzuhalten und mit Klarheit in den nächsten Tag zu gehen.",
+  "description":"Success Journal helps you reflect on your day, capture achievements, and move into tomorrow with more clarity.",
   "url":"https://jzapps.app/erfolgsjournal/",
   "image":"https://jzapps.app/erfolgsjournal/assets/Journal.png",
   "downloadUrl":"https://apps.apple.com",
@@ -62,6 +62,7 @@ body{
     radial-gradient(900px 500px at 90% 40%,rgba(153,102,255,.14),transparent 55%),
     var(--bg);
   color:var(--txt);
+  visibility:hidden;
 }
 
 a{color:inherit}
@@ -967,6 +968,7 @@ document.getElementById("y").textContent = new Date().getFullYear();
 showSlide();
 setLang(currentLang());
 startAutoPlay();
+document.body.style.visibility = "visible";
 </script>
 </body>
 </html>

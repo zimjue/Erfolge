@@ -1,36 +1,36 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Lebensrad – Balance & Reflexion</title>
-<meta name="description" content="Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.">
+<title>Life Wheel – Balance & Reflection</title>
+<meta name="description" content="The Life Wheel app helps you reflect on your life areas, recognize balance, and realign your life with more clarity.">
 <meta name="theme-color" content="#0b1220">
 <meta name="apple-itunes-app" content="app-id=6759198208">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://jzapps.app/lebensrad/">
 
-<meta property="og:title" content="Lebensrad – Balance & Reflexion">
-<meta property="og:description" content="Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.">
+<meta property="og:title" content="Life Wheel – Balance & Reflection">
+<meta property="og:description" content="Reflect on your most important life areas and bring more balance into your life.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jzapps.app/lebensrad/">
 <meta property="og:image" content="https://jzapps.app/lebensrad/assets/lebensrad.png">
-<meta property="og:site_name" content="Lebensrad">
+<meta property="og:site_name" content="Life Wheel">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lebensrad – Balance & Reflexion">
-<meta name="twitter:description" content="Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in dein Leben.">
+<meta name="twitter:title" content="Life Wheel – Balance & Reflection">
+<meta name="twitter:description" content="Reflect on your most important life areas and bring more balance into your life.">
 <meta name="twitter:image" content="https://jzapps.app/lebensrad/assets/lebensrad.png">
 
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"SoftwareApplication",
-  "name":"Lebensrad",
+  "name":"Life Wheel",
   "applicationCategory":"LifestyleApplication",
   "operatingSystem":"iOS, iPadOS, macOS",
-  "description":"Die Lebensrad App hilft dir, deine Lebensbereiche bewusst zu reflektieren, Balance zu erkennen und dein Leben klarer auszurichten.",
+  "description":"The Life Wheel app helps you reflect on your life areas, recognize balance, and realign your life with more clarity.",
   "url":"https://jzapps.app/lebensrad/",
   "image":"https://jzapps.app/lebensrad/assets/lebensrad.png",
   "downloadUrl":"https://apps.apple.com/de/app/lebensrad-dein-lebenskompass/id6759198208",
@@ -63,6 +63,7 @@ body{
     radial-gradient(900px 500px at 90% 40%,rgba(153,102,255,.14),transparent 55%),
     var(--bg);
   color:var(--txt);
+  visibility:hidden;
 }
 
 a{color:inherit}
@@ -940,6 +941,7 @@ slider.addEventListener("touchend", (event) => {
 showSlide();
 setLang(currentLang());
 startAutoPlay();
+document.body.style.visibility = "visible";
 </script>
 </body>
 </html>

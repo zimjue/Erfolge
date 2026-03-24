@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,6 +61,7 @@ body{
     radial-gradient(900px 500px at 90% 40%,rgba(124,184,255,.15),transparent 55%),
     var(--bg);
   color:var(--txt);
+  visibility:hidden;
 }
 
 a{color:inherit}
@@ -942,6 +943,7 @@ slider.addEventListener("touchend", (event) => {
 showSlide();
 setLang(currentLang());
 startAutoPlay();
+document.body.style.visibility = "visible";
 </script>
 </body>
 </html>

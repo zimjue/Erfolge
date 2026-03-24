@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>FitnessGoals – Ziele setzen, Fortschritt sehen</title>
-<meta name="description" content="FitnessGoals hilft dir, klare Fitnessziele zu setzen, Fortschritte zu verfolgen und mit Fokus dranzubleiben.">
+<title>FitnessGoals – Set goals, track progress</title>
+<meta name="description" content="FitnessGoals helps you set clear fitness goals, track progress, and stay consistent with focus.">
 <meta name="theme-color" content="#0b1220">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://jzapps.app/fitnessgoals/">
 
-<meta property="og:title" content="FitnessGoals – Ziele setzen, Fortschritt sehen">
-<meta property="og:description" content="FitnessGoals hilft dir, klare Fitnessziele zu setzen, Fortschritte zu verfolgen und mit Fokus dranzubleiben.">
+<meta property="og:title" content="FitnessGoals – Set goals, track progress">
+<meta property="og:description" content="FitnessGoals helps you set clear fitness goals, track progress, and stay consistent with focus.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jzapps.app/fitnessgoals/">
 <meta property="og:image" content="https://jzapps.app/fitnessgoals/assets/Fitnessgoals.jpeg">
 <meta property="og:site_name" content="FitnessGoals">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FitnessGoals – Ziele setzen, Fortschritt sehen">
-<meta name="twitter:description" content="FitnessGoals hilft dir, klare Fitnessziele zu setzen, Fortschritte zu verfolgen und mit Fokus dranzubleiben.">
+<meta name="twitter:title" content="FitnessGoals – Set goals, track progress">
+<meta name="twitter:description" content="FitnessGoals helps you set clear fitness goals, track progress, and stay consistent with focus.">
 <meta name="twitter:image" content="https://jzapps.app/fitnessgoals/assets/Fitnessgoals.jpeg">
 
 <script type="application/ld+json">
@@ -29,7 +29,7 @@
   "name":"FitnessGoals",
   "applicationCategory":"HealthApplication",
   "operatingSystem":"iOS, iPadOS, macOS",
-  "description":"FitnessGoals hilft dir, klare Fitnessziele zu setzen, Fortschritte zu verfolgen und mit Fokus dranzubleiben.",
+  "description":"FitnessGoals helps you set clear fitness goals, track progress, and stay consistent with focus.",
   "url":"https://jzapps.app/fitnessgoals/",
   "image":"https://jzapps.app/fitnessgoals/assets/Fitnessgoals.jpeg",
   "downloadUrl":"https://apps.apple.com/de/app/fitnessgoals/id6757391456",
@@ -62,6 +62,7 @@ body{
     radial-gradient(900px 500px at 90% 40%,rgba(153,102,255,.14),transparent 55%),
     var(--bg);
   color:var(--txt);
+  visibility:hidden;
 }
 
 a{color:inherit}
@@ -939,6 +940,7 @@ slider.addEventListener("touchend", (event) => {
 showSlide();
 setLang(currentLang());
 startAutoPlay();
+document.body.style.visibility = "visible";
 </script>
 </body>
 </html>

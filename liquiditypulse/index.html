@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>LiquidityPulse – Globale Liquidität verstehen</title>
-<meta name="description" content="LiquidityPulse hilft dir, globale Liquidität, Marktstress und Makro-Signale in einer klaren Übersicht zu verfolgen.">
+<title>LiquidityPulse – Understand global liquidity</title>
+<meta name="description" content="LiquidityPulse helps you track global liquidity, market stress, and macro signals in one clear overview.">
 <meta name="theme-color" content="#09111f">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://jzapps.app/liquiditypulse/">
 
-<meta property="og:title" content="LiquidityPulse – Globale Liquidität verstehen">
-<meta property="og:description" content="Verfolge Liquiditäts-, Makro- und Marktsignale in einer klaren Übersicht.">
+<meta property="og:title" content="LiquidityPulse – Understand global liquidity">
+<meta property="og:description" content="Track liquidity, macro, and market signals in one clear overview.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jzapps.app/liquiditypulse/">
 <meta property="og:image" content="https://jzapps.app/liquiditypulse/assets/liquiditypulse.png">
 <meta property="og:site_name" content="LiquidityPulse">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LiquidityPulse – Globale Liquidität verstehen">
-<meta name="twitter:description" content="Verfolge Liquiditäts-, Makro- und Marktsignale in einer klaren Übersicht.">
+<meta name="twitter:title" content="LiquidityPulse – Understand global liquidity">
+<meta name="twitter:description" content="Track liquidity, macro, and market signals in one clear overview.">
 <meta name="twitter:image" content="https://jzapps.app/liquiditypulse/assets/liquiditypulse.png">
 
 <script type="application/ld+json">
@@ -29,7 +29,7 @@
   "name":"LiquidityPulse",
   "applicationCategory":"FinanceApplication",
   "operatingSystem":"iOS, iPadOS",
-  "description":"LiquidityPulse hilft dir, globale Liquidität, Marktstress und Makro-Signale in einer klaren Übersicht zu verfolgen.",
+  "description":"LiquidityPulse helps you track global liquidity, market stress, and macro signals in one clear overview.",
   "url":"https://jzapps.app/liquiditypulse/",
   "image":"https://jzapps.app/liquiditypulse/assets/liquiditypulse.png",
   "publisher":{
@@ -61,6 +61,7 @@ body{
     radial-gradient(900px 500px at 90% 40%,rgba(124,184,255,.15),transparent 55%),
     var(--bg);
   color:var(--txt);
+  visibility:hidden;
 }
 
 a{color:inherit}
@@ -818,6 +819,7 @@ function setLang(lang){
 document.getElementById("year").textContent = new Date().getFullYear();
 showSlide(0);
 setLang(currentLang);
+document.body.style.visibility = "visible";
 </script>
 </body>
 </html>
