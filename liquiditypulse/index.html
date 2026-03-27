@@ -529,7 +529,6 @@ p{
         <p id="hero-text">LiquidityPulse ist für makro-interessierte Anleger, Marktbeobachter und Bitcoin-orientierte Nutzer. Die App verdichtet Liquiditäts-, Markt- und Stresssignale so, dass du Regimewechsel schneller erkennst und besser einordnen kannst.</p>
 
         <div class="hero-actions">
-          <a class="ghost-cta" href="datenschutz.html" id="primary-cta">Datenschutz</a>
           <a
             class="app-store-badge"
             href="https://apps.apple.com/de/app/liquiditypulse/id6760768700"
@@ -784,8 +783,6 @@ function setLang(lang){
   document.getElementById("eyebrow-text").textContent = t.eyebrow;
   document.getElementById("hero-title").innerHTML = t.title;
   document.getElementById("hero-text").textContent = t.text;
-  document.getElementById("primary-cta").textContent = t.primary;
-  document.getElementById("primary-cta").href = lang === "en" ? "privacy.html" : "datenschutz.html";
   document.getElementById("footer-privacy").textContent = t.primary;
   document.getElementById("footer-privacy").href = lang === "en" ? "privacy.html" : "datenschutz.html";
   document.getElementById("footer-support").href = lang === "en" ? "../support.html" : "../support-de.html";
