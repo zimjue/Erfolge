@@ -801,6 +801,7 @@ Setze klare Fitnessziele und verfolge Fortschritte mit Fokus und Struktur.
 
 <a href="datenschutz.html" id="footer-privacy">Datenschutz</a> ·
 <a href="support-de.html" id="footer-support">Support</a> ·
+<a href="impressum.html" id="footer-imprint">Impressum</a> ·
 <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">EULA</a>
 
 <div class="made" id="made-copy">
@@ -848,6 +849,7 @@ de: {
   fgMeta: "Fitness",
   fgCopy: "Setze klare Fitnessziele und verfolge Fortschritte mit Fokus und Struktur.",
   footerPrivacy: "Datenschutz",
+  footerImprint: "Impressum",
   made: "Made with ❤️ in Munich"
 },
 en: {
@@ -881,6 +883,7 @@ en: {
   fgMeta: "Fitness",
   fgCopy: "Set clear fitness goals and track progress with focus and structure.",
   footerPrivacy: "Privacy",
+  footerImprint: "Legal Notice",
   made: "Made with ❤️ in Munich"
 }
 };
@@ -928,6 +931,7 @@ function setLang(lang){
   document.getElementById("fg-btn-primary").textContent = t.primary;
   document.getElementById("fg-btn-secondary").textContent = t.secondary;
   document.getElementById("footer-privacy").textContent = t.footerPrivacy;
+  document.getElementById("footer-imprint").textContent = t.footerImprint;
   document.getElementById("made-copy").textContent = t.made;
   document.getElementById("featured-btn-secondary").href = lang === "en" ? "liquiditypulse/privacy.html" : "liquiditypulse/datenschutz.html";
   document.getElementById("mvs-btn-secondary").href = lang === "en" ? "myvideospace/privacy.html" : "myvideospace/datenschutz.html";
@@ -936,6 +940,7 @@ function setLang(lang){
   document.getElementById("fg-btn-secondary").href = lang === "en" ? "fitnessgoals/privacy.html" : "fitnessgoals/datenschutz.html";
   document.getElementById("footer-privacy").href = lang === "en" ? "privacy.html" : "datenschutz.html";
   document.getElementById("footer-support").href = lang === "en" ? "support.html" : "support-de.html";
+  document.getElementById("footer-imprint").href = lang === "en" ? "imprint.html" : "impressum.html";
 }
 
 document.getElementById("year").textContent=new Date().getFullYear();
