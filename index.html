@@ -6,23 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="TFswtEXid5ncYV-fMoakyh8XmXu_AZB547KtRE6I1GM">
 
-<title>iPhone & iPad App Development | Jürgen Zimmer</title>
-<meta name="description" content="Jürgen Zimmer builds thoughtful iPhone and iPad apps for his own products and selected independent projects, from concept and UX to App Store launch.">
+<title>Indie iOS Apps for Focused People | Jürgen Zimmer</title>
+<meta name="description" content="Jürgen Zimmer builds independent iPhone and iPad apps with calm product thinking. Explore his apps and enquire about selected collaborations.">
 <meta name="theme-color" content="#0b1220">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://jzapps.app/">
 <link rel="alternate" hreflang="en" href="https://jzapps.app/">
 <link rel="alternate" hreflang="de" href="https://jzapps.app/index-de.html">
 <link rel="alternate" hreflang="x-default" href="https://jzapps.app/">
-<meta property="og:title" content="iPhone & iPad App Development | Jürgen Zimmer">
-<meta property="og:description" content="Jürgen Zimmer builds thoughtful iPhone and iPad apps for his own products and selected independent projects, from concept and UX to App Store launch.">
+<meta property="og:title" content="Independent iPhone & iPad Apps | Jürgen Zimmer">
+<meta property="og:description" content="Focused iOS apps by Jürgen Zimmer, built with calm product thinking for investors and everyday clarity. Selected collaborations available on request.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jzapps.app/">
 <meta property="og:image" content="https://jzapps.app/assets/juergen.jpeg">
 <meta property="og:site_name" content="Jürgen Zimmer Apps">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="iPhone & iPad App Development | Jürgen Zimmer">
-<meta name="twitter:description" content="Jürgen Zimmer builds thoughtful iPhone and iPad apps for his own products and selected independent projects, from concept and UX to App Store launch.">
+<meta name="twitter:title" content="Independent iPhone & iPad Apps | Jürgen Zimmer">
+<meta name="twitter:description" content="Focused iOS apps by Jürgen Zimmer, built with calm product thinking for investors and everyday clarity. Selected collaborations available on request.">
 <meta name="twitter:image" content="https://jzapps.app/assets/juergen.jpeg">
 
 <style>
@@ -33,6 +33,9 @@
 --text:#eaf0ff;
 --muted:#b7c2e1;
 --accent:#66e3ff;
+--line:rgba(255,255,255,.1);
+--soft:rgba(255,255,255,.04);
+--shadow:0 18px 48px rgba(0,0,0,.18);
 }
 
 *{box-sizing:border-box}
@@ -42,14 +45,16 @@ margin:0;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 background:
 radial-gradient(900px 500px at 10% 10%,rgba(102,227,255,.15),transparent 55%),
+radial-gradient(700px 420px at 90% 20%,rgba(255,255,255,.05),transparent 60%),
 var(--bg);
 color:var(--text);
+letter-spacing:-.01em;
 }
 
 .wrap{
 max-width:1100px;
 margin:auto;
-padding:40px 20px 60px;
+padding:40px 20px 72px;
 }
 
 /* TOPBAR */
@@ -58,14 +63,17 @@ padding:40px 20px 60px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:40px;
+margin-bottom:26px;
 flex-wrap:wrap;
 gap:16px;
 }
 
 .brand{
-font-size:18px;
-font-weight:600;
+font-size:17px;
+font-weight:700;
+letter-spacing:.08em;
+text-transform:uppercase;
+opacity:.95;
 }
 
 .lang-switch{
@@ -92,20 +100,32 @@ border-color:transparent;
 /* HEADER */
 
 header{
-margin-bottom:40px;
+margin-bottom:56px;
 text-align:center;
+padding:44px 28px 36px;
+border:1px solid rgba(255,255,255,.1);
+border-radius:32px;
+background:
+linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02)),
+radial-gradient(500px 220px at 50% 0%,rgba(102,227,255,.12),transparent 70%);
+box-shadow:0 24px 60px rgba(0,0,0,.22);
+backdrop-filter:blur(16px);
 }
 
 h1{
-font-size:42px;
-margin:0 0 12px;
+font-size:clamp(40px,6vw,58px);
+line-height:1.05;
+letter-spacing:-.03em;
+max-width:900px;
+margin:0 auto 14px;
 }
 
 .subtitle{
 color:var(--muted);
-font-size:18px;
+font-size:19px;
 max-width:740px;
 margin:auto;
+line-height:1.7;
 }
 
 .hero-actions{
@@ -113,22 +133,46 @@ display:flex;
 gap:14px;
 justify-content:center;
 flex-wrap:wrap;
-margin-top:24px;
+margin-top:28px;
+margin-bottom:10px;
+}
+
+.hero-kicker{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:8px 14px;
+margin-bottom:18px;
+border-radius:999px;
+border:1px solid rgba(102,227,255,.2);
+background:rgba(102,227,255,.08);
+color:var(--accent);
+font-size:12px;
+font-weight:700;
+letter-spacing:.1em;
+text-transform:uppercase;
+box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.hero-note{
+font-size:14px;
+max-width:680px;
 }
 
 .trust{
 display:grid;
 grid-template-columns:repeat(3,minmax(0,1fr));
 gap:16px;
-margin:34px 0 54px;
+margin:20px 0 62px;
 }
 
 .trust-item{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.12);
+background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));
+border:1px solid var(--line);
 border-radius:18px;
 padding:18px 16px;
 text-align:left;
+box-shadow:var(--shadow);
 }
 
 .trust-label{
@@ -150,7 +194,7 @@ line-height:1.55;
 
 .dev{
 text-align:center;
-margin:50px 0 70px;
+margin:62px 0 78px;
 }
 
 .dev img{
@@ -176,12 +220,15 @@ font-size:17px;
 /* FEATURED APP */
 
 .featured{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.15);
+background:
+linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03)),
+radial-gradient(420px 180px at 50% 0%,rgba(102,227,255,.08),transparent 75%);
+border:1px solid rgba(255,255,255,.14);
 border-radius:28px;
-padding:40px;
+padding:44px 40px;
 text-align:center;
 margin-bottom:60px;
+box-shadow:0 22px 56px rgba(0,0,0,.2);
 }
 
 .featured > img{
@@ -192,8 +239,9 @@ box-shadow:0 10px 30px rgba(0,0,0,.5);
 }
 
 .featured h3{
-margin:0 0 10px;
-font-size:26px;
+margin:0 0 12px;
+font-size:30px;
+letter-spacing:-.02em;
 }
 
 .featured-tag{
@@ -230,7 +278,8 @@ color:#8ff7d2;
 color:var(--muted);
 max-width:640px;
 margin:auto;
-line-height:1.6;
+line-height:1.72;
+font-size:16px;
 }
 
 .featured-points{
@@ -265,12 +314,13 @@ color:var(--muted);
 
 .section-intro{
 text-align:center;
-margin:0 0 28px;
+margin:0 0 36px;
 }
 
 .section-intro h2{
-font-size:30px;
-margin:0 0 10px;
+font-size:34px;
+letter-spacing:-.03em;
+margin:0 0 12px;
 }
 
 .section-intro p{
@@ -278,6 +328,24 @@ max-width:760px;
 margin:auto;
 color:var(--muted);
 line-height:1.7;
+}
+
+#apps-section{
+margin-top:18px;
+}
+
+.section-kicker{
+display:inline-block;
+margin-bottom:10px;
+padding:6px 10px;
+border-radius:999px;
+background:rgba(102,227,255,.08);
+border:1px solid rgba(102,227,255,.18);
+color:var(--accent);
+font-size:12px;
+font-weight:700;
+letter-spacing:.08em;
+text-transform:uppercase;
 }
 
 .info-grid,
@@ -291,17 +359,19 @@ margin:0 0 60px;
 .info-card,
 .service-card,
 .contact-card{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.12);
+background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.03));
+border:1px solid var(--line);
 border-radius:24px;
 padding:28px;
+box-shadow:var(--shadow);
 }
 
 .info-card h3,
 .service-card h3,
 .contact-card h2{
 margin:0 0 12px;
-font-size:24px;
+font-size:22px;
+letter-spacing:-.02em;
 }
 
 .info-card p,
@@ -322,6 +392,16 @@ font-size:18px;
 
 .service-card p{
 font-size:15px;
+}
+
+.secondary-offer .service-card,
+.secondary-offer .contact-card{
+background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.025));
+border-color:rgba(255,255,255,.09);
+}
+
+.secondary-offer{
+opacity:.9;
 }
 
 .contact-card{
@@ -349,25 +429,37 @@ text-align:center;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+gap:24px;
 }
 
 .card{
-background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.12);
+background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.035));
+border:1px solid var(--line);
 border-radius:22px;
 padding:28px;
 text-align:center;
-transition:.2s;
+transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 min-height:340px;
+box-shadow:var(--shadow);
+position:relative;
+overflow:hidden;
 }
 
 .card:hover{
 transform:translateY(-6px);
 box-shadow:0 25px 50px rgba(0,0,0,.4);
+border-color:rgba(102,227,255,.18);
+}
+
+.card::before{
+content:"";
+position:absolute;
+inset:0 0 auto 0;
+height:1px;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);
 }
 
 .app-icon{
@@ -383,8 +475,9 @@ box-shadow:0 6px 18px rgba(0,0,0,.35);
 }
 
 .app-title{
-font-size:21px;
+font-size:22px;
 font-weight:600;
+letter-spacing:-.02em;
 margin-bottom:10px;
 }
 
@@ -407,7 +500,7 @@ color:var(--accent);
 .app-desc{
 color:var(--muted);
 font-size:15px;
-line-height:1.6;
+line-height:1.68;
 margin-bottom:22px;
 }
 
@@ -422,7 +515,7 @@ margin-top:auto;
 .featured-store{
 display:flex;
 justify-content:center;
-margin-top:14px;
+margin-top:18px;
 }
 
 .app-store-badge{
@@ -442,7 +535,7 @@ box-shadow:none;
 .card-store{
 display:flex;
 justify-content:center;
-margin-top:14px;
+margin-top:18px;
 }
 
 .btn{
@@ -451,26 +544,41 @@ border-radius:12px;
 text-decoration:none;
 font-size:14px;
 font-weight:600;
+transition:transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease, opacity .18s ease;
 }
 
 .btn.primary{
 background:var(--accent);
 color:black;
+box-shadow:0 10px 26px rgba(102,227,255,.18);
 }
 
 .btn.secondary{
 border:1px solid rgba(255,255,255,.2);
 color:var(--text);
+background:rgba(255,255,255,.02);
+opacity:.88;
+}
+
+.btn:hover{
+transform:translateY(-1px);
+}
+
+.btn.secondary:hover{
+opacity:1;
+border-color:rgba(255,255,255,.28);
 }
 
 /* FOOTER */
 
 footer{
-margin-top:70px;
+margin-top:86px;
 text-align:center;
 font-size:13px;
 color:var(--muted);
 line-height:1.8;
+padding-top:28px;
+border-top:1px solid rgba(255,255,255,.08);
 }
 
 footer a{
@@ -490,6 +598,23 @@ font-size:12px;
 }
 
 @media (max-width:760px){
+.wrap{
+padding:24px 16px 48px;
+}
+
+header{
+padding:28px 18px 24px;
+border-radius:26px;
+}
+
+h1{
+font-size:34px;
+}
+
+.subtitle{
+font-size:17px;
+}
+
 .trust{
 grid-template-columns:1fr;
 }
@@ -497,6 +622,34 @@ grid-template-columns:1fr;
 .info-grid,
 .services-grid{
 grid-template-columns:1fr;
+}
+
+.buttons,
+.hero-actions{
+flex-direction:column;
+align-items:stretch;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+.featured,
+.info-card,
+.service-card,
+.contact-card,
+.card{
+padding:22px;
+}
+
+.featured h3,
+.section-intro h2{
+font-size:28px;
+}
+
+.card{
+min-height:auto;
 }
 
 .featured-points{
@@ -521,19 +674,21 @@ grid-template-columns:1fr;
 
 <header>
 
-<h1 id="hero-title">Thoughtful iPhone and iPad apps for focused products.</h1>
+<div class="hero-kicker">Independent Apps First</div>
+
+<h1 id="hero-title">Independent iPhone and iPad apps with calm product thinking.</h1>
 
 <div class="subtitle" id="hero-subtitle">
-I build calm, high-quality Apple apps for my own products and selected independent projects, from concept and UX to App Store launch.
+I design and ship my own iOS apps for investors and everyday life. They are the core of my work and the clearest proof of how I build focused Apple products.
 </div>
 
 <div class="hero-actions">
-<a class="btn primary" href="https://tally.so/r/J9Dqd4" target="_blank" rel="noopener noreferrer">Discuss an Idea</a>
-<a class="btn secondary" href="services.html">How I work</a>
+<a class="btn primary" href="#apps-section">Explore Apps</a>
+<a class="btn secondary" href="#selected-collaboration">Selected Collaboration</a>
 </div>
 
-<div class="subtitle" style="margin-top:14px;font-size:14px;max-width:680px;">
-Independent personal projects and selected collaborations. No affiliation with or representation of any employer.
+<div class="subtitle hero-note" style="margin-top:14px;">
+Independent products first. Selected collaboration on request. No affiliation with or representation of any employer.
 </div>
 
 </header>
@@ -541,75 +696,37 @@ Independent personal projects and selected collaborations. No affiliation with o
 <section class="trust">
 
 <div class="trust-item">
-<div class="trust-label" id="trust1-label">Studio</div>
-<div class="trust-copy" id="trust1-copy">Own products and selected independent app projects with a calm, focused product style and clear positioning.</div>
+<div class="trust-label" id="trust1-label">Own Apps</div>
+<div class="trust-copy" id="trust1-copy">A growing portfolio of independent iPhone and iPad apps built around clear audiences, specific use cases, and focused product decisions.</div>
 </div>
 
 <div class="trust-item">
-<div class="trust-label" id="trust2-label">Apple Focus</div>
-<div class="trust-copy" id="trust2-copy">Built for iPhone and iPad with strong attention to clarity, quality, and App Store readiness.</div>
+<div class="trust-label" id="trust2-label">Apple Quality</div>
+<div class="trust-copy" id="trust2-copy">Native iOS work with close attention to clarity, pacing, App Store readiness, and a calm user experience.</div>
 </div>
 
 <div class="trust-item">
-<div class="trust-label" id="trust3-label">Approach</div>
-<div class="trust-copy" id="trust3-copy">Best fit for focused products, clear user value, and selected independent projects with a well-defined scope.</div>
+<div class="trust-label" id="trust3-label">Selective Work</div>
+<div class="trust-copy" id="trust3-copy">Collaboration is limited and best suited to well-defined products with real user value and a clear scope.</div>
 </div>
 
 </section>
 
 <section class="info-grid">
 <div class="info-card">
-<h3>For selected app ideas</h3>
-<p>You have an app idea, a digital product, or a focused use case for iPhone and iPad? I occasionally work on selected independent projects, from concept and UX to App Store launch.</p>
+<h3>Own products first</h3>
+<p>My apps are not side projects around client work. They are the center of the business and the clearest expression of how I think about product strategy, UX, and shipping.</p>
 </div>
 <div class="info-card">
-<h3>Own apps as proof</h3>
-<p>My own apps are also my portfolio. They show how I structure products, design calm interfaces, and ship polished Apple apps with real user-facing outcomes.</p>
+<h3>Products as proof</h3>
+<p>Every shipped app doubles as portfolio and social proof: real positioning, real product decisions, real release quality, and real user-facing outcomes.</p>
 </div>
-</section>
-
-<section class="section-intro">
-<h2>How I can help</h2>
-<p>I am strongest in focused Apple projects that need product thinking, clear UX, and a steady path from idea to release.</p>
-</section>
-
-<section class="services-grid">
-<div class="service-card">
-<h3>Product concept</h3>
-<p>Turn an idea into a clear product direction with scope, priorities, and a realistic first version.</p>
-</div>
-<div class="service-card">
-<h3>UX and interface</h3>
-<p>Design thoughtful iPhone and iPad experiences that feel simple, readable, and intentionally paced.</p>
-</div>
-<div class="service-card">
-<h3>Native development</h3>
-<p>Build and refine Apple apps with attention to quality, performance, and a calm, well-structured user experience.</p>
-</div>
-<div class="service-card">
-<h3>Launch and iteration</h3>
-<p>Prepare App Store assets, release cleanly, and improve the product after launch with focus.</p>
-</div>
-</section>
-
-<!-- DEVELOPER -->
-
-<section class="dev">
-
-<img src="assets/juergen.jpeg" alt="Avatar of Jürgen Zimmer">
-
-<h2>Jürgen Zimmer</h2>
-
-<p id="dev-copy">
-Indie iOS developer from Munich.  
-I build my own apps and occasionally work on selected independent iPhone and iPad projects.
-</p>
-
 </section>
 
 <section class="section-intro" id="apps-section">
-<h2>Apps and references</h2>
-<p>These apps show how I work: clear positioning, calm interfaces, and products that are actually shipped to the App Store.</p>
+<span class="section-kicker">Own Apps</span>
+<h2>Focused iOS products, built and shipped independently</h2>
+<p>Each app is made for a specific audience, solves a concrete problem, and shows how I approach clarity, utility, and release quality on Apple platforms.</p>
 </section>
 
 <!-- FEATURED APP -->
@@ -619,7 +736,7 @@ I build my own apps and occasionally work on selected independent iPhone and iPa
 <img src="liquiditypulse/assets/liquiditypulse.png" alt="LiquidityPulse App Icon">
 
 <div class="featured-tags">
-<div class="featured-tag" id="featured-tag">Featured App</div>
+<div class="featured-tag" id="featured-tag">Featured Product</div>
 <div class="featured-tag is-new" id="featured-new">New</div>
 <div class="featured-tag" id="featured-soon">Now on the App Store</div>
 </div>
@@ -628,32 +745,31 @@ I build my own apps and occasionally work on selected independent iPhone and iPa
 
 <p id="featured-copy">
 For macro-minded investors, market watchers, and Bitcoin-focused users:
-LiquidityPulse makes global liquidity, market stress, and regime shifts easier
-to read so you can spot relationships earlier and interpret them with more clarity.
+LiquidityPulse turns liquidity, market stress, and regime shifts into a clearer daily read so you can interpret conditions faster and make better-informed decisions.
 </p>
 
 <div class="featured-points">
 
 <div class="featured-point">
-<div class="featured-point-title" id="fp1-title">Macro Focus</div>
-<div class="featured-point-copy" id="fp1-copy">Liquidity, market stress, and regime shifts in one clear workspace.</div>
+<div class="featured-point-title" id="fp1-title">For Macro Investors</div>
+<div class="featured-point-copy" id="fp1-copy">Built for people who follow liquidity, risk, and market regime changes as part of their process.</div>
 </div>
 
 <div class="featured-point">
-<div class="featured-point-title" id="fp2-title">Fast Context</div>
-<div class="featured-point-copy" id="fp2-copy">Less data noise, more context for what actually matters in markets right now.</div>
+<div class="featured-point-title" id="fp2-title">Clearer Context</div>
+<div class="featured-point-copy" id="fp2-copy">See important shifts faster without digging through a noisy stack of disconnected charts.</div>
 </div>
 
 <div class="featured-point">
-<div class="featured-point-title" id="fp3-title">For Investors</div>
-<div class="featured-point-copy" id="fp3-copy">Especially relevant for users with a macro, risk, and Bitcoin focus.</div>
+<div class="featured-point-title" id="fp3-title">Practical Use</div>
+<div class="featured-point-copy" id="fp3-copy">Especially useful for people who want a calmer way to track macro signals and market pressure.</div>
 </div>
 
 </div>
 
 <div class="buttons" style="margin-top:20px">
 
-<a class="btn primary" href="liquiditypulse/" id="featured-btn-primary">View App</a>
+<a class="btn primary" href="liquiditypulse/" id="featured-btn-primary">Open App Page</a>
 <a class="btn secondary" href="liquiditypulse/privacy.html" id="featured-btn-secondary">Privacy</a>
 
 </div>
@@ -678,15 +794,15 @@ to read so you can spot relationships earlier and interpret them with more clari
 
 <div class="app-title">MyVideoSpace</div>
 
-<div class="app-meta" id="mvs-meta">Video</div>
+<div class="app-meta" id="mvs-meta">Video Library</div>
 
 <div class="app-desc" id="mvs-copy">
-Organize videos, collections, and watchlists in a clear library with quick access.
+For people who save more videos than they can find later. MyVideoSpace keeps watchlists, collections, and personal libraries organized in one calm place.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary" href="myvideospace/" id="mvs-btn-primary">View App</a>
+<a class="btn primary" href="myvideospace/" id="mvs-btn-primary">Open App Page</a>
 <a class="btn secondary" href="myvideospace/privacy.html" id="mvs-btn-secondary">Privacy</a>
 
 </div>
@@ -707,15 +823,15 @@ Organize videos, collections, and watchlists in a clear library with quick acces
 
 <div class="app-title">Erfolgsjournal</div>
 
-<div class="app-meta" id="ej-meta">Reflection</div>
+<div class="app-meta" id="ej-meta">Daily Reflection</div>
 
 <div class="app-desc" id="ej-copy">
-A calm journal for daily reflection, clarity, and personal growth.
+For people who want to notice progress instead of only tasks. Erfolgsjournal turns short reflection into a simple, calm daily habit.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary" href="erfolgsjournal/" id="ej-btn-primary">View App</a>
+<a class="btn primary" href="erfolgsjournal/" id="ej-btn-primary">Open App Page</a>
 <a class="btn secondary" href="erfolgsjournal/privacy.html" id="ej-btn-secondary">Privacy</a>
 
 </div>
@@ -736,15 +852,15 @@ A calm journal for daily reflection, clarity, and personal growth.
 
 <div class="app-title">Lebensrad</div>
 
-<div class="app-meta" id="lr-meta">Balance</div>
+<div class="app-meta" id="lr-meta">Life Balance</div>
 
 <div class="app-desc" id="lr-copy">
-Reflect on your most important life areas and bring more balance into daily life.
+For anyone who wants a clearer view of the areas that shape wellbeing. Lebensrad helps you reflect, rebalance, and choose better next steps.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary" href="lebensrad/" id="lr-btn-primary">View App</a>
+<a class="btn primary" href="lebensrad/" id="lr-btn-primary">Open App Page</a>
 <a class="btn secondary" href="lebensrad/privacy.html" id="lr-btn-secondary">Privacy</a>
 
 </div>
@@ -765,15 +881,15 @@ Reflect on your most important life areas and bring more balance into daily life
 
 <div class="app-title">FitnessGoals</div>
 
-<div class="app-meta" id="fg-meta">Fitness</div>
+<div class="app-meta" id="fg-meta">Training Focus</div>
 
 <div class="app-desc" id="fg-copy">
-Set clear fitness goals and track progress with focus and structure.
+For people who want simple training structure without clutter. FitnessGoals helps you set targets, track consistency, and stay focused over time.
 </div>
 
 <div class="buttons">
 
-<a class="btn primary" href="fitnessgoals/" id="fg-btn-primary">View App</a>
+<a class="btn primary" href="fitnessgoals/" id="fg-btn-primary">Open App Page</a>
 <a class="btn secondary" href="fitnessgoals/privacy.html" id="fg-btn-secondary">Privacy</a>
 
 </div>
@@ -787,11 +903,49 @@ Set clear fitness goals and track progress with focus and structure.
 
 </div>
 
-<section class="contact-card project-inquiry">
-<h2>🚀 Discuss an Idea</h2>
-<p>Share a few details about your app idea or project context and I will let you know whether a selected collaboration could be a good fit.</p>
+<section class="dev">
+
+<img src="assets/juergen.jpeg" alt="Avatar of Jürgen Zimmer">
+
+<h2>Jürgen Zimmer</h2>
+
+<p id="dev-copy">
+Indie iOS developer from Munich.<br>
+I build my own apps from positioning and UX to native development and App Store release. That product work also shapes the way I approach the occasional collaboration: calm, selective, and outcome-focused.
+</p>
+
+</section>
+
+<section class="section-intro secondary-offer" id="selected-collaboration">
+<span class="section-kicker">Selected Collaboration</span>
+<h2>Available for a small number of well-matched projects</h2>
+<p>I occasionally support independent founders, focused product teams, and clear iPhone or iPad app ideas when the scope is strong and the fit is right. My own apps stay in the foreground, so collaboration is limited and by request.</p>
+</section>
+
+<section class="services-grid secondary-offer">
+<div class="service-card">
+<h3>Product direction</h3>
+<p>Clarify audience, scope, and the strongest first version before development becomes expensive.</p>
+</div>
+<div class="service-card">
+<h3>UX for Apple devices</h3>
+<p>Shape flows and interfaces that feel readable, intentional, and native to iPhone and iPad.</p>
+</div>
+<div class="service-card">
+<h3>Native execution</h3>
+<p>Build focused iOS products with strong attention to quality, detail, and launch readiness.</p>
+</div>
+<div class="service-card">
+<h3>Release support</h3>
+<p>Prepare launches, tighten the product before release, and refine what matters after the first version ships.</p>
+</div>
+</section>
+
+<section class="contact-card project-inquiry secondary-offer">
+<h2>Request selected collaboration</h2>
+<p>Share a few details about your product, audience, and scope. I will let you know if a selective collaboration could be a strong fit.</p>
 <div class="buttons">
-<a class="btn primary" href="https://tally.so/r/J9Dqd4" target="_blank" rel="noopener noreferrer">Discuss an Idea</a>
+<a class="btn primary" href="https://tally.so/r/J9Dqd4" target="_blank" rel="noopener noreferrer">Request Collaboration</a>
 </div>
 </section>
 
@@ -819,69 +973,69 @@ Independent personal projects. No affiliation with or representation of any empl
 <script>
 const copy = {
 de: {
-  heroTitle: "Ruhige, fokussierte Apps für klare digitale Produkte und Ideen.",
-  heroSubtitle: "Ich entwickle hochwertige iPhone- und iPad-Apps für eigene Produkte und ausgewählte unabhängige Projekte, von der Idee bis zum App-Store-Launch.",
-  trust1Label: "Studio",
-  trust1Copy: "Eigene Produkte und ausgewählte unabhängige App-Projekte mit klarer Positionierung und ruhiger Produktlogik.",
-  trust2Label: "Apple-Fokus",
-  trust2Copy: "Entwickelt für iPhone und iPad mit viel Aufmerksamkeit für Klarheit, Qualität und App-Store-Reife.",
-  trust3Label: "Zusammenarbeit",
-  trust3Copy: "Am besten passend für fokussierte Produkte, klaren Nutzwert und ausgewählte unabhängige Projekte mit klar definiertem Scope.",
-  devCopy: "Indie iOS Developer aus München.\nIch entwickle eigene Apps und unterstütze gelegentlich ausgewählte unabhängige Projekte für iPhone und iPad.",
-  featuredTag: "Featured App",
+  heroTitle: "Unabhängige iPhone- und iPad-Apps mit ruhigem Produktfokus.",
+  heroSubtitle: "Ich entwickle eigene iOS-Apps für Anleger und den Alltag. Sie stehen im Zentrum meiner Arbeit und zeigen am klarsten, wie ich fokussierte Apple-Produkte konzipiere und veröffentliche.",
+  trust1Label: "Eigene Apps",
+  trust1Copy: "Ein wachsendes Portfolio unabhängiger iPhone- und iPad-Apps mit klaren Zielgruppen, konkreten Anwendungsfällen und fokussierten Produktentscheidungen.",
+  trust2Label: "Apple-Qualität",
+  trust2Copy: "Native iOS-Arbeit mit viel Aufmerksamkeit für Klarheit, Tempo, App-Store-Reife und eine ruhige Nutzererfahrung.",
+  trust3Label: "Selektive Arbeit",
+  trust3Copy: "Zusammenarbeit ist begrenzt und passt am besten zu klar definierten Produkten mit echtem Nutzwert und sauberem Scope.",
+  devCopy: "Indie iOS Developer aus München.\nIch entwickle eigene Apps von Positionierung und UX bis zu nativer Umsetzung und App-Store-Release. Diese Produktarbeit prägt auch die gelegentliche Zusammenarbeit: ruhig, selektiv und ergebnisorientiert.",
+  featuredTag: "Produkt im Fokus",
   featuredNew: "Neu",
   featuredSoon: "Jetzt im App Store",
-  featuredCopy: "Für makro-interessierte Anleger, Marktbeobachter und Bitcoin-orientierte Nutzer:\nLiquidityPulse macht globale Liquidität, Marktstress und Regimewechsel schneller lesbar, damit du Zusammenhänge früher erkennst und klarer einordnen kannst.",
-  fp1Title: "Makro-Fokus",
-  fp1Copy: "Liquidität, Marktstress und Regimewechsel in einer klaren Arbeitsoberfläche.",
-  fp2Title: "Schnelle Einordnung",
-  fp2Copy: "Weniger Datenrauschen, mehr Kontext für das, was an den Märkten gerade wichtig ist.",
-  fp3Title: "Für Anleger",
-  fp3Copy: "Besonders interessant für Nutzer mit Makro-, Risiko- und Bitcoin-Fokus.",
-  primary: "App ansehen",
+  featuredCopy: "Für makro-orientierte Anleger, Marktbeobachter und Bitcoin-interessierte Nutzer:\nLiquidityPulse macht Liquidität, Marktstress und Regimewechsel im Alltag schneller lesbar, damit du Marktlagen klarer einordnen und bessere Entscheidungen treffen kannst.",
+  fp1Title: "Für Makro-Anleger",
+  fp1Copy: "Gebaut für Menschen, die Liquidität, Risiko und Marktregime als Teil ihres Entscheidungsprozesses verfolgen.",
+  fp2Title: "Klarerer Kontext",
+  fp2Copy: "Wichtige Veränderungen schneller sehen, ohne dich durch laute und verstreute Charts arbeiten zu müssen.",
+  fp3Title: "Praktischer Nutzen",
+  fp3Copy: "Besonders hilfreich für alle, die Makro-Signale und Marktdruck in einer ruhigeren Form beobachten wollen.",
+  primary: "App-Seite öffnen",
   secondary: "Datenschutz",
-  mvsMeta: "Video",
-  mvsCopy: "Organisiere Videos, Sammlungen und Watchlists in einer klaren Bibliothek mit schnellem Zugriff.",
-  ejMeta: "Reflexion",
-  ejCopy: "Ein ruhiges Journal für tägliche Reflexion, Klarheit und persönliche Entwicklung.",
-  lrMeta: "Balance",
-  lrCopy: "Reflektiere deine wichtigsten Lebensbereiche und bringe mehr Balance in deinen Alltag.",
-  fgMeta: "Fitness",
-  fgCopy: "Setze klare Fitnessziele und verfolge Fortschritte mit Fokus und Struktur.",
+  mvsMeta: "Videobibliothek",
+  mvsCopy: "Für Menschen, die mehr Videos speichern als später wiederfinden. MyVideoSpace hält Watchlists, Sammlungen und persönliche Bibliotheken an einem ruhigen Ort zusammen.",
+  ejMeta: "Tägliche Reflexion",
+  ejCopy: "Für Menschen, die Fortschritt nicht nur in Aufgaben messen wollen. Erfolgsjournal macht kurze Reflexion zu einer einfachen, ruhigen Gewohnheit.",
+  lrMeta: "Lebensbalance",
+  lrCopy: "Für alle, die einen klareren Blick auf die Bereiche ihres Lebens gewinnen wollen. Lebensrad hilft dir, zu reflektieren, neu auszurichten und bewusstere nächste Schritte zu wählen.",
+  fgMeta: "Trainingsfokus",
+  fgCopy: "Für Menschen, die einfache Trainingsstruktur ohne unnötige Komplexität wollen. FitnessGoals hilft dir, Ziele zu setzen, Konstanz zu verfolgen und dranzubleiben.",
   footerPrivacy: "Datenschutz",
   footerImprint: "Impressum",
   made: "Made with ❤️ in Munich"
 },
 en: {
-  heroTitle: "Thoughtful iPhone and iPad apps for focused products.",
-  heroSubtitle: "I build calm, high-quality Apple apps for my own products and selected independent projects, from concept and UX to App Store launch.",
-  trust1Label: "Studio",
-  trust1Copy: "Own products and selected independent app projects with a calm, focused product style and clear positioning.",
-  trust2Label: "Apple Focus",
-  trust2Copy: "Built for iPhone and iPad with strong attention to clarity, quality, and App Store readiness.",
-  trust3Label: "Approach",
-  trust3Copy: "Best fit for focused products, clear user value, and selected independent projects with a well-defined scope.",
-  devCopy: "Indie iOS developer from Munich.\nI build my own apps and occasionally work on selected independent iPhone and iPad projects.",
-  featuredTag: "Featured App",
+  heroTitle: "Independent iPhone and iPad apps with calm product thinking.",
+  heroSubtitle: "I design and ship my own iOS apps for investors and everyday life. They are the core of my work and the clearest proof of how I build focused Apple products.",
+  trust1Label: "Own Apps",
+  trust1Copy: "A growing portfolio of independent iPhone and iPad apps built around clear audiences, specific use cases, and focused product decisions.",
+  trust2Label: "Apple Quality",
+  trust2Copy: "Native iOS work with close attention to clarity, pacing, App Store readiness, and a calm user experience.",
+  trust3Label: "Selective Work",
+  trust3Copy: "Collaboration is limited and best suited to well-defined products with real user value and a clear scope.",
+  devCopy: "Indie iOS developer from Munich.\nI build my own apps from positioning and UX to native development and App Store release. That product work also shapes the way I approach the occasional collaboration: calm, selective, and outcome-focused.",
+  featuredTag: "Featured Product",
   featuredNew: "New",
   featuredSoon: "Now on the App Store",
-  featuredCopy: "For macro-minded investors, market watchers, and Bitcoin-focused users:\nLiquidityPulse makes global liquidity, market stress, and regime shifts easier to read so you can spot relationships earlier and interpret them with more clarity.",
-  fp1Title: "Macro Focus",
-  fp1Copy: "Liquidity, market stress, and regime shifts in one clear workspace.",
-  fp2Title: "Fast Context",
-  fp2Copy: "Less data noise, more context for what actually matters in markets right now.",
-  fp3Title: "For Investors",
-  fp3Copy: "Especially relevant for users with a macro, risk, and Bitcoin focus.",
-  primary: "View App",
+  featuredCopy: "For macro-minded investors, market watchers, and Bitcoin-focused users:\nLiquidityPulse turns liquidity, market stress, and regime shifts into a clearer daily read so you can interpret conditions faster and make better-informed decisions.",
+  fp1Title: "For Macro Investors",
+  fp1Copy: "Built for people who follow liquidity, risk, and market regime changes as part of their process.",
+  fp2Title: "Clearer Context",
+  fp2Copy: "See important shifts faster without digging through a noisy stack of disconnected charts.",
+  fp3Title: "Practical Use",
+  fp3Copy: "Especially useful for people who want a calmer way to track macro signals and market pressure.",
+  primary: "Open App Page",
   secondary: "Privacy",
-  mvsMeta: "Video",
-  mvsCopy: "Organize videos, collections, and watchlists in a clear library with quick access.",
-  ejMeta: "Reflection",
-  ejCopy: "A calm journal for daily reflection, clarity, and personal growth.",
-  lrMeta: "Balance",
-  lrCopy: "Reflect on your most important life areas and bring more balance into daily life.",
-  fgMeta: "Fitness",
-  fgCopy: "Set clear fitness goals and track progress with focus and structure.",
+  mvsMeta: "Video Library",
+  mvsCopy: "For people who save more videos than they can find later. MyVideoSpace keeps watchlists, collections, and personal libraries organized in one calm place.",
+  ejMeta: "Daily Reflection",
+  ejCopy: "For people who want to notice progress instead of only tasks. Erfolgsjournal turns short reflection into a simple, calm daily habit.",
+  lrMeta: "Life Balance",
+  lrCopy: "For anyone who wants a clearer view of the areas that shape wellbeing. Lebensrad helps you reflect, rebalance, and choose better next steps.",
+  fgMeta: "Training Focus",
+  fgCopy: "For people who want simple training structure without clutter. FitnessGoals helps you set targets, track consistency, and stay focused over time.",
   footerPrivacy: "Privacy",
   footerImprint: "Legal Notice",
   made: "Made with ❤️ in Munich"
